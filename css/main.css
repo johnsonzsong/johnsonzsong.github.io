@@ -22,11 +22,12 @@ body {
 .intro-name {
   font-size: 56px;
   text-align: center;
-  color: #099C7A;
+  color: #205469;
 }
 
 .intro-description {
-  background: linear-gradient(to top,#A0E8D1 25%,transparent 25%)
+  font-size: 24px;
+  background: linear-gradient(to top,#6EA0B5 25%,transparent 25%)
 }
 
 .intro-arrow-wrapper {
@@ -36,7 +37,7 @@ body {
 
 .intro-arrow {
   font-size: 40px;
-  color: #099C7A;
+  color: #205469;
 }
 
 #about {
@@ -46,7 +47,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  background-color: #A0E8D1;
+  background-color: #6EA0B5;
 }
 
 .about-image {
@@ -54,6 +55,7 @@ body {
   height: 300px;
   border-radius: 50%;
   margin: 30px;
+  margin-top: 10vh;
 }
 
 .about-text {
@@ -72,22 +74,42 @@ body {
   justify-content: space-around;
 }
 
+.about-links a:hover {
+  color:#205469;
+}
+
 .about-link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: #404040;
 }
 
-#about a {
+.about-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #205469;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.about-description a {
   text-decoration: none;
   pointer-events: auto !important;
   cursor: pointer !important;
   color: #404040;
-  background: linear-gradient(to top,#099C7A 15%,transparent 15%)
+  background: linear-gradient(to top,#205469 15%,transparent 15%)
 }
 
-#about a:hover, #about a:active {
-  color:#099C7A; /* highlight color */
+.about-description a:hover, .about-description a:active {
+  color:#205469;
 }
 
 #projects {
@@ -96,13 +118,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: #404040;
 }
 
 .projects-title {
   font-size: 48px;
-  color: #099C7A;
+  color: #205469;
+  margin-top: 10vh;
 }
 
 .project-row {
@@ -136,11 +158,11 @@ body {
   pointer-events: auto !important;
   cursor: pointer !important;
   color: #404040;
-  background: linear-gradient(to top,#099C7A 15%,transparent 15%)
+  background: linear-gradient(to top,#205469 15%,transparent 15%)
 }
 
 .project-text a:hover, #about a:active {
-  color:#099C7A; /* highlight color */
+  color:#205469;
 }
 
 .project-name {
@@ -150,9 +172,22 @@ body {
 .project-divider {
   width: 300px;
   height: 5px;
-  background-color: #A0E8D1;
+  background-color: #6EA0B5;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  color: #205469;
+}
+
+.footer-text {
+  
 }
 
 /* .animate-link{
