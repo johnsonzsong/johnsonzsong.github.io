@@ -11,6 +11,11 @@ body {
   padding-bottom: 50px;
 }
 
+.highlight {
+  color: #404040;
+  background: #DEF1F9;
+}
+
 #header {
   width: 100%;
   display: flex;
