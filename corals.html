@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Johnson Song - Design Cards for Educators</title>
+  <title>Johnson Song - Coral Bleaching</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +52,7 @@
 
 
 <section class="portfolio-banner section pb-0">
-  <img src="images/portfolio/cards-banner.jpg" alt="" class="img-fluid w-100">
+  <img src="images/portfolio/corals-banner.jpg" alt="" class="img-fluid w-100">
 </section>
 
 <section class="page-title section pb-0">
@@ -60,7 +60,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="text-center">
-          <h1 class="text-capitalize mb-0 text-lg">Design Cards for Educators</h1>
+          <h1 class="text-capitalize mb-0 text-lg">Coral Bleaching</h1>
         </div>
       </div>
     </div>
@@ -75,15 +75,19 @@
 				<div class="project-info">
 					<h3 class="mt-4 mb-4 portfolio-h3">tl;dr</h3>
 					<h5>
-            I created a deck of cards that challenge middle school educators to
-            think critically about designing for inclusivity inside and outside of
-            the classroom.
+            My project partner and I developed a series of data visualizations
+            in the form of a journalistic article
+            (a la <a href="https://pudding.cool/" target="_blank"> pudding.cool </a>
+            and the <a href="https://www.nytimes.com/" target="_blank"> New York Times</a>)
+            about global coral health trends. Along the way, we explored a
+            variety of datasets and visualization tools including Tableau,
+            Vega-Lite, and D3.
           </h5>
-          <p> May 2020 </p>
-          <p>Role: Principal Product Designer</p>
-          <p>Tools: Figma</p>
+          <p> March 2020 </p>
+          <p>Role: Developer</p>
+          <p>Tools: D3, Tableau, JavaScript, HTML/CSS</p>
           <div class="cta row justify-content-center">
-            <a href="resources/cards.pdf" target="_blank"> Download our card deck here! </a>
+            <a href="https://johnsonzsong.github.io/coral-bleaching/" target="_blank"> Read our article here! </a>
           </div>
 				</div>
 			</div>
@@ -92,16 +96,12 @@
         <h3 class="mt-4 mb-4 portfolio-h3">Problem</h3>
         <h5>
           <p>
-            Understanding intersectional identities and being able to empathize
-            with identities that are separate from one's own starts at a young age.
-            This means recognizing implicit biases, addressing race, gender,
-            socio-economic status, and ability so that we can support each other
-            as human beings.
-          </p>
-          <p>
-            I wanted to create an easy-to-use, interactive resource that answers
-            the question: how might we equip educators to empower middle school
-            students to reframe awkward or uncomfortable conversations?
+            We were interested in trends related to climate change and environmental indicators.
+            We found several databases containing information on coral reefs, coral bleaching, and
+            coral diseases. Since we knew that coral reefs are important to many complicated
+            ocean ecosystems and are sensitive to climate change, we wanted to investigate how
+            the health of various coral reefs have changed over time, and how they may be
+            impacted by human factors.
           </p>
         </h5>
       </div>
@@ -109,36 +109,38 @@
       <div class="col-lg-8">
         <h3 class="mt-4 mb-4 portfolio-h3">Solution</h3>
         <p>
-          This deck of cards is separated into 4 categories:
-          <ul>
-            <li>All-Inclusive</li>
-            <li>Mind of a Middle Schooler</li>
-            <li>Remember to Think About</li>
-            <li>How to...</li>
-          </ul>
-          Each category is meant to highlight a different design prompt for
-          middle school educators. What's great about these cards is that they
-          are not just limited to use inside the classroom by teachers. They
-          can just as effectively be used in workshops to train camp counselors,
-          teachers, and coaches on how to design inclusively in order to reframe
-          conversations with middle schoolers!
+          We began by exploring different datasets to gain a better understanding
+          of the problem space and the possibilities for visual explainers. We
+          looked at datasets that were related to the global coral health,
+          including ones about sea temperatures, diseases, and bleaching events.
+          We settled on our key datasets and performed data manipulation and
+          wrangling, such as removing data for years with few data points and
+          reorganizing data for more efficient processing. We used tools like
+          Trifacta and Python here.
         </p>
         <p>
-          View all the cards below, or download a PDF of them!
-          <div class="cta row justify-content-center">
-            <a href="resources/cards.pdf" target="_blank"> Download our card deck here! </a>
-          </div>
+          Next, we performed initial data exploration using Tableau, experimenting
+          with using different marks and encodings to highlight trends, representing
+          information in different types of charts, and testing out small
+          multiples and maps.
         </p>
-        <div>
-          <img src="images/portfolio/cards-all.jpg" alt="" class="img-fluid w-100">
+        <p>
+          We developed a total of 3 interactive data visualizations using D3,
+          JavaScript, HTML, and CSS. One explains coral bleaching events over
+          time, another shows different coral families around the globe,
+          and the last one shows trends in different coral diseases over time.
+          Read the article in full and check out our interactive visualizations below!
+        </p>
+        <div class="cta row justify-content-center">
+          <a href="https://johnsonzsong.github.io/coral-bleaching/" target="_blank"> Read our article here! </a>
         </div>
       </div>
 	</div>
 
   <div class="row mt-5 justify-content-center">
     <div class="col-lg-6 text-center">
-      <a href="daimler.html" class="btn btn-dark">Prev</a>
-      <a href="corals.html" class="btn btn-dark">Next</a>
+      <a href="cards.html" class="btn btn-dark">Prev</a>
+      <a href="coast.html" class="btn btn-dark">Next</a>
     </div>
   </div>
 
