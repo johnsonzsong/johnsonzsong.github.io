@@ -20,6 +20,14 @@
   <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
 
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -75,115 +83,162 @@
 				<div class="project-info">
 					<h3 class="mt-4 mb-4 portfolio-h3">tl;dr</h3>
 					<h5>
-            We partnered with Daimler to create an online game playable on a
-            Mercedes Benz Head Unit. We had the unique opportunity to take full
-            control, from ideation to design to development, of creating an
-            in-vehicle gaming experience for the autonomous driving era.
+            My team and I created an Android app to make travel planning fun
+            while instilling confidence in trustworthy plans. Planit gamifies
+            the travel-planning process by emphasizing the strong ties among
+            family and friends.
           </h5>
-          <p>January - June 2020 </p>
-          <p>Role: Lead Product Designer and Front-end Developer</p>
-          <p>Tools: React, Figma</p>
-          <div class="cta row justify-content-center">
-            <a href="https://tinyurl.com/trytrivia" target="_blank"> Play Cabana Trivia here! </a>
+          <p>September - December 2018 </p>
+          <p>Role: Android Developer, Web Developer, and Designer</p>
+          <p>Tools: Android Studio (C++), Figma</p>
+          <div class="row justify-content-center">
+            <iframe style="border: none;" width="400" height="686" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FK9HyzIdEnZcUng12iZg2Q17O%2FPlanit%3Fnode-id%3D0%253A1%26scaling%3Dscale-down" allowfullscreen=""></iframe>
           </div>
-				</div>
+        </div>
 			</div>
 
       <div class="col-lg-8">
         <h3 class="mt-4 mb-4 portfolio-h3">Problem</h3>
         <h5>
           <p>
-            As autonomy and electric vehicle charging become more established in
-            the automotive industry, people will have more time on their hands.
-            Whether waiting for their cars to charge or waiting to pick up a child
-            from school, drivers will have an opportunity to engage in in-vehicle
-            entertainment during these times.
+            We sought to help travelers overcome the familiar struggles of
+            planning for their destination trips: not being confident in their
+            plans without the input and approval of family and friends, who were
+            generally unmotivated to respond.
           </p>
         </h5>
       </div>
 
       <div class="col-lg-8">
         <h3 class="mt-4 mb-4 portfolio-h3">Process</h3>
-        <h5> User Studies </h5>
+        <h5> Needfinding </h5>
         <p>
-          Our partners are Daimler wanted to know: what kind of games would be
-          good in the car?
-        </p>
-        <p>
-          My team began by conducting research and user studies to discover these
-          insights. We observed Tesla owners at Supercharger stations to get
-          a better understanding of how owners of autonomous and electric
-          vehicles spent those moments of down-time while waiting for their
-          vehicles to charge.
-        </p>
-        <p>
-          I ventured to a nearby Tesla dealership to learn more about the current
-          status of in-car gaming. I was able to sit in different models and
-          inspect Tesla display units, as well as play around with their games
-          such as Stardew Valley. Before I left, I got the chance to test-drive
-          the Tesla Model 3 around the neighborhood!
+          When we first started our project, we had no idea what problem we would
+          be addressing. Our first step was to find our what users' experiences
+          were in the travel space. Through interviews with a diverse variety
+          of travelers, airline employees, planners, parents, and more, we uncovered
+          the need for efficient and engaging ways to plan trips. Below is a picture
+          of me and a teammate unpacking our findings through an empathy map.
+          You can also click to see our full needfinding results.
+          <div class="row justify-content-center">
+            <img src="images/portfolio/planit-needfinding.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="cta row justify-content-center">
+            <a href="https://drive.google.com/file/d/1JMJyHr4yn_4WAOMAyhCa8S3Nya0s_CGt/view?usp=sharing" target="_blank"> Needfinding Results </a>
+          </div>
         </p>
 
-        <h5> Ideation </h5>
+        <h5> Experience Prototypes </h5>
         <p>
-          My team then went through many ideation stages, coming up with as many
-          games as possible and then narrowing them down based on our findings
-          and constraints. Some of our initial ideas from the first brainstorming session
-          included board games like LIFE and Monopoly, immersive experiences
-          like Mario Kart and Pokemon Go, and old school games like Pac-Man and Space Invaders.
+          Next, we used our initial insights from this first set of interviews to
+          further test assumptions. We conducted another round of interviews, and
+          created Point-of-View personas detailing our surprises and game changers.
+          From this, we generated dozens of "How Might We" statements and used them
+          as jumping points to ideate solutions.
+          <div class="row justify-content-center">
+            <img src="images/portfolio/planit-hmw.png" alt="" class="img-fluid w-50">
+          </div>
         </p>
         <p>
-          In the second round of brainstorming, we focused on aspects
-          of the in-car gaming experience we wanted to emphasis. We knew that
-          the game should capitalize on the unique circumstances and people
-          inside of the car. Some of our ideas here included trivia, karaoke,
-          20 questions, and Mafia.
-
-          With helpful feedback from our Daimler liaisons, we decided to move
-          forward with 3 ideas: trivia, karaoke, and Draw Something.
-        </p>
-
-        <h5> Prototypes and Findings </h5>
-        <p>
-          We rapidly-prototyped these 3 ideas by creating quick pen-and-paper
-          versions of each game, which meant to test the interactions
-          that friends and family playing together would have.
-          <!-- TODO: images of prototype and testing -->
-
-          We set up the environment to mimic the inside of a car, and recruited
-          participants that represented the demographic we were aiming for. Our
-          key insights were:
-
+          We created rapid prototypes for 3 of our top solutions, which were:
           <ul>
-            <li> Friends love inside jokes </li>
-            <li> People are competitive </li>
-            <li> Users wanted to continue playing </li>
+            <li> Likes and Reviews for Plans </li>
+            <li> Augmented Reality Preview of Itinerary </li>
+            <li> Family Feud Style Competition for Generating Ideas </li>
           </ul>
-
-          With our findings and input from our Daimler liaisons, we settled on
-          developing a unique in-vehicle trivia game.
+        </p>
+        <p>
+          We tested these out with willing participants and recorded our findings.
+          Check out some of the behind-the-scene photos below or read the full
+          report of our experience prototypes!
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-experience-prototype1.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-experience-prototype2.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="cta row justify-content-center">
+            <a href="https://drive.google.com/file/d/1JMJyHr4yn_4WAOMAyhCa8S3Nya0s_CGt/view?usp=sharing" target="_blank"> Experience Prototype Results </a>
+          </div>
         </p>
 
-        <h5> Design </h5>
+        <h5> Brainstorming and Lo-Fi Prototype </h5>
         <p>
-          The main aspects of our design were that it fit nicely within
-          Daimler's existing head unit UI, and that it felt like an exciting,
-          futuristic game. As lead product designer, I took charge of designing
-          the low-fi wireframes as well as high-fi working prototypes and components.
-          This is our clickable Figma prototype.
-          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fwgkf0Bb5YrHXKGYLv3OfVI%2FCS210-Cabana-Trivia-Master%3Fnode-id%3D252%253A3%26scaling%3Dscale-down&chrome=DOCUMENTATION" allowfullscreen></iframe>
+          We received the most favorable feedback in our "competition/game"
+          solution, and proceeded to make a Concept Video to prove its potential.
+          See the video for yourself! This was a really fun exercise that made us
+          consider the solution in a different light by exaggerating and dramatizing
+          it. Below is a behind-the-scenes photo of our storyboarding process
+          for the video.
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-storyboard.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="row justify-content-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nR4Iix-sOAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </p>
+
+        <p>
+          In thinking about the style and gameplay of our eventual game, we
+          engaged in a brainstorming session called "Crazy 8s" to generate
+          many different ideas in a short amount of time.
+        </p>
+
+        <p>
+          After this, we created a low fidelity paper prototype for the user
+          flow and interactions that would occur in the different screens of our
+          mobile app. The purpose of this lo-fi prototype was to begin to think more
+          critically about the exact interactions (swipes, gestures, clicks, etc.)
+          that users would experience throughout the app. The use of paper and pen
+          allowed us to quickly modify and adjust screens based on feedback.
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-low1.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-low2.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-low3.png" alt="" class="img-fluid w-50">
+          </div>
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-low4.png" alt="" class="img-fluid w-50">
+          </div>
+        </p>
+
+        <h5> Med-Fi Prototype and Evaluation </h5>
+        <p>
+          After testing our lo-fi paper prototype with recruited participants, we
+          refined our initial sketches and began to develop wireframes using Figma.
+          You might have caught a glimpse of it at the top of this page! With this
+          functional prototype, we were able to observe others interacting with
+          it via a screen, which simulated the real scenario in which the app
+          would be used. This allowed us to develop a much better sense of what
+          was working well and what wasn't, through a process called heuristic
+          evaluation. Below, you can see some wireframes that were part of our
+          med-fi prototype.
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-med1.jpg" alt="" class="img-fluid w-25 mr-1">
+            <img src="images/portfolio/planit-med2.jpg" alt="" class="img-fluid w-25">
+          </div>
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-med3.jpg" alt="" class="img-fluid w-25 mr-1">
+            <img src="images/portfolio/planit-med4.jpg" alt="" class="img-fluid w-25">
+          </div>
         </p>
       </div>
 
       <div class="col-lg-8">
         <h3 class="mt-4 mb-4 portfolio-h3">Solution</h3>
           <p>
-            Finally, we used React and Firebase to engineer a fully-functional,
-            dynamic trivia game complete with user profiles, scores and leaderboard,
-            and a variety of categories, including a location-based one!
+            The final step was taking all of our needfinding and design work
+            and turning it into a fully-functional Android app. For this, our
+            team used Android Studio and programmed in C++ to make the game
+            come to life. We showcased this at the project fair, and you can see
+            the poster we made with an overview of our entire process and final
+            product!
           </p>
-          <div class="cta row justify-content-center">
-            <a href="https://tinyurl.com/trytrivia" target="_blank"> Play Cabana Trivia here! </a>
+          <div class="row justify-content-center mb-4">
+            <img src="images/portfolio/planit-poster2.jpg" alt="" class="img-fluid w-100">
           </div>
       </div>
 
