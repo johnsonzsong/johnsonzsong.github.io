@@ -815,6 +815,10 @@ textarea.form-control {
   color: #4F86C6;
 }
 
+.cta {
+  margin-bottom: 20px;
+}
+
 .cta a{
   padding: 10px;
   background-color: #fff;
