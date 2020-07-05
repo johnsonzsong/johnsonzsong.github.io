@@ -145,6 +145,14 @@ a:hover {
   color: #FCAA68;
 }
 
+.slant-right {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.slant-left {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
+
 .page-title h1 {
   position: relative;
   padding-bottom: 30px;
