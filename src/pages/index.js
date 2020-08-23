@@ -11,9 +11,9 @@ export default function Home() {
     <div className="body">
       <div className="container">
         <Header/>
-        <div className="intro">
-          <div className="introHeadline"> Renaissance Technologist </div>
-          <div className="introBody">
+        <div className="display">
+          <div className="displayTitle"> Renaissance Technologist </div>
+          <div className="displayBody">
             I recently completed my undergraduate studies at Stanford with a major in computer science and minor in economics. Currently, I am a master’s student at Stanford, studying human-computer interation. Previously, I was a software engineering intern on Facebook Gaming and Messenger.
           </div>
         </div>

@@ -16,6 +16,7 @@
 /* TYPOGRAPHY */
 $display-font-size: 48px;
 $display-line-height: 64px;
+$display-font-weight: 700;
 
 /* COLORS */
 $black-60: rgba(0, 0, 0, 0.6);
@@ -98,12 +99,12 @@ a:visited {
   font-weight: 500;
 
   @media only screen and (max-width: 600px) {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
-.intro {
+.display {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,10 +117,10 @@ a:visited {
   }
 }
 
-.introHeadline {
-  font-size: 48px;
-  line-height: 64px;
-  font-weight: 700;
+.displayTitle {
+  font-size: $display-font-size;
+  line-height: $display-line-height;
+  font-weight: $display-font-weight;
 
   @media only screen and (max-width: 600px) {
     font-size: 24px;
@@ -127,15 +128,15 @@ a:visited {
   }
 }
 
-.introBody {
+.displayBody {
   font-family: 'Proxima Nova';
   font-size: 22px;  // 22 px ?
   line-height: 30px;
   color: $black-60;
 
   @media only screen and (max-width: 600px) {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px; // ??
+    line-height: 20px; // ??
   }
 }
 
@@ -152,6 +153,7 @@ a:visited {
 .featureImage {
   max-height: 70%;
   max-width: 50%;
+  margin: 24px 0px;
 }
 
 .overlay {
@@ -183,4 +185,13 @@ a:visited {
 
 .projectSquare:hover .overlay {
   opacity: 1;
+}
+
+.banner {
+  background-color: $blue-30;
+  height: 20vh;
+  width: calc(100% + 272px); // 136 * 2
+  margin-left: -136px;  // 128px + 8px
+  margin-right: -136px; // padding: 32px 128px;
+  padding: 32px 136px;
 }
