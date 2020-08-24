@@ -25,7 +25,7 @@ export default function Home() {
                   <img className="featureImage" src={cabanaFeature} />
                   <div className="overlay">
                     <div className="overlayProjectName"> Cabana Trivia </div>
-                    <div className="overlayProjectDetails"> User Research, UX/UI, React, and Firebase</div>
+                    <p> User Research, UX/UI, React, and Firebase</p>
                   </div>
                 </div>
               </Link>
@@ -36,7 +36,7 @@ export default function Home() {
                   <img className="featureImage" src={planitFeature} />
                   <div className="overlay">
                     <div className="overlayProjectName"> Planit </div>
-                    <div className="overlayProjectDetails"> User Research, UX/UI, Android, and HTML/CSS</div>
+                    <p> User Research, UX/UI, Android, and HTML/CSS</p>
                   </div>
                 </div>
               </Link>

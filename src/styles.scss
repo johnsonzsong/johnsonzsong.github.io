@@ -23,13 +23,28 @@ $black-60: rgba(0, 0, 0, 0.6);
 $blue-30: rgba(198, 232, 251, 0.3);
 $white-95: rgba(255, 255, 255, 0.95);
 
+/* MARGINS */
+.mt-small { // Used for banner header separation
+  margin-top: 12px;
+}
+
+/* ******************************************** */
+
 .body {
   font-family: 'Poppins', 'Proxima Nova', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #000;
-  margin: auto;
-  max-width: 1440px;
+  // margin: auto;
+  // max-width: 1440px;
   width: 100%;
+}
+
+// Used for default body text
+p {
+  font-family: 'Proxima Nova', 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black-60;
+  margin: 0px;
 }
 
 a:link {
@@ -110,7 +125,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 24px 128px;
+  margin: 24px 15%;
 
   @media only screen and (max-width: 600px) {
     margin: 24px 0px;
@@ -178,20 +193,27 @@ a:visited {
   font-weight: 500;
 }
 
-.overlayProjectDetails {
-  font-family: 'Proxima Nova';
-  font-size: 16px;
-}
-
 .projectSquare:hover .overlay {
   opacity: 1;
 }
 
 .banner {
   background-color: $blue-30;
-  height: 20vh;
-  width: calc(100% + 272px); // 136 * 2
+  width: 100%;
   margin-left: -136px;  // 128px + 8px
   margin-right: -136px; // padding: 32px 128px;
   padding: 32px 136px;
+}
+
+.bannerHeader {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.sectionHeader {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-top: 24px;
 }
