@@ -14,12 +14,13 @@
 // @media only screen and (min-width: 1200px) {...}
 
 /* TYPOGRAPHY */
-$display-font-size: 48px;
-$display-line-height: 64px;
+$display-font-size: 36px;
+$display-line-height: 45px;
 $display-font-weight: 700;
 
 /* COLORS */
 $black-60: rgba(0, 0, 0, 0.6);
+$blue-100: rgb(198, 232, 251);
 $blue-30: rgba(198, 232, 251, 0.3);
 $white-95: rgba(255, 255, 255, 0.95);
 
@@ -36,6 +37,28 @@ $white-95: rgba(255, 255, 255, 0.95);
   // margin: auto;
   // max-width: 1440px;
   width: 100%;
+}
+
+.notificationWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.notification {
+  width: 30%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+
+  a {
+    font-size: 18px;
+  }
+
+  a:hover {
+    background: linear-gradient(to top, $blue-100, 30%,transparent 70%);  transition: all 2s ease;
+  }
 }
 
 // Used for default body text
@@ -62,7 +85,7 @@ a:visited {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 32px 128px;
+  padding: 32px 192px;
 
   @media only screen and (max-width: 600px) {
     padding: 16px 32px;
@@ -145,8 +168,8 @@ a:visited {
 
 .displayBody {
   font-family: 'Proxima Nova';
-  font-size: 22px;  // 22 px ?
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 24px;
   color: $black-60;
 
   @media only screen and (max-width: 600px) {
@@ -200,9 +223,9 @@ a:visited {
 .banner {
   background-color: $blue-30;
   width: 100%;
-  margin-left: -136px;  // 128px + 8px
-  margin-right: -136px; // padding: 32px 128px;
-  padding: 32px 136px;
+  margin-left: -200px;  // 192px + 8px
+  margin-right: -200px; // padding: 32px 192px;
+  padding: 32px 200px;
 }
 
 .bannerHeader {
@@ -216,4 +239,38 @@ a:visited {
   line-height: 32px;
   font-weight: 600;
   margin-top: 24px;
+}
+
+.quoteWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.processImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.processImage {
+  max-width: 80%;
+  max-height: 80%;
+  padding-top: 24px;
 }

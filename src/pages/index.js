@@ -9,6 +9,12 @@ import { Link } from "gatsby";
 export default function Home() {
   return (
     <div className="body">
+      <div className="notificationWrapper">
+        <div className="notification">
+          &#128679;Website currently under construction...&#128679; <br/>
+          Feel free to <a href="mailto:johnsonsong@stanford.edu?subject=Hey%20Johnson!"> say hi </a> in the meantime!
+        </div>
+      </div>
       <div className="container">
         <Header/>
         <div className="display">
