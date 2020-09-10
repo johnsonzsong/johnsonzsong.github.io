@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"
 import "../styles.scss";
 import Header from "../components/Header";
 import Grid from '@material-ui/core/Grid';
@@ -7,6 +8,10 @@ import planitFeature from "../../static/planitFeature.png";
 export default function Planit() {
   return (
     <div className="body">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Planit - Johnson Song</title>
+      </Helmet>
       <div className="container">
         <Header/>
         <div className="display">

@@ -18,11 +18,20 @@ $display-font-size: 36px;
 $display-line-height: 45px;
 $display-font-weight: 700;
 
+$semi-bold-font-size: 24px;
+$semi-bold-line-height: 32px;
+$semi-bold-font-weight: 600;
+
+$medium-font-weight: 500;
+
 /* COLORS */
+$black-20: rgba(0, 0, 0, 0.2);
 $black-60: rgba(0, 0, 0, 0.6);
 $blue-100: rgb(198, 232, 251);
 $blue-30: rgba(198, 232, 251, 0.3);
 $white-95: rgba(255, 255, 255, 0.95);
+
+$box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.25);
 
 /* MARGINS */
 .mt-small { // Used for banner header separation
@@ -34,8 +43,7 @@ $white-95: rgba(255, 255, 255, 0.95);
 .body {
   font-family: 'Poppins', 'Proxima Nova', sans-serif;
   -webkit-font-smoothing: antialiased;
-  // margin: auto;
-  // max-width: 1440px;
+  margin: auto;
   width: 100%;
 }
 
@@ -49,7 +57,7 @@ $white-95: rgba(255, 255, 255, 0.95);
 .notification {
   width: 30%;
   text-align: center;
-  font-weight: 500;
+  font-weight: $medium-font-weight;
   font-size: 12px;
 
   a {
@@ -122,7 +130,7 @@ a:visited {
   font-size: 24px;
   line-height: 32px;
   margin-left: 12px;
-  font-weight: 700;
+  font-weight: $display-font-weight;
 
   @media only screen and (max-width: 600px) {
     font-size: 18px;
@@ -134,7 +142,7 @@ a:visited {
 .resume {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: $medium-font-weight;
 
   @media only screen and (max-width: 600px) {
     font-size: 12px;
@@ -167,7 +175,7 @@ a:visited {
 }
 
 .displayBody {
-  font-family: 'Proxima Nova';
+  font-family: 'Proxima Nova', 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: $black-60;
@@ -213,7 +221,7 @@ a:visited {
 
 .overlayProjectName {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: $medium-font-weight;
 }
 
 .projectSquare:hover .overlay {
@@ -226,19 +234,30 @@ a:visited {
   margin-left: -200px;  // 192px + 8px
   margin-right: -200px; // padding: 32px 192px;
   padding: 32px 200px;
+
+  // mobile padding: 16px 32px
+  @media only screen and (max-width: 600px) {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 16px 40px;
+  }
 }
 
 .bannerHeader {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 600;
+  font-weight: $semi-bold-font-weight;
+}
+
+.section {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .sectionHeader {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-  margin-top: 24px;
+  font-size: $semi-bold-font-size;
+  line-height: $semi-bold-line-height;
+  font-weight: $semi-bold-font-weight;
 }
 
 .quoteWrapper {
@@ -258,7 +277,7 @@ a:visited {
   margin-top: 24px;
   font-size: 20px;
   font-style: italic;
-  font-weight: 500;
+  font-weight: $medium-font-weight;
 }
 
 .processImageWrapper {
@@ -267,10 +286,129 @@ a:visited {
   justify-content: center;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .processImage {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 100%;
   padding-top: 24px;
+}
+
+.processImageSwitchTop {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 24px;
+  position: absolute;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.processImageSwitchBottom {
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 24px;
+  position: absolute;
+}
+
+.userPersonaCard {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 64px;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  margin-top: 12px;
+}
+
+.userInfoRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $blue-30;
+  margin-left: -64px;
+  margin-right: -64px;
+  margin-top: -32px;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.userPhoto {
+  width: 96px;
+}
+
+.userInfoText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  font-weight: $medium-font-weight;
+}
+
+.userInsights {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media only screen and (min-width: 600px) {
+    height: 45vh;
+  }
+}
+
+.centeredTextWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.insightCard {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  text-align: center;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  margin-top: 12px;
+}
+
+.insightNumber {
+  font-size: $semi-bold-font-size;
+  line-height: $semi-bold-line-height;
+  font-weight: $semi-bold-font-weight;
+  color: $black-20;
+}
+
+.figmaEmbed {
+  width: 100%;
 }

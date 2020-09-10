@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"
 import "../styles.scss";
 import Header from "../components/Header";
 import Grid from '@material-ui/core/Grid';
@@ -9,6 +10,10 @@ import { Link } from "gatsby";
 export default function Home() {
   return (
     <div className="body">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Johnson Song - Home</title>
+      </Helmet>
       <div className="notificationWrapper">
         <div className="notification">
           &#128679;Website currently under construction...&#128679; <br/>

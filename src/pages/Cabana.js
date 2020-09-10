@@ -1,13 +1,29 @@
 import React from "react";
+import { Helmet } from "react-helmet"
+import FigmaEmbed from 'react-figma-embed';
 import "../styles.scss";
 import Header from "../components/Header";
 import Grid from '@material-ui/core/Grid';
 import cabanaFeature from "../../static/cabanaFeature.png";
 import cabana1 from "../../static/cabana1.jpg";
+import cabanaUser1 from "../../static/cabanaUser1.svg";
+import cabanaUser2 from "../../static/cabanaUser2.svg";
+import cabanaBrainstorm1 from "../../static/cabanaBrainstorm1.svg";
+import cabanaBrainstorm2 from "../../static/cabanaBrainstorm2.svg";
+import cabanaDaimler1 from "../../static/cabanaDaimler1.jpg";
+import cabanaPrototype1 from "../../static/cabanaPrototype1.jpg";
+import cabanaPrototype2 from "../../static/cabanaPrototype2.jpg";
+import cabanaWireframe1 from "../../static/cabanaWireframe1.svg";
+import cabanaWireframe2 from "../../static/cabanaWireframe2.svg";
+import cabanaMoodboard from "../../static/cabanaMoodboard.svg";
 
 export default function Cabana() {
   return (
     <div className="body">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Cabana - Johnson Song</title>
+      </Helmet>
       <div className="container">
         <Header/>
         <div className="display">
@@ -18,7 +34,10 @@ export default function Cabana() {
             <strong>
               In-vehicle gaming experience for Mercedes-Benz head units.</strong>
           </div>
-          <img className="featureImage" src={cabanaFeature}/>
+          <a href="https://master-dev.d28ds4nnoxwdjw.amplifyapp.com/"   
+            target="_blank">
+            <img className="featureImage" src={cabanaFeature}/>
+          </a>
         </div>
         <div className="banner">
           <Grid container spacing={1}>
@@ -55,46 +74,187 @@ export default function Cabana() {
               </p>
             </Grid>
             <Grid item xs={12} sm={6}>
-              {/* <div className="processImageWrapper">
-                <img className="processImage" src={cabana1}/>
-              </div> */}
               <div className="quoteWrapper">
                 <div className="quote">
-                  "What kind of games would be good in the car?"
+                  "What kinds of games would be good in the car?"
                 </div>
               </div>
             </Grid>
           </Grid>
         </div>
-        <div className="sectionHeader">User Studies</div>
-        <p>
-          My team conducted user studies by observing and interviewing Tesla owners at Supercharger stations. We wanted to gain a better understanding of how owners of autonomous and electric vehicles spent those moments of down-time while waiting for their vehicles to charge. We also took a trip to the nearby Palo Alto Tesla dealership to learn more about the current status of in-car gaming from Tesla employees, as well as to have more conversations with owners.
-        </p>
         <div className="section">
-          <div className="questionsTitle">
-            We asked questions like...
-          </div>
-          <div className="questionsContent">
-            <ul>
-              <li>What do you or your passengers do while you are driving or waiting to charge? </li>
-              <li>What do you do in the car when autopilot is on?</li>
-              <li>When and how often do you play the built-in games in your car?</li>
-            </ul>
-          </div>
+          <div className="sectionHeader">User Studies</div>
+          <p>
+            My team conducted user studies by observing and interviewing Tesla owners at Supercharger stations. We wanted to gain a better understanding of how owners of autonomous and electric vehicles spent those moments of down-time while waiting for their vehicles to charge. We also took a trip to the nearby Palo Alto Tesla dealership to learn more about the current status of in-car gaming from Tesla employees and electric vehicle owners. Below are two  <strong>user personas</strong> to represent the aggregate profile of over <strong>50 total interviews</strong>.
+          </p>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}>
+              <div className="userPersonaCard">
+                <div className="userInfoRow">
+                  <img className="userPhoto" src={cabanaUser1} />
+                  <div className="userInfoText">
+                    <div>Neil</div>
+                    <p>Age: 30s</p>
+                    <p>Location: Hawaii</p>
+                  </div>
+                </div>
+                <div className="userInsights">
+                  <p>Charges 5 times a week in order to reserve the Electric Vehicle parking spaces at his condo</p>
+                  &#9889;
+                  <p>Keeps hands on wheel even in autopilot</p>
+                  &#9889;
+                  <p>Mentioned Tesla Caraoke is too distracting and shouldn’t be allowed</p>
+                  &#9889;
+                  <p>Has nausea when using phone inside car</p>
+                  &#9889;
+                  <p>Never plays games while charging, since he’s running errands</p>
+                </div>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="userPersonaCard">
+                <div className="userInfoRow">
+                  <img className="userPhoto" src={cabanaUser2} />
+                  <div className="userInfoText">
+                    <div>Alex</div>
+                    <p>Age: 50s</p>
+                    <p>Location: Palo Alto</p>
+                  </div>
+                </div>
+                <div className="userInsights">
+                  <p>Has only played in-vehicle games once to try and show his children</p>
+                  &#9889;
+                  <p>His children also have only tried in-vehicle games once or twice, quickly deferring to other forms of entertainment (smart phones, TV, etc.)</p>
+                  &#9889;
+                  <p>Never thinks to play in-car games in free time</p>
+                  &#9889;
+                  <p>Tries to plan it so he’s being productive when charging, such as charging while at work, at a restaurant, or in his house</p>
+                </div>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+        <div className="section">
+          <div className="sectionHeader">Brainstorm and Affinity Mapping</div>
+          <Grid container spacing={1}>
+            <Grid className="processImageWrapper" item xs={12} sm={6}>
+              <img className="processImage" src={cabanaBrainstorm1} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="centeredTextWrapper">
+                <p>My team then went through many ideation stages, first coming up with as many games as possible and then narrowing them down based on our findings and constraints. Some of our initial ideas from the first brainstorming session included board games like LIFE and Monopoly, immersive experiences like Mario Kart and Pokemon Go, and old school games like Pac-Man and Space Invaders.</p>
+              </div>
+            </Grid>
+            <Grid className="processImageWrapper" item xs={12} sm={6}>
+              <img className="processImage" src={cabanaBrainstorm2} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="centeredTextWrapper">
+                <p>In the second round of brainstorming, we focused on aspects of the in-car gaming experience we wanted to emphasis. We knew that the game should capitalize on the unique circumstances and people inside of the car. We grouped these ideas into an affinity map to help structure our goals.</p>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="centeredTextWrapper">
+                <p>With helpful feedback from our Daimler liaisons, we decided to move forward with 3 ideas: trivia, karaoke, and Draw Something. We brought our user research, insights, and brainstorm to our Daimler liaisons in their Sunnyvale office and received valuable feedback to consider moving forward in our prototyping stages.</p>
+              </div>
+            </Grid>
+            <Grid className="processImageWrapper" item xs={12} sm={6}>
+              <img className="processImage" src={cabanaDaimler1} />
+            </Grid>
+          </Grid>
+        </div>
+        <div className="section">
+          <div className="sectionHeader">Rapid Prototyping</div>
+          <Grid container spacing={1}>
+            <Grid className="processImageWrapper" item xs={12} sm={6}>
+              <img className="processImage" src={cabanaPrototype1} />
+            </Grid>
+            <Grid className="processImageWrapper" item xs={12} sm={6}>
+              <img className="processImage" src={cabanaPrototype2} />
+            </Grid>
+            <Grid item xs={12}>
+              <p>We rapidly-prototyped these 3 ideas by creating quick pen-and-paper versions of each game, which meant to test the interactions that friends and family playing together would have. Then, we set up a car-like experience by arranging chairs as if they were the seats in a car, and taping a makeshift head-unit display to the wall in front of them.</p>
+            </Grid>
+          </Grid>
         </div>
 
-        {/* Mostly middle-aged men (Merceds target group) were interviewed 
-They all said they like to drive, not very interested in self-driving/does not trust it
-Not interested in the games, tested it maybe once 
-When played, usually related to their kids who have played a few times
-Most people don’t stay in their cars when charging. They run other errands 
-If they stay in the car, everyone (except for one couple who tried the games for the first time) were on their phones  */}
+        <div className="section">
+          <div className="sectionHeader">Key Insights</div>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={4}>
+              <div className="insightCard">
+                <div className="insightNumber">1</div>
+                People love inside jokes
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <div className="insightCard">
+                <div className="insightNumber">2</div>
+                Humans are competitive!
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <div className="insightCard">
+                <div className="insightNumber">3</div>
+                People want a chance to redeem themselves if they lose
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+
+        <div className="section">
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}>
+              <div className="sectionHeader">Wireframes and Design</div>
+              <p>
+                Among the games that we rapidly-prototyped, we felt that trivia offered the best mixture of positive feedback from testers, alignment with Daimler's vision, and our timeframe. We went ahead and started to create simple wireframes for our medium-fidelity prototype. Some key features that we were sure to keep in mind were designing for a touch-screen, designing for use by multiple people at various distances, and creating an intuitive, uncluttered interface.
+              </p>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="processImageWrapper">
+              <img className="processImageSwitchBottom" src={cabanaWireframe2}/>
+              <img className="processImageSwitchTop" src={cabanaWireframe1}/>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="processImageWrapper">
+              <img className="processImage" src={cabanaMoodboard}/>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="centeredTextWrapper">
+              <p>
+                We used a moodboard to get at the core essence of the ambience (aka ~vibe~) we wanted for the game. We wanted the game, and more importantly, the entire in-vehicle gaming experience to exude <strong>futuristic</strong> yet <strong>familiar</strong>, <strong>sleek</strong>, <strong>luxurious</strong>, and <strong>bold</strong>.
+              </p>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+
+        <div className="section">
+          <div className="sectionHeader">Final Result</div>
+            <p>
+              And now for a brief summary of our development process.
+            </p>
+            <p>
+              Check out our interactive prototype below. But don't stop there -- you can actually play our live and developed game too!
+            </p>
+            <FigmaEmbed className="figmaEmbed" url="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fwgkf0Bb5YrHXKGYLv3OfVI%2FCS210-Cabana-Trivia-Master%3Fnode-id%3D252%253A3%26scaling%3Dscale-down&chrome=DOCUMENTATION"/>
 
 
-        <p>
-          There were some of our insights from over 50 total interviews.
-        </p>
+          {/* Link to try it out */}
+        </div>
+
       </div>
     </div>
   );
 }
+
+// findings
+// Tesla games have very low usage
+// When people are alone, they use their phone
+
+//goals
+// Game that engages groups in the car
+// Unique for the in-car experience
+
