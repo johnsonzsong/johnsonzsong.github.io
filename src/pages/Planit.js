@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet"
 import "../styles.scss";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Grid from '@material-ui/core/Grid';
 import planitFeature from "../../static/planitFeature.png";
 
@@ -93,6 +94,7 @@ If they stay in the car, everyone (except for one couple who tried the games for
         {/* <p>
           There were some of our insights from over 50 total interviews.
         </p> */}
+        <Footer/>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import FigmaEmbed from 'react-figma-embed';
 import "../styles.scss";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Grid from '@material-ui/core/Grid';
 import cabanaFeature from "../../static/cabanaFeature.png";
 import cabana1 from "../../static/cabana1.jpg";
@@ -61,7 +62,7 @@ export default function Cabana() {
             </Grid>
             <Grid item xs={12} sm={4}>
               <div className="bannerHeader">Tools</div>
-              <p>Figma, React, Firebase</p>
+              <p>React, Figma, Firebase</p>
             </Grid>
           </Grid>
         </div>
@@ -232,29 +233,30 @@ export default function Cabana() {
         </div>
 
         <div className="section">
-          <div className="sectionHeader">Final Result</div>
-            <p>
-              And now for a brief summary of our development process.
-            </p>
-            <p>
-              Check out our interactive prototype below. But don't stop there -- you can actually play our live and developed game too!
-            </p>
-            <FigmaEmbed className="figmaEmbed" url="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fwgkf0Bb5YrHXKGYLv3OfVI%2FCS210-Cabana-Trivia-Master%3Fnode-id%3D252%253A3%26scaling%3Dscale-down&chrome=DOCUMENTATION"/>
-
-
-          {/* Link to try it out */}
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}>
+              <div className="sectionHeader">Final Result</div>
+              <p>
+                Before diving into development, we created a fully-interactive high-fidelity prototype of the trivia experience. We combined our findings from our early rapid prototyping stages to infuse the app with a vision for a delightful, collaborative, and competitive in-vehicle gaming experience. For development, we used React on the frontend UI paired with Firebase to store player data like usernames and high scores. Check out our <strong> interactive prototype below</strong>. But don't stop there -- you can actually play our live game by clicking on the <strong> play button! </strong>
+              </p>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="centeredTextWrapper">
+                <a href="https://master-dev.d28ds4nnoxwdjw.amplifyapp.com/"   
+            target="_blank" className="playCabanaButton">
+                  PLAY
+                </a>
+              </div>
+            </Grid>
+          </Grid>
         </div>
 
+        <div className="section">
+          <FigmaEmbed className="figmaEmbed" url="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fwgkf0Bb5YrHXKGYLv3OfVI%2FCS210-Cabana-Trivia-Master%3Fnode-id%3D252%253A3%26scaling%3Dscale-down&chrome=DOCUMENTATION"/>
+        </div>
+        
+        <Footer/>
       </div>
     </div>
   );
 }
-
-// findings
-// Tesla games have very low usage
-// When people are alone, they use their phone
-
-//goals
-// Game that engages groups in the car
-// Unique for the in-car experience
-

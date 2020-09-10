@@ -100,6 +100,7 @@ a:visited {
   }
 }
 
+// HEADER
 .header {
   display: flex;
   flex-direction: row;
@@ -148,6 +149,20 @@ a:visited {
     font-size: 12px;
     line-height: 18px;
   }
+}
+
+// FOOTER
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.footerIcon {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .display {
@@ -411,4 +426,15 @@ a:visited {
 
 .figmaEmbed {
   width: 100%;
+}
+
+.playCabanaButton {
+  font-family: "Poppins", "Proxima Nova", sans-serif;
+  font-size: $semi-bold-font-size;
+  font-weight: $semi-bold-font-weight;
+  padding: 15px 80px;
+  background: #FFFFFF;
+  border: 5px solid #4DFAFA;
+  border-radius: 20px;
+  color: #1F1F55;
 }
