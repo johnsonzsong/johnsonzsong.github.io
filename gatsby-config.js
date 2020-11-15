@@ -9,17 +9,19 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Poppins`,
-            variants: [`400`, `500`, `700`]
-          },
-          {
-            family: `Proxima Nova`,
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Poppins`,
+              variants: [`400`, `500`, `700`]
+            },
+            {
+              family: `Proxima Nova`,
+            },
+          ],
+        },
       },
     },
   ],

@@ -42,7 +42,7 @@ export default function Cabana() {
         </div>
         <div className="banner">
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={4}>
+            <Grid className="bannerSection" item xs={12} sm={4}>
             <div className="bannerHeader">
               Context
             </div>
@@ -50,7 +50,7 @@ export default function Cabana() {
               We partnered with Daimler to create a multiplayer touchscreen game for the Mercedes-Benz Head Unit in the autonomous driving era.
             </p>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid className="bannerSection" item xs={12} sm={4}>
               <div className="bannerHeader">
                 Role
               </div>
@@ -60,7 +60,7 @@ export default function Cabana() {
               </div>
               <p> January - June 2020 </p>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid className="bannerSection" item xs={12} sm={4}>
               <div className="bannerHeader">Tools</div>
               <p>React, Figma, Firebase</p>
             </Grid>

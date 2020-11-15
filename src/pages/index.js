@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import Grid from '@material-ui/core/Grid';
 import planitFeature from "../../static/planitFeature.png";
 import cabanaFeature from "../../static/cabanaFeature.png";
+import stealthFeature from "../../static/stealthFeature.png";
+import cardsFeature from "../../static/cardsFeature.svg";
 import { Link } from "gatsby";
 
 export default function Home() {
@@ -17,7 +19,7 @@ export default function Home() {
       </Helmet>
       <div className="notificationWrapper">
         <div className="notification">
-          &#128679;Website currently under construction...&#128679; <br/>
+          &#128679;Website currently under hand-construction...&#128679; <br/>
           Feel free to <a href="mailto:johnsonsong@stanford.edu?subject=Hey%20Johnson!"> say hi </a> in the meantime!
         </div>
       </div>
@@ -26,11 +28,24 @@ export default function Home() {
         <div className="display">
           <div className="displayTitle"> Renaissance Technologist </div>
           <div className="displayBody">
-            I recently completed my undergraduate studies at Stanford with a major in computer science and minor in economics. Currently, I am a master’s student at Stanford, studying human-computer interation. Previously, I was a software engineering intern on Facebook Gaming and Messenger.
+            I am a master’s student at Stanford, studying human-computer interation. I'm also the <strong>engineering lead at a stealth startup</strong> in the interactive media space.
+            <br/><br/>
+            Previously, I was a <strong>software engineering intern on Facebook Gaming and Messenger</strong>.
           </div>
         </div>
         <div className="projects">
           <Grid container spacing={1}>
+          <Grid item xs={12} sm={6}>
+              <Link to="/Stealth">
+                <div className="projectSquare">
+                  <img className="featureImage" src={stealthFeature} />
+                  <div className="overlay">
+                    <div className="overlayProjectName"> Stealth Startup</div>
+                    <p> Engineering Lead, React, TypeScript, and Firebase </p>
+                  </div>
+                </div>
+              </Link>
+            </Grid>
             <Grid item xs={12} sm={6}>
               <Link to="/Cabana">
                 <div className="projectSquare">
@@ -38,6 +53,17 @@ export default function Home() {
                   <div className="overlay">
                     <div className="overlayProjectName"> Cabana Trivia </div>
                     <p> User Research, UX/UI, React, and Firebase</p>
+                  </div>
+                </div>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Link to="/Cards">
+                <div className="projectSquare">
+                  <img className="featureImage" src={cardsFeature} />
+                  <div className="overlay">
+                    <div className="overlayProjectName"> Design Cards for Educators </div>
+                    <p> User Research and Product Design</p>
                   </div>
                 </div>
               </Link>

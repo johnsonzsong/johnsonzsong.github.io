@@ -1,5 +1,5 @@
 var plugins = [{
-      plugin: require('/Users/johnsonsong/Desktop/Website/johnsonzsong.github.io/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
+      plugin: require('/Users/johnsonsong/Desktop/johnsonzsong.github.io/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":[{"family":"Poppins","variants":["400","500","700"]},{"family":"Proxima Nova"}]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

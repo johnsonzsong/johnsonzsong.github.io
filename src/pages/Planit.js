@@ -27,7 +27,7 @@ export default function Planit() {
         </div>
         <div className="banner">
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={4}>
+            <Grid className="bannerSection" item xs={12} sm={4}>
             <div className="bannerHeader">
               Context
             </div>
@@ -35,7 +35,7 @@ export default function Planit() {
             We created an Android app to make travel planning fun while instilling confidence in trustworthy plans.
             </p>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid className="bannerSection" item xs={12} sm={4}>
               <div className="bannerHeader">
                 Role
               </div>
@@ -45,7 +45,7 @@ export default function Planit() {
               </div>
               <p> September - December 2018 </p>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid className="bannerSection" item xs={12} sm={4}>
               <div className="bannerHeader">Tools</div>
               <p>Android Studio, Figma, HTML/CSS</p>
             </Grid>
