@@ -1,5 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet"
+import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
 import "../styles.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,21 +9,51 @@ import cabanaFeature from "../../static/cabanaFeature.png";
 import stealthFeature from "../../static/stealthFeature.png";
 import cardsFeature from "../../static/cardsFeature.svg";
 import { Link } from "gatsby";
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './theme';
+import { GlobalStyles } from './global';
 
 export default function Home() {
+  const [theme, setTheme] = useState(lightTheme);
+  const [themeString, setThemeString] = useState("light");
+
+  const toggleTheme = () => {
+    if (theme === lightTheme) {
+      setTheme(darkTheme);
+      setThemeString("dark")
+    }
+    else {
+      setTheme(lightTheme);
+      setThemeString("light")
+    }
+  };
+
   return (
     <div className="body">
+    <ThemeProvider theme={theme}>
+    <GlobalStyles />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song - Home</title>
       </Helmet>
-      <div className="notificationWrapper">
-        <div className="notification">
-          &#128679;Website currently under hand-construction...&#128679; <br/>
-          Feel free to <a href="mailto:johnsonsong@stanford.edu?subject=Hey%20Johnson!"> say hi </a> in the meantime!
-        </div>
-      </div>
       <div className="container">
+        <div className="notificationWrapper">
+          <div className="notification">
+            &#128679;&#128679;
+            <br/>
+            This website currently under hand-construction...
+            <br/>
+            I'm continually adding project highlights and fun features
+            <br/>
+              like this
+              <button className="toggleButton" onClick={toggleTheme}>
+                <p>{themeString} theme</p>
+              </button>
+              toggle
+            <br/>
+            Feel free to <a href="mailto:johnsonsong@stanford.edu?subject=Hey%20Johnson!"> say hi </a> in the meantime!
+          </div>
+        </div>
         <Header/>
         <div className="display">
           <div className="displayTitle"> Renaissance Technologist </div>
@@ -83,6 +113,7 @@ export default function Home() {
         </div>
         <Footer/>
       </div>
+      </ThemeProvider>
     </div>
   );
 }
