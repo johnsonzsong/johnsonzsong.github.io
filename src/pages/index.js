@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import Header from "../components/Header";
@@ -10,27 +10,18 @@ import stealthFeature from "../../static/stealthFeature.png";
 import cardsFeature from "../../static/cardsFeature.svg";
 import { Link } from "gatsby";
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './theme';
-import { GlobalStyles } from './global';
+import { lightTheme, darkTheme } from '../theme';
+import { GlobalStyles } from '../global';
+import {useDarkMode} from "../useDarkMode";
 
-export default function Home() {
-  const [theme, setTheme] = useState(lightTheme);
-  const [themeString, setThemeString] = useState("light");
-
-  const toggleTheme = () => {
-    if (theme === lightTheme) {
-      setTheme(darkTheme);
-      setThemeString("dark")
-    }
-    else {
-      setTheme(lightTheme);
-      setThemeString("light")
-    }
-  };
+const Home = () => {
+  const [theme, setTheme] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const themeString = theme === 'light' ? "light" : "dark";
 
   return (
     <div className="body">
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeMode}>
     <GlobalStyles />
       <Helmet>
         <meta charSet="utf-8" />
@@ -46,7 +37,7 @@ export default function Home() {
             I'm continually adding project highlights and fun features
             <br/>
               like this
-              <button className="toggleButton" onClick={toggleTheme}>
+              <button className="toggleButton" onClick={setTheme}>
                 <p>{themeString} theme</p>
               </button>
               toggle
@@ -54,7 +45,7 @@ export default function Home() {
             Feel free to <a href="mailto:johnsonsong@stanford.edu?subject=Hey%20Johnson!"> say hi </a> in the meantime!
           </div>
         </div>
-        <Header/>
+        <Header theme={themeMode}/>
         <div className="display">
           <div className="displayTitle"> Renaissance Technologist </div>
           <div className="displayBody">
@@ -66,7 +57,7 @@ export default function Home() {
         <div className="projects">
           <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
-              <Link to="/Stealth">
+              <Link to="/Stealth" state={{theme: themeMode}}>
                 <div className="projectSquare">
                   <img className="featureImage" src={stealthFeature} />
                   <div className="overlay">
@@ -77,7 +68,7 @@ export default function Home() {
               </Link>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Link to="/Cabana">
+              <Link to="/Cabana" state={{theme: themeMode}}>
                 <div className="projectSquare">
                   <img className="featureImage" src={cabanaFeature} />
                   <div className="overlay">
@@ -88,7 +79,7 @@ export default function Home() {
               </Link>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Link to="/Cards">
+              <Link to="/Cards" state={{theme: themeMode}}>
                 <div className="projectSquare">
                   <img className="featureImage" src={cardsFeature} />
                   <div className="overlay">
@@ -99,7 +90,7 @@ export default function Home() {
               </Link>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Link to="/Planit">
+              <Link to="/Planit" state={{theme: themeMode}}>
                 <div className="projectSquare">
                   <img className="featureImage" src={planitFeature} />
                   <div className="overlay">
@@ -117,3 +108,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

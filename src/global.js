@@ -4,7 +4,6 @@ export const GlobalStyles = createGlobalStyle`
   *,
   *::after,
   *::before {
-    box-sizing: border-box;
   }
 
   body {
@@ -33,19 +32,19 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
-  .toggleButton {
-    background: ${({ theme }) => theme.projectSquareBackground};
-  }
-
   .displayBody {
     color: ${({ theme }) => theme.text};
   }
 
-  .projectSquare {
+  .projectSquare, .toggleButton, .banner {
     background-color: ${({ theme }) => theme.projectSquareBackground};
   }
 
-  .overlay {
+  .insightCard, .userPersonaCard {
+    background-color: ${({ theme }) => theme.insightCardBackground};
+  }
+
+  .overlay, .userInfoRow {
     background-color: ${({ theme }) => theme.overlayBackground};
   }
 `;

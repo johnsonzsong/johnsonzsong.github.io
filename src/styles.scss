@@ -253,7 +253,6 @@ a:visited {
 }
 
 .banner {
-  background-color: $blue-30;
   width: 100%;
   margin-left: -200px;  // 192px + 8px
   margin-right: -200px; // padding: 32px 192px;
@@ -376,7 +375,6 @@ a:visited {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: $blue-30;
   margin-left: -64px;
   margin-right: -64px;
   margin-top: -32px;
@@ -449,8 +447,8 @@ a:visited {
   font-size: $semi-bold-font-size;
   font-weight: $semi-bold-font-weight;
   padding: 15px 80px;
-  background: #FFFFFF;
+  // background: #FFFFFF;
   border: 5px solid #4DFAFA;
   border-radius: 20px;
-  color: #1F1F55;
+  // color: #1F1F55;
 }

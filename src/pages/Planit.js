@@ -5,16 +5,25 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Grid from '@material-ui/core/Grid';
 import planitFeature from "../../static/planitFeature.png";
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../theme';
+import { GlobalStyles } from '../global';
+import {useDarkMode} from "../useDarkMode";
 
-export default function Planit() {
+const Planit = () => {
+  const [theme, setTheme] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   return (
     <div className="body">
+      <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Planit - Johnson Song</title>
       </Helmet>
       <div className="container">
-        <Header/>
+        <Header theme={themeMode}/>
         <div className="display">
           <div className="displayTitle">
             Planit
@@ -96,6 +105,9 @@ If they stay in the car, everyone (except for one couple who tried the games for
         </p> */}
         <Footer/>
       </div>
+      </ThemeProvider>
     </div>
   );
 }
+
+export default Planit;

@@ -17,16 +17,25 @@ import cabanaPrototype2 from "../../static/cabanaPrototype2.jpg";
 import cabanaWireframe1 from "../../static/cabanaWireframe1.svg";
 import cabanaWireframe2 from "../../static/cabanaWireframe2.svg";
 import cabanaMoodboard from "../../static/cabanaMoodboard.svg";
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../theme';
+import { GlobalStyles } from '../global';
+import {useDarkMode} from "../useDarkMode";
 
-export default function Cabana() {
+const Cabana = () => {
+  const [theme, setTheme] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   return (
     <div className="body">
+      <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Cabana - Johnson Song</title>
       </Helmet>
       <div className="container">
-        <Header/>
+        <Header theme={themeMode}/>
         <div className="display">
           <div className="displayTitle">
             Cabana Trivia
@@ -257,6 +266,9 @@ export default function Cabana() {
         
         <Footer/>
       </div>
+      </ThemeProvider>
     </div>
   );
 }
+
+export default Cabana;

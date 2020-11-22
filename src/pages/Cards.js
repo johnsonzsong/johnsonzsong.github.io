@@ -7,16 +7,25 @@ import Grid from '@material-ui/core/Grid';
 import cardsFeature2 from "../../static/cardsFeature2.jpg";
 import cardsLink from "../../static/Design Cards for Educators.pdf";
 import allCards from "../../static/allCards.jpg";
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../theme';
+import { GlobalStyles } from '../global';
+import {useDarkMode} from "../useDarkMode";
 
-export default function Cabana() {
+const Cards = () => {
+  const [theme, setTheme] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   return (
     <div className="body">
+      <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Design Cards for Educators - Johnson Song</title>
       </Helmet>
       <div className="container">
-        <Header/>
+        <Header theme={themeMode}/>
         <div className="display">
           <div className="displayTitle">
             Design Cards for Educators
@@ -101,6 +110,9 @@ export default function Cabana() {
         </div>
         <Footer/>
       </div>
+      </ThemeProvider>
     </div>
   );
 }
+
+export default Cards;

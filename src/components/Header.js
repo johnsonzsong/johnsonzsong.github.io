@@ -3,10 +3,14 @@ import "../styles.scss";
 import { Link } from "gatsby";
 import avatar from "../../static/avatar.png";
 import resume from "../../static/Johnson_Song_Resume.pdf";
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../global';
 
-export default function Header() {
+const Header = ({theme}) => {
   return (
     <div className="header">
+      <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Link className="logo" to="/">
         <div className="avatarWrapper">
           <img src={avatar}/>
@@ -16,6 +20,9 @@ export default function Header() {
       <a className="resume" href={resume} target="_blank">
         Resume
       </a>
+      </ThemeProvider>
     </div>
   );
 }
+
+export default Header;
