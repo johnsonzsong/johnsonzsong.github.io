@@ -61,7 +61,9 @@ const Planit = () => {
             <Grid item xs={12} sm={6}>
               <div className="sectionHeader">Coming Soon...</div>
               <p>
-              It wouldn't be very "stealth" of me to disclose all the research surrounding the fascinating problems our team has been working on over the past few months, would it? &#128521; Not to worry, we are making progress every single day and will be launching a beta version of our app in 2021...stay tuned!
+              <strong>Stealth</strong> -  intended not to attract attention.
+              <br></br><br></br>
+              It wouldn't be very "stealth" of me to disclose the exact details of this project &#128521;. However, feel free to reach out and I'd be happy to share what I can. It's an exciting trek into the interactive media space, and we're expected to launch in 2021...stay tuned!
               </p>
             </Grid>
           </Grid>

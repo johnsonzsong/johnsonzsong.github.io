@@ -34,24 +34,22 @@ const Home = () => {
             <br/>
             This website currently under hand-construction...
             <br/>
-            I'm continually adding project highlights and fun features
+            I'm continually adding project highlights and sandbox features
             <br/>
               like this
               <button className="toggleButton" onClick={setTheme}>
                 <p>{themeString} theme</p>
               </button>
               toggle
-            <br/>
-            Feel free to <a href="mailto:johnsonsong@stanford.edu?subject=Hey%20Johnson!"> say hi </a> in the meantime!
           </div>
         </div>
         <Header theme={themeMode}/>
         <div className="display">
-          <div className="displayTitle"> Renaissance Technologist </div>
+          <div className="displayTitle"> Hi, I'm Johnson </div>
           <div className="displayBody">
             I am a master’s student at Stanford, studying human-computer interation. I'm also the <strong>engineering lead at a stealth startup</strong> in the interactive media space.
             <br/><br/>
-            Previously, I was a <strong>software engineering intern on Facebook Gaming and Messenger</strong>.
+            Previously, I was a software engineering intern on <strong>Facebook Gaming</strong> and <strong>Messenger</strong>.
           </div>
         </div>
         <div className="projects">
