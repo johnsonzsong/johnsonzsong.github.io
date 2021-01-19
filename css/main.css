@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body ::-moz-selection {
+  background-color: #F3A712;
+  color: #011627;
+}
+
+body ::selection {
+  background-color: #F3A712;
+  color: #011627;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: translate(-25px, -25px);
+          transform: translate(-25px, -25px);
+}
+
+.hoverLink {
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translate(-40px, -40px);
+          transform: translate(-40px, -40px);
+  background-color: #F3A712;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.abril {
+  font-family: 'Abril Fatface', cursive;
+}
+
+.highlight {
+  display: inline-block;
+  background-color: #F3A712;
+  color: #011627;
+}
+
+.page-container {
+  background: #c6dad8;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c6dad8), to(#182727));
+  background: linear-gradient(0deg, #c6dad8 0%, #182727 100%);
+  overflow-x: hidden;
+}
+
+.nav-container {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-container a {
+  color: white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+}
+
+header .logo {
+  font-size: 3em;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul a {
+  display: block;
+  margin: 0 0 0 3em;
+  text-transform: uppercase;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding-top: 10em;
+  padding-bottom: 4em;
+  margin: 0 2em;
+  position: relative;
+  height: 100%;
+}
+
+.hero .content {
+  margin-bottom: .5em;
+  z-index: 2;
+  padding-top: 6em;
+}
+
+.hero .content.about {
+  padding-top: 10em;
+}
+
+.display {
+  font-size: 3em;
+  margin: 0;
+}
+
+.about-photo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-photo {
+  position: absolute;
+  top: -2em;
+  width: 80%;
+  z-index: -1;
+  border-radius: 1em;
+}
+
+.meet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0;
+}
+
+.meet p {
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+.clouds-container {
+  position: relative;
+}
+
+.cloud-one {
+  position: absolute;
+  left: -8em;
+}
+
+.cloud-two {
+  position: absolute;
+  top: 5em;
+  right: -10em;
+  width: 150%;
+}
+
+.cta {
+  color: #011627;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 1em 0;
+  z-index: 2;
+}
+
+.footer-text {
+  color: #011627;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.scroll {
+  width: 30px;
+  margin-top: 2em;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #F3A712;
+  letter-spacing: .2em;
+  font-size: 0.85em;
+}
+
+.featured-subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #37393A;
+  letter-spacing: .2em;
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.featured-title {
+  color: #011627;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: bold;
+  font-size: 2em;
+  margin: -.1em 0 1em 0;
+  display: block;
+}
+
+.featured-desc {
+  color: #37393A;
+  margin-top: -.2em;
+  margin-bottom: 1em;
+  font-size: .9em;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+.portfolio {
+  padding-top: 7em;
+}
+
+.portfolio-container {
+  background: linear-gradient(96.95deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.08) 100%);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  border-radius: 30px;
+  margin: 2em 0;
+  padding: 2em;
+  position: relative;
+}
+
+.portfolio-container a img {
+  max-height: 100%;
+}
+
+.portfolio-image-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 2em 4em;
+  }
+  .hero .content {
+    margin-bottom: 4em;
+  }
+  .about-photo {
+    width: 40%;
+    top: .5em;
+  }
+  .footer {
+    bottom: 3em;
+    margin: 0;
+  }
+  .meet {
+    padding: 0 8em;
+  }
+  .cloud-one {
+    top: -5em;
+    left: -25em;
+  }
+  .cloud-two {
+    right: -40em;
+  }
+  .cloud-two.about {
+    top: -30em;
+    left: 50em;
+  }
+  .featured, .portfolio {
+    text-align: left;
+  }
+  .featured, .portfolio-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
+  }
+  .portfolio-left {
+    display: -ms-grid;
+    display: grid;
+  }
+  .portfolio {
+    padding-top: 0;
+  }
+  .portfolio-container {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hide-on-mobile {
+    display: unset;
+  }
+  .hide-on-desktop {
+    display: none;
+  }
+  .hero {
+    padding: 8em 0;
+  }
+  .hero .content {
+    padding: 0 8em;
+  }
+  .hero .content h1 {
+    font-size: 5em;
+    line-height: 1.2em;
+  }
+  .hero .content.about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 0em;
+    text-align: left;
+  }
+  .about-text-container {
+    width: 60%;
+  }
+  .meet.about {
+    padding: 0;
+  }
+  header {
+    padding: 2em 4em;
+  }
+  .about-photo {
+    position: unset;
+    width: 80%;
+  }
+  .footer {
+    bottom: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-text.left, .footer-text.right {
+    white-space: nowrap;
+  }
+  .portfolio {
+    padding: 0 16em;
+  }
+  .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 1em;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1em;
+  }
+  .socials a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 1em;
+  }
+  section {
+    padding: 4em;
+  }
+  .portfolio-left {
+    margin-right: 2em;
+  }
+  .portfolio img {
+    float: right;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  header {
+    padding: 2em 10em;
+  }
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+  .hero {
+    margin-left: 10em;
+    margin-right: 10em;
+    padding-top: 12em;
+    padding-bottom: 4em;
+  }
+  .content {
+    padding: 8em 8em 0em 8em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
