@@ -85,6 +85,7 @@ header {
   padding: 2em;
 
   .logo {
+    color: #F3A712;
     font-size: 3em;
   }
 
@@ -257,13 +258,14 @@ section {
 }
 
 .portfolio-image-container {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   background-color:rgba(255, 255, 255, 0.2);
   border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 }
 
 
