@@ -21,6 +21,12 @@ module.exports = {
             {
               family: `Proxima Nova`,
             },
+            {
+              family: `Montserrat`,
+            },
+            {
+              family: `PT Serif`,
+            }
           ],
         },
       },
