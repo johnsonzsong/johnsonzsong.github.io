@@ -1,16 +1,57 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
-import Grid from '@material-ui/core/Grid';
-import { Link } from "gatsby";
+import { withPrefix, Link } from "gatsby";
 
 const Home = () => {
   return (
-    <div className="body">
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Home</title>
+        <script src={withPrefix('script.js')} type="text/javascript"/>
       </Helmet>
+      {/* CURSOR */}
+      <div className="cursor"></div>
+
+      {/* NAV */}
+      <div id="nav-container">
+        <div className="nav-bar"></div>
+        <div className="nav-list">
+          <p id="nav-intro" className="nav-active" onClick={() => {
+            var elmnt = document.getElementById("intro");
+            elmnt.scrollIntoView();
+          }}>
+            About.
+          </p>
+          <p id="nav-professional" onClick={() => {
+            var elmnt = document.getElementById("professional");
+            elmnt.scrollIntoView();
+          }}>
+            Professional Experience.
+          </p>
+          <p id="nav-education" onClick={() => {
+            var elmnt = document.getElementById("education");
+            elmnt.scrollIntoView();
+          }}>
+            Education.
+          </p>
+          <p id="nav-favorites" onClick={() => {
+            var elmnt = document.getElementById("favorites");
+            elmnt.scrollIntoView();
+          }}>
+            Favorites.
+          </p>
+          <p id="nav-shoutouts" onClick={() => {
+            var elmnt = document.getElementById("shoutouts");
+            elmnt.scrollIntoView();
+          }}>
+            Shoutouts.
+          </p>
+        </div>
+      </div>
+
+      {/* CONTENT */}
       <div className="container">
         <div className="col-60">
           <section id="intro">
@@ -26,23 +67,25 @@ const Home = () => {
             <h2> Professional Experiences. </h2>
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Product Designer</b></p>
-                <p className="no-margin">CartaLab (Stanford University)</p>
-                <p className="no-margin"><i>January 2021 - now</i></p>
+                <p className="m-0"><b>Product Designer</b></p>
+                <p className="m-0">Carta (Stanford University)</p>
+                <p className="m-0"><i>January 2021 - now</i></p>
                 <p>
-                  I joined the CartaLab team at Stanford to design a delightful way to search, filter, and sort through the thousands of courses offered at Stanford. I thoroughly enjoyed working with fellow designers in a beautiful design system and relevant application.
+                  I joined the Carta team at Stanford to design a delightful way to search, filter, and sort through the thousands of courses offered at Stanford. I thoroughly enjoyed working with fellow designers in a beautiful design system and relevant application.
                 </p>
               </div>
               <div className="col-50 project-button-container">
-                <button className="project-button">More about CartaLab</button>
+                <Link to="carta">
+                  <button className="project-button">More about Carta</button>
+                </Link>
               </div>
             </div>
 
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Engineering Lead</b></p>
-                <p className="no-margin">Stealth Startup</p>
-                <p className="no-margin"><i>September 2020 - now</i></p>
+                <p className="m-0"><b>Engineering Lead</b></p>
+                <p className="m-0">Stealth Startup</p>
+                <p className="m-0"><i>September 2020 - now</i></p>
                 <p>
                   I led the engineering team at a stealth startup in the interactive media space. I developed dozens of MVP features for web and mobile, scoped tasks, designed some flows, and helped form the early company product vision.
                 </p>
@@ -51,9 +94,9 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Software Engineering Intern</b></p>
-                <p className="no-margin">Facebook (Seattle)</p>
-                <p className="no-margin"><i>June - September 2020</i></p>
+                <p className="m-0"><b>Software Engineering Intern</b></p>
+                <p className="m-0">Facebook (Seattle)</p>
+                <p className="m-0"><i>June - September 2020</i></p>
                 <p>
                 I developed a brand new MVP experience for Facebook Gaming on web. I worked closely with designers and engineers across teams.
                 </p>
@@ -62,23 +105,25 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Designer and Developer</b></p>
-                <p className="no-margin">Daimler (Sunnyvale)</p>
-                <p className="no-margin"><i>January - June 2020</i></p>
+                <p className="m-0"><b>Designer and Developer</b></p>
+                <p className="m-0">Daimler (Sunnyvale)</p>
+                <p className="m-0"><i>January - June 2020</i></p>
                 <p>
                   I led research, prototyping, and user testing for an in-vehicle gaming experience for the autonomous driving era. I also helped program the MVP.
                 </p>
               </div>
               <div className="col-50 project-button-container">
-                <button className="project-button">More about Daimler</button>
+                <Link to="daimler">
+                  <button className="project-button">More about Daimler</button>
+                </Link>
               </div>
             </div>
 
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Software Engineering Intern</b></p>
-                <p className="no-margin">Facebook (Menlo Park)</p>
-                <p className="no-margin"><i>June - September 2019</i></p>
+                <p className="m-0"><b>Software Engineering Intern</b></p>
+                <p className="m-0">Facebook (Menlo Park)</p>
+                <p className="m-0"><i>June - September 2019</i></p>
                 <p>
                   I developed new iOS features and ran user tests on Messenger, collaborating closely with designers, engineers, and data scientists. I also sought mentorship from incredible designers on the team.
                 </p>
@@ -87,16 +132,16 @@ const Home = () => {
             
           </section>
 
-          <section>
+          <section id="education">
             <h2> Education. </h2>
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Stanford University</b></p>
-                <p className="no-margin">M.S. Computer Science</p>
-                <p className="no-margin">
+                <p className="m-0"><b>Stanford University</b></p>
+                <p className="m-0">M.S. Computer Science</p>
+                <p className="m-0">
                   Human Computer Interaction Concentration
                 </p>
-                <p className="no-margin"><i>GPA: 4.0/4.0</i></p>
+                <p className="m-0"><i>GPA: 4.0/4.0</i></p>
 
                 <p>
                   Select Coursework: Product Management, Entrepreneurial Principles, Data Visualization, Social Computing, Web Applications
@@ -106,10 +151,10 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Stanford University</b></p>
-                <p className="no-margin">B.S. Computer Science</p>
-                <p className="no-margin">Minor in Economics</p>
-                <p className="no-margin"><i>GPA: 3.9/4.0</i></p>
+                <p className="m-0"><b>Stanford University</b></p>
+                <p className="m-0">B.S. Computer Science</p>
+                <p className="m-0">Minor in Economics</p>
+                <p className="m-0"><i>GPA: 3.9/4.0</i></p>
                 <p>
                   Select Coursework: Computer Systems, Artificial Intelligence, Human-Computer Interaction Design Studio, Product Design and Manufacturing, Design Sketching
                 </p>
@@ -117,32 +162,49 @@ const Home = () => {
             </div>
           </section>
 
-          <section>
+          <section id="favorites">
             <h2>Favorites.</h2>
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Hikes</b></p>
-                <p className="no-margin">
+                <p className="m-0"><b>Hikes</b></p>
+                <p className="m-0">
                   Upper Yosemite Falls - Yosemite National Park
                 </p>
-                <p className="no-margin">Samaria Gorge - Crete</p>
-                <p className="no-margin">
+                <p className="m-0">Samaria Gorge - Crete</p>
+                <p className="m-0">
                   Boy Scout Trail - Joshua Tree National Park
                 </p>
               </div>
             </div>
             <div className="project">
               <div className="col-50">
-                <p className="no-margin"><b>Books</b></p>
-                <p className="no-margin">
+                <p className="m-0"><b>Books</b></p>
+                <p className="m-0">
                   Le Petit Prince - Antoine de Saint-Exupery
                 </p>
-                <p className="no-margin">
+                <p className="m-0">
                   The Prophets - Robert Jones, Jr.
                 </p>
-                <p className="no-margin">
+                <p className="m-0">
                   This is Water - David Foster Wallace
                 </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="shoutouts">
+            <h2>Shoutouts.</h2>
+            <div className="project">
+              <div className="col-50">
+                <p>
+                  I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on my experiences and happiness.
+                </p>
+                <p className="m-0">Jordan Dunn</p>
+                <p className="m-0">Riza Selcuk Saydam</p>
+                <p className="m-0">Noopur Chhabra</p>
+                <p className="m-0">Seth Kasky</p>
+                <p className="m-0">Kristina Inouye</p>
+                <p className="m-0">Jennifer Song</p>
               </div>
             </div>
           </section>
