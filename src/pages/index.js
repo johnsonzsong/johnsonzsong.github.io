@@ -9,11 +9,9 @@ const Home = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Home</title>
-        <script src={withPrefix('script.js')} type="text/javascript"/>
+        <script src={withPrefix('homeNavScript.js')} type="text/javascript"/>
+        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
-      {/* CURSOR */}
-      <div className="cursor"></div>
-
       {/* NAV */}
       <div id="nav-container">
         <div className="nav-bar"></div>

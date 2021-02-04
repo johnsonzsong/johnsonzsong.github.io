@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
-import { Link } from "gatsby";
+import { withPrefix, Link } from "gatsby";
 
 const Carta = () => {
   return (
@@ -9,6 +9,7 @@ const Carta = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Carta</title>
+        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
       <div className="container">
         <div className="col-60">

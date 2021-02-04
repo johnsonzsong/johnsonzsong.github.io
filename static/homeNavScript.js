@@ -22,7 +22,7 @@ window.addEventListener('scroll', function() {
   }
 
   // Professional section is majority of screen
-  if (professionalPosition.top <= window.innerHeight/3 && educationPosition.bottom >= window.innerHeight/2) {
+  if (professionalPosition.top <= window.innerHeight/5 && educationPosition.bottom >= window.innerHeight/2) {
     navProfessional.classList.add("nav-active");
     navEducation.classList.remove("nav-active");
     navIntro.classList.remove("nav-active");
@@ -42,15 +42,9 @@ window.addEventListener('scroll', function() {
     navShoutouts.classList.remove("nav-active");
   }
 
-  // Shoutouts section is majority of screen
-  if (shoutoutsPosition.top <= window.innerHeight/2) {
+  // At bottom of page, always highlight shoutouts
+  if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
     navShoutouts.classList.add("nav-active");
     navFavorites.classList.remove("nav-active");
   }
-});
-
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener('mousemove', e => {
-  cursor.setAttribute("style", "top: " + (e.clientY)+"px; left: " + (e.clientX) +"px;");
 });
