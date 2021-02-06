@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
-import { withPrefix, Link } from "gatsby";
+import { Link } from "gatsby";
 
 const Carta = () => {
   return (
@@ -9,16 +9,15 @@ const Carta = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Carta</title>
-        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
       <div className="container">
         <div className="col-60">
-          <section id="background">
+          <section id="section-one">
             <h1> Carta. </h1>
             <p>
               The CartaLab (or Carta) is a research group at Stanford trying to understand how students navigate their academic paths. Carta helps students learn about course choices and educators observe how students move through college. Read more about Carta here.
             </p>
-            <div className="mt-64 col-60">
+            <div className="mt-64">
               <h2>Background.</h2>
               <p>
                 My project over the course of 10 weeks was to redesign the course search process. Specifically, I conducted user research and comparator studies, and created low-to-high fidelity designs for the search results page.

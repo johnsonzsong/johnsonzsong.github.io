@@ -34,9 +34,29 @@ body {
   pointer-events: none;
 }
 
+.logo {
+  font-family: 'PT Serif';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
 #nav-container {
   position: fixed;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.nav-items {
   display: flex;
 }
 
@@ -91,6 +111,14 @@ p {
 
 section {
   margin-bottom: 128px;
+}
+
+.wide {
+  margin-left: -96px;
+  margin-right: -96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 // Utility classes --------------------------------------------------------------------------------

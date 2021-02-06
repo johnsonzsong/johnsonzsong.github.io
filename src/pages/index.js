@@ -9,50 +9,55 @@ const Home = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Home</title>
-        <script src={withPrefix('homeNavScript.js')} type="text/javascript"/>
+        <script src={withPrefix('navScript.js')} type="text/javascript"/>
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
       {/* NAV */}
       <div id="nav-container">
-        <div className="nav-bar"></div>
-        <div className="nav-list">
-          <p id="nav-intro" className="nav-active" onClick={() => {
-            var elmnt = document.getElementById("intro");
-            elmnt.scrollIntoView();
-          }}>
-            About.
-          </p>
-          <p id="nav-professional" onClick={() => {
-            var elmnt = document.getElementById("professional");
-            elmnt.scrollIntoView();
-          }}>
-            Professional Experience.
-          </p>
-          <p id="nav-education" onClick={() => {
-            var elmnt = document.getElementById("education");
-            elmnt.scrollIntoView();
-          }}>
-            Education.
-          </p>
-          <p id="nav-favorites" onClick={() => {
-            var elmnt = document.getElementById("favorites");
-            elmnt.scrollIntoView();
-          }}>
-            Favorites.
-          </p>
-          <p id="nav-shoutouts" onClick={() => {
-            var elmnt = document.getElementById("shoutouts");
-            elmnt.scrollIntoView();
-          }}>
-            Shoutouts.
-          </p>
+        <Link to="/">
+          <div className="logo">JS.</div>
+        </Link>
+        <div className="nav-items">
+          <div className="nav-bar"></div>
+          <div className="nav-list">
+            <p id="nav-one" className="nav-active" onClick={() => {
+              var elmnt = document.getElementById("section-one");
+              elmnt.scrollIntoView();
+            }}>
+              About.
+            </p>
+            <p id="nav-two" onClick={() => {
+              var elmnt = document.getElementById("section-two");
+              elmnt.scrollIntoView();
+            }}>
+              Professional Experience.
+            </p>
+            <p id="nav-three" onClick={() => {
+              var elmnt = document.getElementById("section-three");
+              elmnt.scrollIntoView();
+            }}>
+              Education.
+            </p>
+            <p id="nav-four" onClick={() => {
+              var elmnt = document.getElementById("section-four");
+              elmnt.scrollIntoView();
+            }}>
+              Favorites.
+            </p>
+            <p id="nav-five" onClick={() => {
+              var elmnt = document.getElementById("section-five");
+              elmnt.scrollIntoView();
+            }}>
+              Shoutouts.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* CONTENT */}
       <div className="container">
-        <div className="col-60">
-          <section id="intro">
+        {/* <div className="col-60"> */}
+          <section id="section-one" className="col-60">
             <h2> Hey! I'm Johnson. </h2>
             <p>
               I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiousity, creativity, and a keen eye for detail.
@@ -61,7 +66,7 @@ const Home = () => {
               I am a master’s student in computer science at Stanford. I am currently doing product design with the CartaLab at Stanford, helping students navigate their academic paths. Previously, I was a software engineering intern at Facebook Gaming and Messenger, where I developed new features for web and iOS.
             </p>
           </section>
-          <section id="professional">
+          <section id="section-two">
             <h2> Professional Experiences. </h2>
             <div className="project">
               <div className="col-50">
@@ -130,7 +135,7 @@ const Home = () => {
             
           </section>
 
-          <section id="education">
+          <section id="section-three">
             <h2> Education. </h2>
             <div className="project">
               <div className="col-50">
@@ -160,7 +165,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section id="favorites">
+          <section id="section-four">
             <h2>Favorites.</h2>
             <div className="project">
               <div className="col-50">
@@ -190,7 +195,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section id="shoutouts">
+          <section id="section-five">
             <h2>Shoutouts.</h2>
             <div className="project">
               <div className="col-50">
@@ -206,7 +211,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-        </div>
+        {/* </div> */}
         
 
 
