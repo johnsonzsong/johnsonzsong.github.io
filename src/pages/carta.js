@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
-import { Link } from "gatsby";
 
 const Carta = () => {
   return (

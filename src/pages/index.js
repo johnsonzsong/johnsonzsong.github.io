@@ -56,8 +56,8 @@ const Home = () => {
 
       {/* CONTENT */}
       <div className="container">
-        {/* <div className="col-60"> */}
-          <section id="section-one" className="col-60">
+        <div className="col-60">
+          <section id="section-one">
             <h2> Hey! I'm Johnson. </h2>
             <p>
               I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiousity, creativity, and a keen eye for detail.
@@ -211,7 +211,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-        {/* </div> */}
+        </div>
         
 
 

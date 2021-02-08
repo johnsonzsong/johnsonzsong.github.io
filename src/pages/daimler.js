@@ -3,6 +3,10 @@ import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { Link } from "gatsby";
 import cabanaFeature from "../../static/cabanaFeature.png";
+import neil from "../../static/neil.png";
+import alex from "../../static/alex.png";
+import cabanaBrainstorm1 from "../../static/cabanaBrainstorm1.png";
+import cabanaBrainstorm2 from "../../static/cabanaBrainstorm2.png";
 
 const Daimler = () => {
   return (
@@ -49,12 +53,6 @@ const Daimler = () => {
             }}>
               Hi-Fi and MVP.
             </p>
-            {/* <p id="nav-takeaways" onClick={() => {
-              var elmnt = document.getElementById("takeaways");
-              elmnt.scrollIntoView();
-            }}>
-              Takeaways.
-            </p> */}
           </div>
         </div>
       </div>
@@ -90,34 +88,111 @@ const Daimler = () => {
             </div>
           </section>
         </div>
+        
         <section id="section-two" className="wide">
-          <img src={cabanaFeature} style={{
-            width: "50%"
-          }}></img>
-          <div style={{width: "40%"}}>
+          <div className="col-60 multi-image">
+            <div className="persona-container">
+              {/* TOP */}
+              <div className="persona-top">
+                <img className="persona-image" src={neil}></img>
+                <div>
+                  <h2 className="m-0">Neil</h2>
+                  <p className="m-0">
+                    Neil is a 32 year old engineer living in Hawaii. He is married and has no children.
+                  </p>
+                </div>
+              </div>
+
+              {/* BOTTOM */}
+              <div className="persona-bottom">
+                <div className="persona-timeline">
+                  <div className="persona-line"></div>
+                  <div className="persona-dot"></div>
+                  <div className="persona-dot"></div>
+                  <div className="persona-dot"></div>
+                </div>
+                <div className="persona-findings-container">
+                  <p className="persona-finding">
+                    Charges 5 times a week in order to reserve the Electric Vehicle parking spaces at his condo
+                  </p>
+                  <p className="persona-finding">
+                    “Tesla Caraoke is too distracting and shouldn’t be allowed”
+                  </p>
+                  <p className="persona-finding">
+                    Never plays games while charging, since he’s running errands
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="persona-container">
+              {/* TOP */}
+              <div className="persona-top">
+                <img className="persona-image" src={alex}></img>
+                <div>
+                  <h2 className="m-0">Alex</h2>
+                  <p className="m-0">
+                    Alex is a 46 year old professor living in Palo Alto. He has 2 children.
+                  </p>
+                </div>
+              </div>
+
+              {/* BOTTOM */}
+              <div className="persona-bottom">
+                <div className="persona-timeline">
+                  <div className="persona-line"></div>
+                  <div className="persona-dot"></div>
+                  <div className="persona-dot"></div>
+                  <div className="persona-dot"></div>
+                </div>
+                <div className="persona-findings-container">
+                  <p className="persona-finding">
+                    Has only played in-vehicle games once to show children.
+                  </p>
+                  <p className="persona-finding">
+                    His children have also only tried in-car games once, quickly deferring to other forms of entertainment (smart phones, TV, etc.)
+                  </p>
+                  <p className="persona-finding">
+                    Prioritizes productivity when charging
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-35">
             <h2>User Research.</h2>
             <p>
               As autonomy and electric vehicle charging become more established in the automotive industry, drivers will have an increasing opportunity to engage with in-vehicle entertainment.
             </p>
             <p>
-              My team conducted user studies by observing and interviewing Tesla owners at Supercharger stations. We wanted to gain a better understanding of how owners of autonomous and electric vehicles spent those moments of down-time while waiting for their vehicles to charge. We also took a trip to the nearby Palo Alto Tesla dealership to learn more about the current status of in-car gaming from Tesla employees and electric vehicle owners. Here are two user personas to represent the aggregate profile of over 50 total interviews.
+              My team conducted user studies by observing and interviewing Tesla owners at Supercharger stations. We sought a better understanding of how owners of autonomous and electric vehicles interacted with and within their cars. We also took a trip to the nearby Palo Alto Tesla dealership to learn more about the current status of in-car entertainment technology. Here are two user personas to represent the aggregate profile of over 50 total user interviews.
+            </p>
+            <p>
+              Our interviews revealed that few autonomous-vehicle owners turned to their in-car entertainment systems in hands-free moments. They actively planned ways to be productive while their cars were hooked up to electrical charging stations. Meanwhile, existing forms of built-in entertainment fell in the shadows of other technologies like smart phones and TVs.
             </p>
           </div>
         </section>
+        
         <section id="brainstorm" className="wide">
-          <img src={cabanaFeature} style={{
-            width: "50%"
-          }}></img>
-          <div style={{width: "40%"}}>
+          <div className="col-60 multi-image">
+            <div className="persona-container">
+              <img style={{width: "100%"}} src={cabanaBrainstorm1}></img>
+            </div>
+            <div className="persona-container">
+              <img style={{width: "100%"}} src={cabanaBrainstorm2}></img>
+            </div>
+          </div>
+          <div className="col-35">
             <h2>Brainstorm and Affinity Mapping.</h2>
             <p>
-              My team then went through many ideation stages, first coming up with as many games as possible and then narrowing them down based on our findings and constraints. Some of our initial ideas from the first brainstorming session included board games like LIFE and Monopoly, immersive experiences like Mario Kart and Pokemon Go, and old school games like Pac-Man and Space Invaders.
+              My team then went through multiple ideation stages, first coming up with as many games as possible. Some of our initial ideas from the first brainstorming session included board games like LIFE and Monopoly, immersive experiences like Mario Kart and Pokemon Go, and old school games like Pac-Man and Space Invaders.
             </p>
             <p>
-              In the second round of brainstorming, we focused on aspects of the in-car gaming experience we wanted to emphasis. We knew that the game should capitalize on the unique circumstances and people inside of the car. We grouped these ideas into an affinity map to help structure our goals.
+              In the second round of brainstorming, we honed in on our user research. We knew that the game should capitalize on the unique circumstances and relationships among people inside of the car. And we knew that we were up against some dominating forces that tugged at the attention of passengers. Here, we grouped our ideas into an affinity map to help structure our goals.
             </p>
           </div>
         </section>
+
         <section id="section-three" className="wide">
           <img src={cabanaFeature} style={{
             width: "50%"
