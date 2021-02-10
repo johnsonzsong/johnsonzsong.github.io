@@ -6,9 +6,21 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Johnson Song`,
+    description: `Handmade from scratch`,
+    author: `@johnson.song`,
+  },
   pathPrefix: "/",
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-page-transitions`,
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 1000
+      }
+    },
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {

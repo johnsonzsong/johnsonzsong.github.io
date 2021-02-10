@@ -2,9 +2,11 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { withPrefix, Link } from "gatsby";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Home = () => {
   return (
+    <PageTransition>
     <div>
       <Helmet>
         <meta charSet="utf-8" />
@@ -217,6 +219,7 @@ const Home = () => {
 
       </div>
     </div>
+    </PageTransition>
   );
 }
 

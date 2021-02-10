@@ -7,9 +7,13 @@ import neil from "../../static/neil.png";
 import alex from "../../static/alex.png";
 import cabanaBrainstorm1 from "../../static/cabanaBrainstorm1.png";
 import cabanaBrainstorm2 from "../../static/cabanaBrainstorm2.png";
+import cabanaPrototype1 from "../../static/cabanaPrototype1.png";
+import cabanaPrototype2 from "../../static/cabanaPrototype2.png";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Daimler = () => {
   return (
+    <PageTransition>
     <div>
       <Helmet>
         <meta charSet="utf-8" />
@@ -39,7 +43,7 @@ const Daimler = () => {
               var elmnt = document.getElementById("section-three");
               elmnt.scrollIntoView();
             }}>
-              Rapid Prototyping.
+              Rapid Prototypes.
             </p>
             <p id="nav-four" onClick={() => {
               var elmnt = document.getElementById("section-four");
@@ -62,7 +66,7 @@ const Daimler = () => {
           <section id="section-one">
             <h1> Daimler. </h1>
             <p>
-              The Mercedes-Benz Research and Development North America (MBRDNA), located in Sunnyvale, CA, is Daimler AG’s hub of cutting-edge technology and groundbreaking innovation. Researchers here focus on creating the next generations of connected, autonomous, electric vehicles and the ecosystems enabling them. Read more about MBRDNA here.
+              The Mercedes-Benz Research and Development North America (MBRDNA), located in Sunnyvale, CA, is Daimler AG’s hub of cutting-edge technology and groundbreaking innovation. Researchers here focus on creating the next generations of connected, autonomous, electric vehicles (EVs) and the ecosystems enabling them. Read more about MBRDNA here.
             </p>
             <div className="mt-64">
               <h2>Background.</h2>
@@ -90,7 +94,7 @@ const Daimler = () => {
         </div>
         
         <section id="section-two" className="wide">
-          <div className="col-60 multi-image">
+          <div className="col-70 multi-image">
             <div className="persona-container">
               {/* TOP */}
               <div className="persona-top">
@@ -159,7 +163,7 @@ const Daimler = () => {
               </div>
             </div>
           </div>
-          <div className="col-35">
+          <div className="col-25">
             <h2>User Research.</h2>
             <p>
               As autonomy and electric vehicle charging become more established in the automotive industry, drivers will have an increasing opportunity to engage with in-vehicle entertainment.
@@ -167,18 +171,36 @@ const Daimler = () => {
             <p>
               My team conducted user studies by observing and interviewing Tesla owners at Supercharger stations. We sought a better understanding of how owners of autonomous and electric vehicles interacted with and within their cars. We also took a trip to the nearby Palo Alto Tesla dealership to learn more about the current status of in-car entertainment technology. Here are two user personas to represent the aggregate profile of over 50 total user interviews.
             </p>
-            <p>
-              Our interviews revealed that few autonomous-vehicle owners turned to their in-car entertainment systems in hands-free moments. They actively planned ways to be productive while their cars were hooked up to electrical charging stations. Meanwhile, existing forms of built-in entertainment fell in the shadows of other technologies like smart phones and TVs.
-            </p>
           </div>
         </section>
         
+        <section id="user-insights" className="wide stack">
+          <h2>User Insights.</h2>
+          <p className="col-60 mb-32">
+            Our interviews revealed that few autonomous-vehicle owners turned to their in-car entertainment systems in hands-free moments. They actively planned ways to be productive while their cars were hooked up to electrical charging stations. Meanwhile, existing forms of built-in entertainment fell in the shadows of other technologies like smart phones and TVs.
+          </p>
+          <div className="multi-image">
+            <div className="insight-container">
+              <div className="insight-number">1</div>
+              EV owners are rarely inside the car when charging.
+            </div>
+            <div className="insight-container">
+             <div className="insight-number">2</div>
+              In-vehicle games are often overlooked in favor of smartphones and other devices.
+            </div>
+            <div className="insight-container">
+              <div className="insight-number">3</div>
+              EVs are a potential channel for family bonding.
+            </div>
+          </div>
+        </section>
+
         <section id="brainstorm" className="wide">
           <div className="col-60 multi-image">
-            <div className="persona-container">
+            <div className="image-container">
               <img style={{width: "100%"}} src={cabanaBrainstorm1}></img>
             </div>
-            <div className="persona-container">
+            <div className="image-container">
               <img style={{width: "100%"}} src={cabanaBrainstorm2}></img>
             </div>
           </div>
@@ -194,20 +216,49 @@ const Daimler = () => {
         </section>
 
         <section id="section-three" className="wide">
-          <img src={cabanaFeature} style={{
-            width: "50%"
-          }}></img>
-          <div style={{width: "40%"}}>
-            <h2>Rapid Prototyping.</h2>
+          <div className="col-60 multi-image">
+            {/* <div className="image-container">
+              <img style={{width: "100%"}} src={cabanaPrototype1}></img>
+            </div> */}
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cabanaPrototype2}></img>
+            </div>
+          </div>
+          <div className="col-35">
+            <h2>Rapid Prototypes.</h2>
             <p>
-            With helpful feedback from our Daimler liaisons, we decided to move forward with 3 ideas: trivia, karaoke, and Draw Something. We brought our user research, insights, and brainstorm to our Daimler liaisons in their Sunnyvale office and received valuable feedback to consider moving forward in our prototyping stages.
+              We brought our user research, insights, and brainstorms to our Daimler liaisons in their Sunnyvale office and received feedback to move forward with 3 ideas: trivia, karaoke, and Draw Something.
             </p>
             <p>
-              We rapidly-prototyped these 3 ideas by creating quick pen-and-paper versions of each game, which meant to test the interactions that friends and family playing together would have. Then, we set up a car-like experience by arranging chairs as if they were the seats in a car, and taping a makeshift head-unit display to the wall in front of them.
+             Based on our findings, we chose to focus on the common scenarios of driving in an EV with many family members. We found there to be an unique opportunity to frame the in-vehicle entertainment experience as not one that sought to replace smartphones, but one to complement them. We positioned these games as a way to strengthen relationships in a low-barrier, intuitive, and engaging format.
+            </p>
+            <p>
+              We rapid-prototyped our ideas with pen-and-paper versions of each game, which meant to test the interactions that friends and family playing together would have. Then, we set up a car-like experience by arranging chairs as if they were the seats in a car, and taping a makeshift head-unit display to the wall in front of them.
             </p>
           </div>
         </section>
-        {/* TODO: KEY INSIGHTS SECTION TO CONNECT PROTOTYPE TO MED-FI. Key insights should also include why we chose trivia and the reasoning for focusing on this target segment. */}
+        
+        <section id="prototype-insights" className="wide stack">
+          <h2>Prototype Insights.</h2>
+          <p className="col-60 mb-32">
+            At this stage, we wanted to test our assumptions about interactions that people with close ties would have in a car. We told our participants to imagine they were on a long road trip in an autonomous vehicle. Their genuine friendships with each other were representative of our target segment, which primarily consisted of family with children along with groups of young adults (roommates, best friends, etc.).
+          </p>
+          <div className="multi-image">
+            <div className="insight-container">
+              <div className="insight-number">1</div>
+                People love inside jokes, and build off of each other's energies to demonstrate depth of their relationship.
+              </div>
+            <div className="insight-container">
+             <div className="insight-number">2</div>
+                Friends love to compete against each other, especially if grouped into teams.
+              </div>
+            <div className="insight-container">
+              <div className="insight-number">3</div>
+                People want a chance to redeem themselves if they lose. They will keep playing until they feel they've won.
+              </div>
+          </div>
+        </section>
+
         <section id="section-four" className="wide">
           <img src={cabanaFeature} style={{
             width: "50%"
@@ -215,6 +266,7 @@ const Daimler = () => {
           <div style={{width: "40%"}}>
             <h2>Medium-Fidelity.</h2>
             <p>
+              {/* todo */}
               Among the games that we rapidly-prototyped, we felt that trivia offered the best mixture of positive feedback from testers, alignment with Daimler's vision, and our timeframe. We went ahead and started to create simple wireframes for our medium-fidelity prototype. Some key features that we were sure to keep in mind were designing for a touch-screen, designing for use by multiple people at various distances, and creating an intuitive, uncluttered interface.
             </p>
           </div>
@@ -235,6 +287,7 @@ const Daimler = () => {
         </section>
       </div>
     </div>
+    </PageTransition>
   );
 }
 
