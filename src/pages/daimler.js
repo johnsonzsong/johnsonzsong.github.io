@@ -2,13 +2,15 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { Link } from "gatsby";
-import cabanaFeature from "../../static/cabanaFeature.png";
 import neil from "../../static/neil.png";
 import alex from "../../static/alex.png";
 import cabanaBrainstorm1 from "../../static/cabanaBrainstorm1.png";
 import cabanaBrainstorm2 from "../../static/cabanaBrainstorm2.png";
-import cabanaPrototype1 from "../../static/cabanaPrototype1.png";
 import cabanaPrototype2 from "../../static/cabanaPrototype2.png";
+import cabanaMedFi1 from "../../static/cabanaMedFi1.png";
+import cabanaMedFi2 from "../../static/cabanaMedFi2.png";
+import cabanaMedFi3 from "../../static/cabanaMedFi3.png";
+import cabanaHiFi from "../../static/cabanaHiFi.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Daimler = () => {
@@ -66,7 +68,7 @@ const Daimler = () => {
           <section id="section-one">
             <h1> Daimler. </h1>
             <p>
-              The Mercedes-Benz Research and Development North America (MBRDNA), located in Sunnyvale, CA, is Daimler AG’s hub of cutting-edge technology and groundbreaking innovation. Researchers here focus on creating the next generations of connected, autonomous, electric vehicles (EVs) and the ecosystems enabling them. Read more about MBRDNA here.
+              The Mercedes-Benz Research and Development North America (MBRDNA), located in Sunnyvale, CA, is Daimler AG’s hub of cutting-edge technology and groundbreaking innovation. Researchers here focus on creating the next generations of connected, autonomous, electric vehicles (EVs) and the ecosystems enabling them. Read more about MBRDNA <a href="https://www.daimler.com/company/north-america/mercedes-benz-r-d.html" target="_blank">here.</a>
             </p>
             <div className="mt-64">
               <h2>Background.</h2>
@@ -260,29 +262,37 @@ const Daimler = () => {
         </section>
 
         <section id="section-four" className="wide">
-          <img src={cabanaFeature} style={{
-            width: "50%"
-          }}></img>
-          <div style={{width: "40%"}}>
+          <div className="col-60 multi-image-vertical">
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cabanaMedFi1}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cabanaMedFi2}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cabanaMedFi3}></img>
+            </div>
+          </div>
+          <div className="col-35">
             <h2>Medium-Fidelity.</h2>
             <p>
-              {/* todo */}
-              Among the games that we rapidly-prototyped, we felt that trivia offered the best mixture of positive feedback from testers, alignment with Daimler's vision, and our timeframe. We went ahead and started to create simple wireframes for our medium-fidelity prototype. Some key features that we were sure to keep in mind were designing for a touch-screen, designing for use by multiple people at various distances, and creating an intuitive, uncluttered interface.
+              Among the games that we rapid-prototyped, we found that trivia offered the best mixture of positive feedback from testers and alignment with Daimler's vision. I led wireframing, starting with simple, low-fidelity flows to capture the important steps along a player's journey. The crucial aspects we wanted to pin down were designing for a touch-screen device, designing for user by multiple users at varying distances, and creating an intuitive, uncluttered interface.
             </p>
           </div>
         </section>
-        <section id="section-five" className="wide">
-          <img src={cabanaFeature} style={{
-            width: "50%"
-          }}></img>
-          <div style={{width: "40%"}}>
-            <h2>High-Fidelity and MVP.</h2>
-            <p>
-              In transitioning from medium-fidelity to high-fidelity, we used a moodboard to get at the core essence of the ambience (aka ~vibe~) we wanted for the game. We wanted the game, and more importantly, the entire in-vehicle gaming experience to exude futuristic yet familiar, sleek, luxurious, and bold. It was meant to be appealing for children and teenagers easily distracted by phones, and also be a nod to more retro games like Pac-Man and Space Invaders.
-            </p>
-            <p>
-              With our high-fidelity designs, we were ready for development. We used React on the frontend UI paired with Firebase to store player data like usernames and high scores. Check out our interactive prototype below. But don't stop there -- you can actually play our live game by clicking on the play button!
-            </p>
+        
+        <section id="section-five" className="wide stack">
+          <h2>High-Fidelity and MVP.</h2>
+          <p className="col-60">
+            Before diving into development, I led efforts to create a fully-interactive high-fidelity prototype. This included defining a basic typographic system, color palette, and visual identity. With the help of a moodboard, we aimed to create a futuristic yet familiar, sleek, and bold vibe that could appeal across generations. Check out our interactive prototype <a href="https://tinyurl.com/cabanatrivia" target="_blank">here.</a>
+          </p>
+          <p className="col-60 mb-32">
+            We developed our MVP in React and Firebase. This allowed us to extend our original prototypes to include features like player usernames, high scores, and a leaderboard. Don't just take my word for it - you can actually play our live game by clicking below!
+          </p>
+          <div className="image-container">
+            <a href="https://master-dev.d28ds4nnoxwdjw.amplifyapp.com/" target="_blank">
+              <img style={{width: "100%"}} src={cabanaHiFi}></img>
+            </a>
           </div>
         </section>
       </div>

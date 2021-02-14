@@ -58,7 +58,7 @@ const Home = () => {
 
       {/* CONTENT */}
       <div className="container">
-        <div className="col-60">
+        <div className="col-70">
           <section id="section-one">
             <h2> Hey! I'm Johnson. </h2>
             <p>
@@ -140,7 +140,7 @@ const Home = () => {
           <section id="section-three">
             <h2> Education. </h2>
             <div className="project">
-              <div className="col-50">
+              <div className="col-70">
                 <p className="m-0"><b>Stanford University</b></p>
                 <p className="m-0">M.S. Computer Science</p>
                 <p className="m-0">
@@ -155,7 +155,7 @@ const Home = () => {
             </div>
 
             <div className="project">
-              <div className="col-50">
+              <div className="col-70">
                 <p className="m-0"><b>Stanford University</b></p>
                 <p className="m-0">B.S. Computer Science</p>
                 <p className="m-0">Minor in Economics</p>
@@ -170,7 +170,7 @@ const Home = () => {
           <section id="section-four">
             <h2>Favorites.</h2>
             <div className="project">
-              <div className="col-50">
+              <div className="col-70">
                 <p className="m-0"><b>Hikes</b></p>
                 <p className="m-0">
                   Upper Yosemite Falls - Yosemite National Park
@@ -182,13 +182,13 @@ const Home = () => {
               </div>
             </div>
             <div className="project">
-              <div className="col-50">
+              <div className="col-70">
                 <p className="m-0"><b>Books</b></p>
                 <p className="m-0">
                   Le Petit Prince - Antoine de Saint-Exupery
                 </p>
                 <p className="m-0">
-                  The Prophets - Robert Jones, Jr.
+                  Circe - Madeline Miller
                 </p>
                 <p className="m-0">
                   This is Water - David Foster Wallace
@@ -200,7 +200,7 @@ const Home = () => {
           <section id="section-five">
             <h2>Shoutouts.</h2>
             <div className="project">
-              <div className="col-50">
+              <div className="col-70">
                 <p>
                   I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on my experiences and happiness.
                 </p>

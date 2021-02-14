@@ -43,7 +43,8 @@ window.addEventListener('scroll', function() {
   }
 
   // At bottom of page, always highlight shoutouts
-  if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+  if (window.innerHeight + window.scrollY >= document.body.scrollHeight ||
+    positionFour.bottom <= 0) {
     navFive.classList.add("nav-active");
     navFour.classList.remove("nav-active");
   }

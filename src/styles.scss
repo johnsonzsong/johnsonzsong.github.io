@@ -24,6 +24,20 @@ body {
   background-color: #fffef4;
 }
 
+a {
+  color: black;
+}
+
+::selection {
+  color: #fffef4;
+  background: black;
+}
+
+::-moz-selection {
+  color: #fffef4;
+  background: black;
+}
+
 #customCursor {
   width: 50px;
   height: 50px;
@@ -200,6 +214,23 @@ section {
   display: flex;
   justify-content: space-between;
   height: 100%;
+
+  .image-container {
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+  }
+}
+
+.multi-image-vertical {
+  display: flex;
+  flex-direction: column;
+
+  .image-container {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
 }
 
 .image-container {
@@ -209,10 +240,6 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-
-  &:not(:last-child) {
-    margin-right: 1em;
-  }
 }
 
 .persona-container {
@@ -260,7 +287,8 @@ section {
   width: 1px;
   background-color: black;
   position: absolute;
-  height: 100%;
+  height: calc(100% - 3em);
+  margin-top: 3em;
 }
 
 .persona-dot {
