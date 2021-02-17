@@ -2,9 +2,6 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import cartaAudit1 from "../../static/cartaAudit1.png";
 import cartaAudit2 from "../../static/cartaAudit2.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
@@ -63,19 +60,6 @@ const Carta = () => {
             </p> */}
           </div>
         </div>
-      </div>
-
-      {/* SOCIAL */}
-      <div id="social-container">
-        <a href="http://instagram.com/johnson.song" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
-        </a>
-        <a href="https://www.linkedin.com/in/johnsonsong/" target="_blank">
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
-        </a>
-        <a href="mailto:johnsonsong@stanford.edu">
-          <FontAwesomeIcon icon={faEnvelope} size="2x" />
-        </a>
       </div>
 
       <div className="container">

@@ -80,7 +80,7 @@ const Home = () => {
           *P.S. - this entire website was handmade from scratch by me. Let me know what you think!
         </p>
         <div className="col-80">
-          <section id="section-one" style={{display: "flex", alignItems: "center"}}>
+          <section id="section-one" className="intro">
             <div>
               <h2> Hey! I'm Johnson. </h2>
               <p>
@@ -93,7 +93,7 @@ const Home = () => {
                 <button className="project-button">Download my Resume</button>
               </a>
             </div>
-            <img src={avatar} style={{width: "6em", height: "6em", marginLeft: "2em"}}/>
+            <img className="avatar" src={avatar} />
           </section>
           <section id="section-two">
             <h2> Professional Experiences. </h2>

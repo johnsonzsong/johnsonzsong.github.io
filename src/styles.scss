@@ -113,7 +113,7 @@ a {
 
 #ps-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 2em;
 }
 
 .container {
@@ -206,6 +206,17 @@ section {
 }
 
 // ----------------------------
+
+.intro {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 6em;
+  height: 6em;
+  margin-left: 2em;
+}
 
 .project {
   margin-bottom: 32px;
@@ -356,13 +367,20 @@ section {
   font-size: 2em;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .container {
-    padding: 32px 16px;
+    padding: 6em 4em;
   }
 
-  .col-50, .col-60 {
+  .nav-items {
+    display: none;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .col-25, .col-35, .col-50, .col-60, .col-70, .col-80 {
     width: 100%;
   }
   
@@ -376,5 +394,32 @@ section {
 
   .project-button-container {
     justify-content: flex-start;
+  }
+
+  .wide {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: unset;
+  }
+
+  .multi-image {
+    flex-direction: column;
+
+    .image-container {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .persona-container, .insight-container {
+    margin-bottom: 2em;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
   }
 }
