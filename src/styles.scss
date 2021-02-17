@@ -368,6 +368,10 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
+  #customCursor {
+    display: none;
+  }
+
   .container {
     padding: 6em 4em;
   }
