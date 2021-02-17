@@ -11,7 +11,7 @@ window.addEventListener('scroll', function() {
   var navFour = document.querySelector('#nav-four');
   var navFive = document.querySelector('#nav-five');
 
-  // Intro section is majority of screen
+  // 1st section is majority of screen
   if (positionOne.top <= window.innerHeight/2 && positionTwo.bottom >= window.innerHeight/2) {
     navOne.classList.add("nav-active");
     navTwo.classList.remove("nav-active");
@@ -21,7 +21,7 @@ window.addEventListener('scroll', function() {
     navTwo.classList.remove("nav-active");
   }
 
-  // Professional section is majority of screen
+  // 2nd section is majority of screen
   if (positionTwo.top <= window.innerHeight/5 && positionThree.bottom >= window.innerHeight/2) {
     navTwo.classList.add("nav-active");
     navThree.classList.remove("nav-active");

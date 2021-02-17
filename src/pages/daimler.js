@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import neil from "../../static/neil.png";
 import alex from "../../static/alex.png";
 import cabanaBrainstorm1 from "../../static/cabanaBrainstorm1.png";
@@ -10,7 +13,7 @@ import cabanaPrototype2 from "../../static/cabanaPrototype2.png";
 import cabanaMedFi1 from "../../static/cabanaMedFi1.png";
 import cabanaMedFi2 from "../../static/cabanaMedFi2.png";
 import cabanaMedFi3 from "../../static/cabanaMedFi3.png";
-import cabanaHiFi from "../../static/cabanaHiFi.png";
+import cabanaFeature from "../../static/cabanaFeature.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Daimler = () => {
@@ -63,6 +66,19 @@ const Daimler = () => {
         </div>
       </div>
 
+      {/* SOCIAL */}
+      <div id="social-container">
+        <a href="http://instagram.com/johnson.song" target="_blank">
+          <FontAwesomeIcon icon={faInstagram} size="2x" />
+        </a>
+        <a href="https://www.linkedin.com/in/johnsonsong/" target="_blank">
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
+        <a href="mailto:johnsonsong@stanford.edu">
+          <FontAwesomeIcon icon={faEnvelope} size="2x" />
+        </a>
+      </div>
+
       <div className="container">
         <div className="col-60">
           <section id="section-one">
@@ -75,7 +91,7 @@ const Daimler = () => {
               <p>
                 As part of a senior capstone project course at Stanford, my team and I partnered with Daimler to create a multiplayer touchscreen game for the Mercedes-Benz Head Unit. Our liaisons at Daimler were interested in uncovering insights about in-vehicle entertainment in the autonomous driving era.
               </p>
-              <p className="background-facts">
+              <div className="background-facts">
                 <div> 
                   <p>DURATION</p>
                   <p>January - June 2020</p>
@@ -90,7 +106,7 @@ const Daimler = () => {
                   <p className="m-0">Figma</p>
                   <p className="m-0">React</p>
                 </div>
-              </p>
+              </div>
             </div>
           </section>
         </div>
@@ -289,9 +305,9 @@ const Daimler = () => {
           <p className="col-60 mb-32">
             We developed our MVP in React and Firebase. This allowed us to extend our original prototypes to include features like player usernames, high scores, and a leaderboard. Don't just take my word for it - you can actually play our live game by clicking below!
           </p>
-          <div className="image-container">
+          <div className="col-50">
             <a href="https://master-dev.d28ds4nnoxwdjw.amplifyapp.com/" target="_blank">
-              <img style={{width: "100%"}} src={cabanaHiFi}></img>
+              <img style={{width: "100%"}} src={cabanaFeature}></img>
             </a>
           </div>
         </section>

@@ -21,21 +21,21 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: auto;
   width: 100%;
-  background-color: #fffef4;
+  background-color: #F7F4F0;
 }
 
 a {
-  color: black;
+  color: #0C1821;
 }
 
 ::selection {
   color: #fffef4;
-  background: black;
+  background: #0C1821;
 }
 
 ::-moz-selection {
   color: #fffef4;
-  background: black;
+  background: #0C1821;
 }
 
 #customCursor {
@@ -57,6 +57,7 @@ a {
 }
 
 #nav-container {
+  z-index: 1;
   position: fixed;
   padding: 1em;
   display: flex;
@@ -64,7 +65,7 @@ a {
 
   a {
     text-decoration: none;
-    color: black;
+    color: #0C1821;
     width: fit-content;
     height: fit-content;
   }
@@ -77,7 +78,7 @@ a {
 .nav-bar {
   width: 2px;
   border-radius: 100px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: #0C182130;
   height: 200px;
   margin-right: 0.5em;
 }
@@ -85,18 +86,41 @@ a {
 .nav-list {
   font-family: 'PT Serif';
   font-style: italic;
-  color: rgba(0, 0, 0, 0.15);
+  color: #0C182130;
 }
 
 .nav-active {
-  color: black !important;
+  color: #0C1821 !important;
   font-weight: bold !important;
+}
+
+#social-container {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    color: #0C1821;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1em;
+  }
+}
+
+#ps-container {
+  position: absolute;
+  bottom: 0px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   padding: 192px 229px;
+  position: relative;
 }
 
 // Used for project page titles
@@ -200,7 +224,7 @@ section {
   font-family: 'Montserrat', 'Proxima Nova', sans-serif;
   background-color: white;
   padding: 16px 32px;
-  border: 1px solid black;
+  border: 1px solid #0C1821;
   text-transform: uppercase;
 }
 
@@ -240,6 +264,7 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .persona-container {
@@ -285,7 +310,7 @@ section {
 
 .persona-line {
   width: 1px;
-  background-color: black;
+  background-color: #0C1821;
   position: absolute;
   height: calc(100% - 3em);
   margin-top: 3em;
@@ -294,7 +319,7 @@ section {
 .persona-dot {
   width: 0.8em;
   height: 0.8em;
-  background-color: black;
+  background-color: #0C1821;
   border-radius: 50%;
   margin-top: 3em;
 }

@@ -3,6 +3,11 @@ import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { withPrefix, Link } from "gatsby";
 import PageTransition from 'gatsby-plugin-page-transitions';
+import avatar from "../../static/avatar.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import resume from "../../static/Johnson_Song_Resume.pdf";
 
 const Home = () => {
   return (
@@ -56,17 +61,39 @@ const Home = () => {
         </div>
       </div>
 
+      {/* SOCIAL */}
+      <div id="social-container">
+        <a href="http://instagram.com/johnson.song" target="_blank">
+          <FontAwesomeIcon icon={faInstagram} size="2x" />
+        </a>
+        <a href="https://www.linkedin.com/in/johnsonsong/" target="_blank">
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
+        <a href="mailto:johnsonsong@stanford.edu">
+          <FontAwesomeIcon icon={faEnvelope} size="2x" />
+        </a>
+      </div>
+
       {/* CONTENT */}
       <div className="container">
-        <div className="col-70">
-          <section id="section-one">
-            <h2> Hey! I'm Johnson. </h2>
-            <p>
-              I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiousity, creativity, and a keen eye for detail.
-            </p>
-            <p>
-              I am a master’s student in computer science at Stanford. I am currently doing product design with the CartaLab at Stanford, helping students navigate their academic paths. Previously, I was a software engineering intern at Facebook Gaming and Messenger, where I developed new features for web and iOS.
-            </p>
+        <p id="ps-container">
+          *P.S. - this entire website was handmade from scratch by me. Let me know what you think!
+        </p>
+        <div className="col-80">
+          <section id="section-one" style={{display: "flex", alignItems: "center"}}>
+            <div>
+              <h2> Hey! I'm Johnson. </h2>
+              <p>
+                I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiousity, creativity, and a keen eye for detail.
+              </p>
+              <p>
+                I am a master’s student in computer science at Stanford. I am currently doing product design with Carta at Stanford, helping students navigate their academic paths. Previously, I was a software engineering intern at <a href="https://www.facebook.com/gaming/" target="_blank">Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">Messenger</a>, where I developed new features for web and iOS.
+              </p>
+              <a href={resume} target="_blank">
+                <button className="project-button">Download my Resume</button>
+              </a>
+            </div>
+            <img src={avatar} style={{width: "6em", height: "6em", marginLeft: "2em"}}/>
           </section>
           <section id="section-two">
             <h2> Professional Experiences. </h2>
@@ -204,19 +231,20 @@ const Home = () => {
                 <p>
                   I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on my experiences and happiness.
                 </p>
-                <p className="m-0">Jordan Dunn</p>
-                <p className="m-0">Riza Selcuk Saydam</p>
-                <p className="m-0">Noopur Chhabra</p>
-                <p className="m-0">Seth Kasky</p>
-                <p className="m-0">Kristina Inouye</p>
                 <p className="m-0">Jennifer Song</p>
+                <p className="m-0">Rıza Selçuk Saydam</p>
+                <p className="m-0">Jordan Dunn</p>
+                <p className="m-0">Odette Du</p>
+                <p className="m-0">Daiwei Liu</p>
+                <p className="m-0">Kristina Inouye</p>
+                <p className="m-0">Sophia Nguyen</p>
+                <p className="m-0">Roger Li</p>
+                <p className="m-0">Seth Kasky</p>
+                <p className="m-0">Noopur Chhabra</p>                
               </div>
             </div>
           </section>
         </div>
-        
-
-
       </div>
     </div>
     </PageTransition>
