@@ -82,7 +82,7 @@ const Home = () => {
         <div className="col-80">
           <section id="section-one" className="intro">
             <div>
-              <h2> Hey! I'm Johnson. </h2>
+              <h2 className="holo-text"> Hey! I'm Johnson. </h2>
               <p>
                 I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiousity, creativity, and a keen eye for detail.
               </p>
