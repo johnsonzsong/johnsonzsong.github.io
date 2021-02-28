@@ -24,7 +24,7 @@ const Daimler = () => {
       {/* NAV */}
       <div id="nav-container">
         <Link to="/">
-          <div className="logo">JS.</div>
+          <div className="logo holo-text">JS.</div>
         </Link>
         <div className="nav-items">
           <div className="nav-bar"></div>
@@ -82,7 +82,7 @@ const Daimler = () => {
                 </div>
                 <div> 
                   <p>ROLES</p>
-                  <p className="m-0">UX/UI Designer</p>
+                  <p className="m-0">Product Designer</p>
                   <p className="m-0">Frontend Developer</p>
                 </div>
                 <div> 

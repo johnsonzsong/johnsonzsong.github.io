@@ -22,7 +22,7 @@ const Home = () => {
       {/* NAV */}
       <div id="nav-container">
         <Link to="/">
-          <div className="logo">JS.</div>
+          <div className="logo holo-text">JS.</div>
         </Link>
         <div className="nav-items">
           <div className="nav-bar"></div>
@@ -93,13 +93,16 @@ const Home = () => {
                 <button className="project-button">Download my Resume</button>
               </a>
             </div>
-            <img className="avatar" src={avatar} />
+            <div className="avatar-container">
+              <img className="avatar" src={avatar} />
+              <div className="avatar-ring" />
+            </div>
           </section>
           <section id="section-two">
             <h2> Professional Experiences. </h2>
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>Product Designer</b></p>
+                <p className="m-0"><b>UX/UI Designer</b></p>
                 <p className="m-0">Carta (Stanford University)</p>
                 <p className="m-0"><i>January 2021 - now</i></p>
                 <p>
@@ -137,11 +140,11 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>Designer and Developer</b></p>
+                <p className="m-0"><b>Product Designer and Developer</b></p>
                 <p className="m-0">Daimler (Sunnyvale)</p>
                 <p className="m-0"><i>January - June 2020</i></p>
                 <p>
-                  I led research, prototyping, and user testing for an in-vehicle gaming experience for the autonomous driving era. I also helped program the MVP.
+                  I led research, prototyping, and user testing for an in-vehicle gaming experience for the autonomous driving era. I also helped develop the MVP.
                 </p>
               </div>
               <div className="col-50 project-button-container">

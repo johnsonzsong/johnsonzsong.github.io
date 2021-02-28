@@ -36,6 +36,12 @@ a {
   color: $white-100;
 }
 
+p a {
+  &:hover {
+    @extend .holo-text;
+  }
+}
+
 ::selection {
   color: $bg;
   background: $white-100;
@@ -62,9 +68,6 @@ a {
   font-style: italic;
   font-size: 2em;
   margin-bottom: 1em;
-  background: $holo;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #nav-container {
@@ -105,6 +108,7 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold !important;
+  user-select: none;
 }
 
 #social-container {
@@ -160,6 +164,7 @@ h2 {
   background: $holo;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  user-select: none;
 }
 
 // Used for default body text
@@ -233,20 +238,31 @@ section {
   align-items: center;
 }
 
+.avatar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4em;
+}
+
 .avatar {
   width: 6em;
   height: 6em;
-  margin-left: 2em;
+  position: absolute;
 }
 
-.avatar::after {
+.avatar-ring {
+  width: 6.3em;
+  height: 6.3em;
+  background: transparent;
   position: absolute;
-  top: -4px; bottom: -4px;
-  left: -4px; right: -4px;
-  background: linear-gradient(red, blue);
-  content: '';
+  border: double 2px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient($bg, $bg), radial-gradient(circle at top left, rgba(242,97,255,1), rgba(86,245,255,1));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   z-index: -1;
-  border-radius: 16px;
 }
 
 .project {

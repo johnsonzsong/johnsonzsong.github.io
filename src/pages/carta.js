@@ -17,7 +17,7 @@ const Carta = () => {
       {/* NAV */}
       <div id="nav-container">
         <Link to="/">
-          <div className="logo">JS.</div>
+          <div className="logo holo-text">JS.</div>
         </Link>
         <div className="nav-items">
           <div className="nav-bar"></div>
