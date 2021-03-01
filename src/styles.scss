@@ -145,10 +145,11 @@ h1 {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 62px;
+  font-size: 3em;
   width: fit-content;
-  }
+
+  @extend .holo-text;
+}
 
 // Used for section headings
 h2 {
@@ -169,8 +170,8 @@ h2 {
 
 // Used for default body text
 p {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 section {
@@ -229,6 +230,10 @@ section {
 
 .mb-32 {
   margin-bottom: 2em;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 // ----------------------------
@@ -326,7 +331,7 @@ section {
 }
 
 .image-container {
-  background: #FFFFFF;
+  // background: #FFFFFF;
   border: 1px solid #000000;
   border-radius: 1em;
   overflow: hidden;

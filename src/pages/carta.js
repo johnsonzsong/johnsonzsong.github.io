@@ -4,6 +4,11 @@ import "../styles.scss";
 import { Link } from "gatsby";
 import cartaAudit1 from "../../static/cartaAudit1.png";
 import cartaAudit2 from "../../static/cartaAudit2.png";
+import cartaFilterFlare1 from "../../static/cartaFilterFlare1.png";
+import cartaFilterFlare2 from "../../static/cartaFilterFlare2.png";
+import cartaFilterFlare3 from "../../static/cartaFilterFlare3.png";
+import cartaSearchFlare1 from "../../static/cartaSearchFlare1.png";
+import cartaSearchFlare2 from "../../static/cartaSearchFlare2.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Carta = () => {
@@ -98,8 +103,13 @@ const Carta = () => {
 
         <section id="section-two" className="wide">
           <div className="col-60 multi-image">
-            <div className="image-container">
-              {/* <img style={{width: "100%"}} src={cartaResearch}></img> */}
+            <div className="insight-container">
+              <div className="insight-number">1</div>
+              Most of the time, students know exactly what course they'd like to search on Carta, and search it by exact course code or name.
+            </div>
+            <div className="insight-container">
+             <div className="insight-number">2</div>
+              Or, they're looking for <b>one last class</b> to fit into their existing schedules (units-wise) or fulfill some elusive graduation requirement.
             </div>
           </div>
           <div className="col-35">
@@ -111,7 +121,7 @@ const Carta = () => {
               Through user interviews, I found that filters on the search results page were used in few limited cases. Students often entered exact-string queries of the course in question, and so didn’t always need to further filter results.
             </p>
             <p>
-              However, a compelling use case for filters among students was in finding <b>one last course</b> - a filler course to complete their quarter schedule. The most frequently-used filters to help with this scenario was narrowing results by number of units and fulfillment of graduation requirements (WAYS requirements).
+              However, a compelling use case for filters among students was in finding <b>one last course</b> - a filler course to complete their quarter schedule. The most frequently-used filters to help with this scenario was narrowing results by quarter, number of units, and fulfillment of graduation requirements (WAYS requirements).
             </p>
           </div>
         </section>
@@ -134,16 +144,54 @@ const Carta = () => {
           </div>
         </section>
 
-        <section id="section-three" className="wide">
-          <div className="col-60 multi-image">
+        <section id="section-three" className="wide stack mb-32">
+          <h2>Medium-Fidelity.</h2>
+          <p className="col-60">
+          With this context, I embarked on concretizing my findings into rough, grayscale prototypes. The goal was to capture the essential hierarchies and layouts at a high level. I spent the majority of my time at this stage, practicing the <b>flare and focus</b> design thinking principle through 1. filtering search results and 2. navigating between different types of search results.
+          </p>
+        </section>
+
+        <section id="med-fi-filter-flare" className="wide">
+          <div className="col-60 multi-image-vertical">
             <div className="image-container">
-              {/* <img style={{width: "100%"}} src={cartaResearch}></img> */}
+              <img style={{width: "100%"}} src={cartaFilterFlare1}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaFilterFlare2}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaFilterFlare3}></img>
             </div>
           </div>
           <div className="col-35">
-            <h2>Medium-Fidelity.</h2>
+            <h2>Filtering Search Results.</h2>
             <p>
-            With this context, I embarked on concretizing my findings into rough, grayscale prototypes. The goal was to capture the essential hierarchies and elements at a high level. I spent the majority of my time at this stage, flaring out into a huge variety of variations in what this search experience might look like.
+              I considered multiple ways of representing the information hierarchies implied by filters. In one version, I tried out a collapsible panel at the top of the page that either displayed or hid all possible filters. In the second, I explored a slide-out drawer which contained all filters. In the third, I tried out a row of dropdown selections with most salient filters, and then additional filters in a popup modal.
+            </p>
+            <p>
+              My fellow designers and I evaluated the merits of each approach. Liam and Kaelyn appreciated the way a row of relevant filters gave users context for their search, and noted that the first two variations were lacking this context. Jordan and Kaelyn were cautious of using a popup modal, since it had the reverse effect of bringing the user out of context - it might have been too jarring, especially because it covered the underlying search results.
+            </p>
+            <p>
+              I took my team's feedback and decided on a hybrid approach that used dropdown selections for the most-used filters, alongside a "More Filters" button that would open up a side panel drawer. Of note, I also focused on giving users feedback on which filters they selected, including a thorough consideration of ways that active/selected states can be leveraged to show which filters were applied.
+            </p>
+          </div>
+        </section>
+
+        {/* TODO: section about binary filter states */}
+
+        <section id="med-fi-filter-focus" className="wide">
+          <div className="col-60 multi-image-vertical">
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaSearchFlare2}></img>
+            </div>
+          </div>
+          <div className="col-35">
+            <h2>Navigating Search Results.</h2>
+            <p>
+              
             </p>
           </div>
         </section>
