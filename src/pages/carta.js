@@ -45,24 +45,12 @@ const Carta = () => {
             }}>
               Med-Fi.
             </p>
-            {/* <p id="nav-three" onClick={() => {
-              var elmnt = document.getElementById("section-three");
-              elmnt.scrollIntoView();
-            }}>
-              Rapid Prototypes.
-            </p>
             <p id="nav-four" onClick={() => {
               var elmnt = document.getElementById("section-four");
               elmnt.scrollIntoView();
             }}>
-              Med-Fi.
+              Hi-Fi.
             </p>
-            <p id="nav-five" onClick={() => {
-              var elmnt = document.getElementById("section-five");
-              elmnt.scrollIntoView();
-            }}>
-              Hi-Fi and MVP.
-            </p> */}
           </div>
         </div>
       </div>
@@ -70,9 +58,9 @@ const Carta = () => {
       <div className="container">
         <div className="col-60">
           <section id="section-one">
-            <h1> Carta. </h1>
+            <h1> [WIP] Carta.</h1>
             <p>
-              The CartaLab (or Carta) is a research group at Stanford trying to understand how students navigate their academic paths. Carta helps students learn about course choices and educators observe how students move through college. Read more about Carta here.
+              The CartaLab (or Carta) is a research group at Stanford trying to understand how students navigate their academic paths. Carta helps students learn about course choices and educators observe how students move through college. Read more about Carta <a href="https://cartalab.stanford.edu/" target="_blank">here</a>.
             </p>
             <div className="mt-64">
               <h2>Background.</h2>
@@ -94,10 +82,6 @@ const Carta = () => {
                 </div>
               </div>
             </div>
-          </section>
-
-          <section>
-            <h2>More updates coming soon!</h2>
           </section>
         </div>
 
@@ -151,7 +135,7 @@ const Carta = () => {
           </p>
         </section>
 
-        <section id="med-fi-filter-flare" className="wide">
+        <section id="med-fi-filters" className="wide">
           <div className="col-60 multi-image-vertical">
             <div className="image-container">
               <img style={{width: "100%"}} src={cartaFilterFlare1}></img>
@@ -164,7 +148,7 @@ const Carta = () => {
             </div>
           </div>
           <div className="col-35">
-            <h2>Filtering Search Results.</h2>
+            <h2>Filtering Results.</h2>
             <p>
               I considered multiple ways of representing the information hierarchies implied by filters. In one version, I tried out a collapsible panel at the top of the page that either displayed or hid all possible filters. In the second, I explored a slide-out drawer which contained all filters. In the third, I tried out a row of dropdown selections with most salient filters, and then additional filters in a popup modal.
             </p>
@@ -179,24 +163,58 @@ const Carta = () => {
 
         {/* TODO: section about binary filter states */}
 
-        <section id="med-fi-filter-focus" className="wide">
+        <section id="med-fi-search" className="wide">
           <div className="col-60 multi-image-vertical">
             <div className="image-container">
               <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
             </div>
-            <div className="image-container">
+            {/* <div className="image-container">
               <img style={{width: "100%"}} src={cartaSearchFlare2}></img>
-            </div>
+            </div> */}
           </div>
           <div className="col-35">
-            <h2>Navigating Search Results.</h2>
+            <h2>Navigating Results.</h2>
             <p>
-              
+              One peculiarity of Carta search results is that there are multiple <i>types</i> of results: courses, professors/teaching staff, or even departments. This challenged me to design for smooth, intuitive navigation. My first attempt used a tabbed navigation to switch between all results, courses, people, and departments. Tabs were a natural course since they would be used to <b>logically chunk</b> results that were <b>parallel in nature</b>. Additionally, they were already used throughout numerous other pages on Carta. Shoutout to Liam for sharing a <a href="https://www.nngroup.com/articles/tabs-used-right/" target="_blank">great article from Nielsen Norman Group</a> about using tabs that helped inform this approach.
+            </p>
+            <p>
+              I also tried using buttons (inspired by LinkedIn search) to navigate between result types. LinkedIn provided a great comparison, since it has the same pattern - search results include companies, job opportunities, people, posts, and more. Exploring this pattern gave me insights about how filter sets could be dynamic depending on type of result the user is looking at.
             </p>
           </div>
         </section>
 
-        <section id="section-four"></section>
+        <section id="med-fi-insights" className="wide stack">
+          <h2>Putting it All Together.</h2>
+          <p className="col-60">
+            {/* Below is the final result of this medium-fidelity stage of iterative flare and focus for search result filters and navigation. */}
+          </p>
+          <div className="multi-image">
+            {/* <div className="image-container">
+              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+            </div> */}
+          </div>
+        </section>
+
+        <section id="section-four" className="wide">
+          <div className="col-60 multi-image">
+            <div className="image-container">
+              {/* <img style={{width: "100%"}} src={cartaSearchFlare1}></img> */}
+            </div>
+          </div>
+          <div className="col-35">
+            <h2>High-Fidelity.</h2>
+            <p>
+              {/* The time I spent in medium-fidelity prototyping paid off, as  */}
+            </p>
+          </div>
+        </section>
+
         <section id="section-five"></section>
 
       </div>

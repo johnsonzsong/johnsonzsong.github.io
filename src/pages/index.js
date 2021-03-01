@@ -241,6 +241,9 @@ const Home = () => {
                 <p className="m-0">Daiwei Liu</p>
                 <p className="m-0">Kristina Inouye</p>
                 <p className="m-0">Sophia Nguyen</p>
+                <p className="m-0">Jordan Llorin</p>
+                <p className="m-0">Liam Llorin</p>
+                <p className="m-0">Kaelyn Ong</p>
                 <p className="m-0">Roger Li</p>
                 <p className="m-0">Seth Kasky</p>
                 <p className="m-0">Noopur Chhabra</p>                
