@@ -76,28 +76,28 @@ const Home = () => {
 
       {/* CONTENT */}
       <div className="container">
-        <p id="ps-container">
+        <p id="ps-container" class="holo-text">
           *P.S. - this entire website was handmade from scratch by me. Let me know what you think!
         </p>
+        <section id="section-one" className="intro">
+          <div className="col-80">
+            <h2 className="holo-text"> Hey! I'm Johnson. </h2>
+            <p>
+              I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiosity, creativity, and a keen eye for detail.
+            </p>
+            <p>
+              I am a master’s student in computer science at Stanford. I am currently doing product design with Carta at Stanford, helping students navigate their academic paths. Previously, I was a software engineering intern at <a href="https://www.facebook.com/gaming/" target="_blank">Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">Messenger</a>, where I developed new features for web and iOS.
+            </p>
+            <a href={resume} target="_blank">
+              <button className="project-button">Download my Resume</button>
+            </a>
+          </div>
+          <div className="avatar-container">
+            <img className="avatar" src={avatar} />
+            <div className="avatar-ring" />
+          </div>
+        </section>
         <div className="col-80">
-          <section id="section-one" className="intro">
-            <div>
-              <h2 className="holo-text"> Hey! I'm Johnson. </h2>
-              <p>
-                I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiousity, creativity, and a keen eye for detail.
-              </p>
-              <p>
-                I am a master’s student in computer science at Stanford. I am currently doing product design with Carta at Stanford, helping students navigate their academic paths. Previously, I was a software engineering intern at <a href="https://www.facebook.com/gaming/" target="_blank">Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">Messenger</a>, where I developed new features for web and iOS.
-              </p>
-              <a href={resume} target="_blank">
-                <button className="project-button">Download my Resume</button>
-              </a>
-            </div>
-            <div className="avatar-container">
-              <img className="avatar" src={avatar} />
-              <div className="avatar-ring" />
-            </div>
-          </section>
           <section id="section-two">
             <h2> Professional Experiences. </h2>
             <div className="project">

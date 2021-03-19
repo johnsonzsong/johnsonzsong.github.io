@@ -199,9 +199,9 @@ const Daimler = () => {
 
         <section id="brainstorm" className="wide">
           <div className="col-60 multi-image">
-            <div className="image-container">
+            {/* <div className="image-container">
               <img style={{width: "100%"}} src={cabanaBrainstorm1}></img>
-            </div>
+            </div> */}
             <div className="image-container">
               <img style={{width: "100%"}} src={cabanaBrainstorm2}></img>
             </div>
@@ -261,8 +261,12 @@ const Daimler = () => {
           </div>
         </section>
 
-        <section id="section-four" className="wide">
-          <div className="col-60 multi-image-vertical">
+        <section id="section-four" className="wide stack">
+          <h2>Medium-Fidelity.</h2>
+          <p className="col-60 mb-32">
+            Among the games that we rapid-prototyped, we found that trivia offered the best mixture of positive feedback from testers and alignment with Daimler's vision. I led wireframing, starting with simple, low-fidelity flows to capture the important steps along a player's journey. The crucial aspects we wanted to pin down were designing for a touch-screen device, designing for user by multiple users at varying distances, and creating an intuitive, uncluttered interface.
+          </p>
+          <div className="multi-image">
             <div className="image-container">
               <img style={{width: "100%"}} src={cabanaMedFi1}></img>
             </div>
@@ -272,12 +276,6 @@ const Daimler = () => {
             <div className="image-container">
               <img style={{width: "100%"}} src={cabanaMedFi3}></img>
             </div>
-          </div>
-          <div className="col-35">
-            <h2>Medium-Fidelity.</h2>
-            <p>
-              Among the games that we rapid-prototyped, we found that trivia offered the best mixture of positive feedback from testers and alignment with Daimler's vision. I led wireframing, starting with simple, low-fidelity flows to capture the important steps along a player's journey. The crucial aspects we wanted to pin down were designing for a touch-screen device, designing for user by multiple users at varying distances, and creating an intuitive, uncluttered interface.
-            </p>
           </div>
         </section>
         

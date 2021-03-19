@@ -9,6 +9,8 @@ import cartaFilterFlare2 from "../../static/cartaFilterFlare2.png";
 import cartaFilterFlare3 from "../../static/cartaFilterFlare3.png";
 import cartaSearchFlare1 from "../../static/cartaSearchFlare1.png";
 import cartaSearchFlare2 from "../../static/cartaSearchFlare2.png";
+import cartaMedFinal1 from "../../static/cartaMedFinal1.png";
+import cartaMedFinal2 from "../../static/cartaMedFinal2.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Carta = () => {
@@ -58,7 +60,7 @@ const Carta = () => {
       <div className="container">
         <div className="col-60">
           <section id="section-one">
-            <h1> [WIP] Carta.</h1>
+            <h1> Carta.</h1>
             <p>
               The CartaLab (or Carta) is a research group at Stanford trying to understand how students navigate their academic paths. Carta helps students learn about course choices and educators observe how students move through college. Read more about Carta <a href="https://cartalab.stanford.edu/" target="_blank">here</a>.
             </p>
@@ -161,7 +163,7 @@ const Carta = () => {
           </div>
         </section>
 
-        {/* TODO: section about binary filter states */}
+        {/* TODO: section about binary filter states or search bar?*/}
 
         <section id="med-fi-search" className="wide">
           <div className="col-60 multi-image-vertical">
@@ -185,34 +187,31 @@ const Carta = () => {
 
         <section id="med-fi-insights" className="wide stack">
           <h2>Putting it All Together.</h2>
-          <p className="col-60">
-            {/* Below is the final result of this medium-fidelity stage of iterative flare and focus for search result filters and navigation. */}
+          <p className="col-60 mb-32">
+            The final medium-fidelity design I settled on is shown below. A major decision I made was to scrap the "All Results" tab. My reasons for doing so were that since our research showed that students are searching for courses in the majority of cases (~90% of the time), it would reduce friction to just display the courses as a default. Similarly, since showing an "All Results" tab would always require students to have to specifically switch to Courses, or People, or Departments, I decided that removing this would bring them one step closer to an intuitive and efficient search flow, without sacrificing the experience.
           </p>
           <div className="multi-image">
-            {/* <div className="image-container">
-              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaMedFinal1}></img>
             </div>
             <div className="image-container">
-              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+              <img style={{width: "100%"}} src={cartaMedFinal2}></img>
             </div>
-            <div className="image-container">
-              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
-            </div> */}
           </div>
         </section>
 
         <section id="section-four" className="wide">
           <div className="col-60 multi-image">
-            <div className="image-container">
-              {/* <img style={{width: "100%"}} src={cartaSearchFlare1}></img> */}
-            </div>
+            {/* <div className="image-container">
+              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
+            </div> */}
+            <h2 className="holo-text"> Updates Coming Soon... </h2>
           </div>
-          <div className="col-35">
+          {/* <div className="col-35">
             <h2>High-Fidelity.</h2>
             <p>
-              {/* The time I spent in medium-fidelity prototyping paid off, as  */}
             </p>
-          </div>
+          </div> */}
         </section>
 
         <section id="section-five"></section>
