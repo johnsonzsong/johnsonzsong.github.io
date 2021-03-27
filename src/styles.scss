@@ -33,6 +33,20 @@ body {
   color: $white-100;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: $white-30;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $accent;    /* color of the scroll thumb */
+  border-radius: 3em;       /* roundness of the scroll thumb */
+  border: 2px solid $white-30;  /* creates padding around scroll thumb */
+}
+
 a {
   color: $white-100;
 }
@@ -132,6 +146,19 @@ p a {
 #ps-container {
   position: absolute;
   bottom: 2em;
+}
+
+#backToTop-container {
+  z-index: 1;
+  position: fixed;
+  right: 1em;
+  bottom: 0;
+  padding: 1em;
+  color: $white-30;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .container {
@@ -341,6 +368,11 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  &.nb {
+    border: none;
+    box-shadow: none;
+  }
 }
 
 .persona-container {

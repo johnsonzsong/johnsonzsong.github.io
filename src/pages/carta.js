@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
+
 import cartaAudit1 from "../../static/cartaAudit1.png";
 import cartaAudit2 from "../../static/cartaAudit2.png";
 import cartaFilterFlare1 from "../../static/cartaFilterFlare1.png";
@@ -11,7 +14,11 @@ import cartaSearchFlare1 from "../../static/cartaSearchFlare1.png";
 import cartaSearchFlare2 from "../../static/cartaSearchFlare2.png";
 import cartaMedFinal1 from "../../static/cartaMedFinal1.png";
 import cartaMedFinal2 from "../../static/cartaMedFinal2.png";
+import cartaHiFi1 from "../../static/cartaHiFi1.png";
+import cartaHiFi2 from "../../static/cartaHiFi2.png";
+import cartaHiFi3 from "../../static/cartaHiFi3.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
+import { withPrefix } from "gatsby";
 
 const Carta = () => {
   return (
@@ -20,6 +27,7 @@ const Carta = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Carta</title>
+        <script src={withPrefix('imageScript.js')} type="text/javascript"/>
       </Helmet>
       {/* NAV */}
       <div id="nav-container">
@@ -53,9 +61,19 @@ const Carta = () => {
             }}>
               Hi-Fi.
             </p>
+            <p id="nav-five" onClick={() => {
+              var elmnt = document.getElementById("section-five");
+              elmnt.scrollIntoView();
+            }}>
+              Takeaways.
+            </p>
           </div>
         </div>
       </div>
+
+      <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
+        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+      </a>
 
       <div className="container">
         <div className="col-60">
@@ -188,7 +206,7 @@ const Carta = () => {
         <section id="med-fi-insights" className="wide stack">
           <h2>Putting it All Together.</h2>
           <p className="col-60 mb-32">
-            The final medium-fidelity design I settled on is shown below. A major decision I made was to scrap the "All Results" tab. My reasons for doing so were that since our research showed that students are searching for courses in the majority of cases (~90% of the time), it would reduce friction to just display the courses as a default. Similarly, since showing an "All Results" tab would always require students to have to specifically switch to Courses, or People, or Departments, I decided that removing this would bring them one step closer to an intuitive and efficient search flow, without sacrificing the experience.
+            The final medium-fidelity design I settled on is shown below. A major decision I made was to scrap the "All Results" tab. Since our research showed that students are searching for courses in the majority of cases (~90% of the time), it would reduce friction to just display the courses as a default. Similarly, since showing an "All Results" tab would always require students to have to specifically switch to Courses, or People, or Departments, I decided that removing this would bring them one step closer to an intuitive and efficient search flow, without sacrificing the experience.
           </p>
           <div className="multi-image">
             <div className="image-container">
@@ -200,22 +218,45 @@ const Carta = () => {
           </div>
         </section>
 
-        <section id="section-four" className="wide">
-          <div className="col-60 multi-image">
-            {/* <div className="image-container">
-              <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
-            </div> */}
-            <h2 className="holo-text"> Updates Coming Soon... </h2>
+        <section id="section-four" className="wide stack">
+          <h2>High-Fidelity.</h2>
+          <p className="col-60 mb-32">
+            Finally, I polished my wireframes by ensuring that I was using all patterns, components, and colors consistently within our design system. Then, I linked up the interactions into a fully-funtional, usable prototype that would help the hand-off process to the development team. I also included commentary on expected behaviors for the flows, including cases for null results, different search queries, and peculiarities in filter criteria.
+          </p>
+          <div className="multi-image col-80">
+            <div className="image-container nb">
+              <img style={{width: "100%"}} src={cartaHiFi2}></img>
+            </div>
           </div>
-          {/* <div className="col-35">
-            <h2>High-Fidelity.</h2>
-            <p>
-            </p>
-          </div> */}
         </section>
 
-        <section id="section-five"></section>
+        <section id="section-five" className="wide">
+          <div className="col-60 multi-image">
+            <div className="insight-container">
+              <div className="insight-number">1</div>
+              Overcommunicate. It will save you time in the long-run.
+            </div>
+            <div className="insight-container">
+             <div className="insight-number">2</div>
+              Be patient. The design process is not a straight path, and you'll be frustrated, surprised, and overjoyed at what you discover along the way.
+            </div>
+          </div>
+          <div className="col-35">
+            <h2>Takeaways.</h2>
+            <p>
+              This was my first time working on a real, structured design team, and I am incredibly grateful for the opportunity. I wouldn't want to have had my first structured design critiques, brainstorming sessions, and design banters with anyone else - so huge huge shoutout to my design team: Kristina, Liam, Jordan, and Kaelyn.
+            </p>
+            <p>
+              I was surprised by both how much I knew, and how little I knew, of the design process. Sure, I'd heard of and practiced needfinding, brainstorming, and prototyping before. However, I didn't realize how many wild and exciting directions design could take me, with a feature as seemingly straightforward as filters, no less! I am excited to continue applying what I've learned to future design - and even engineering - projects.
+            </p>
+          </div>
+        </section>
 
+        <div className="project-button-container mt-64">
+          <Link to="/daimler">
+            <button className="project-button">Next: Daimler</button>
+          </Link>
+        </div>
       </div>
     </div>
     </PageTransition>

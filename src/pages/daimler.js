@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
+
 import neil from "../../static/neil.png";
 import alex from "../../static/alex.png";
 import cabanaBrainstorm1 from "../../static/cabanaBrainstorm1.png";
@@ -62,6 +65,10 @@ const Daimler = () => {
           </div>
         </div>
       </div>
+
+      <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
+        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+      </a>
 
       <div className="container">
         <div className="col-60">
@@ -293,6 +300,12 @@ const Daimler = () => {
             </a>
           </div>
         </section>
+
+        <div className="project-button-container mt-64">
+          <Link to="/carta">
+            <button className="project-button">Previous: Carta</button>
+          </Link>
+        </div>
       </div>
     </div>
     </PageTransition>

@@ -6,7 +6,7 @@ import PageTransition from 'gatsby-plugin-page-transitions';
 import avatar from "../../static/avatar.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import resume from "../../static/Johnson_Song_Resume.pdf";
 
 const Home = () => {
@@ -73,6 +73,11 @@ const Home = () => {
           <FontAwesomeIcon icon={faEnvelope} size="2x" />
         </a>
       </div>
+
+      {/* BACK TO TOP */}
+      <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
+        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+      </a>
 
       {/* CONTENT */}
       <div className="container">
@@ -234,19 +239,35 @@ const Home = () => {
                 <p>
                   I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on my experiences and happiness.
                 </p>
-                <p className="m-0">Jennifer Song</p>
+                <p className="m-0">
+                  <a href="https://www.linkedin.com/in/jennifersongcmu" target="_blank">
+                    Jennifer Song
+                  </a>
+                </p>
                 <p className="m-0">Rıza Selçuk Saydam</p>
                 <p className="m-0">Jordan Dunn</p>
+                <p className="m-0">
+                  <a href="http://www.kristinainouye.com/" target="_blank">
+                    Kristina Inouye
+                  </a>
+                </p>
+                <p className="m-0">
+                  <a href="https://www.sophia-nguyen.com/" target="_blank">
+                    Sophia Nguyen
+                  </a>
+                </p>
+                <p className="m-0">Jordan Llorin</p>
+                <p className="m-0">
+                  <a href="https://www.liamllorin.com/" target="_blank">
+                    Liam Llorin
+                  </a>
+                </p>
+                <p className="m-0">Kaelyn Ong</p>
+                <p className="m-0">Noopur Chhabra</p>   
                 <p className="m-0">Odette Du</p>
                 <p className="m-0">Daiwei Liu</p>
-                <p className="m-0">Kristina Inouye</p>
-                <p className="m-0">Sophia Nguyen</p>
-                <p className="m-0">Jordan Llorin</p>
-                <p className="m-0">Liam Llorin</p>
-                <p className="m-0">Kaelyn Ong</p>
                 <p className="m-0">Roger Li</p>
-                <p className="m-0">Seth Kasky</p>
-                <p className="m-0">Noopur Chhabra</p>                
+                <p className="m-0">Seth Kasky</p>        
               </div>
             </div>
           </section>
