@@ -161,6 +161,17 @@ p a {
   }
 }
 
+#featured {
+  // background: $holo;
+  box-shadow: 0px 0px 32px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  // background: $accent;
+  // box-shadow: 0px 0px 32px rgba(255, 224, 102, 0.5);
+  // padding: 1em;
+  border-radius: 1em;
+  display: flex;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -264,6 +275,10 @@ section {
   margin-bottom: 0px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 // ----------------------------
 
 .intro {
@@ -293,6 +308,7 @@ section {
   border: double 2px transparent;
   border-radius: 50%;
   background-image: linear-gradient($bg, $bg), radial-gradient(circle at top left, rgba(242,97,255,1), rgba(86,245,255,1));
+  // background-color: $accent;
   background-origin: border-box;
   background-clip: content-box, border-box;
   z-index: -1;
@@ -303,6 +319,15 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.current {
+  width: .8em;
+  height: .8em;
+  border-radius: 1em;
+  background-color: $accent;
+  display: inline-block;
+  margin-right: .5em;
 }
 
 .project-button-container {
@@ -367,7 +392,7 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: fit-content;
 
   &.nb {
     border: none;
@@ -464,6 +489,12 @@ section {
   color:rgba(0, 0, 0, 0.25);
   font-weight: bold;
   font-size: 2em;
+}
+
+.bottom-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 768px) {

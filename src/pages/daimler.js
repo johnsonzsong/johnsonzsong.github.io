@@ -15,6 +15,7 @@ import cabanaMedFi2 from "../../static/cabanaMedFi2.png";
 import cabanaMedFi3 from "../../static/cabanaMedFi3.png";
 import cabanaFeature from "../../static/cabanaFeature.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
+import { withPrefix } from "gatsby";
 
 const Daimler = () => {
   return (
@@ -23,6 +24,8 @@ const Daimler = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Daimler</title>
+        <script src={withPrefix('navScript.js')} type="text/javascript"/>
+        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
       {/* NAV */}
       <div id="nav-container">

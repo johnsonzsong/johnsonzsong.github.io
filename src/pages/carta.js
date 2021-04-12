@@ -27,7 +27,8 @@ const Carta = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Johnson Song | Carta</title>
-        <script src={withPrefix('imageScript.js')} type="text/javascript"/>
+        <script src={withPrefix('navScript.js')} type="text/javascript"/>
+        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
       {/* NAV */}
       <div id="nav-container">
@@ -252,10 +253,17 @@ const Carta = () => {
           </div>
         </section>
 
-        <div className="project-button-container mt-64">
-          <Link to="/daimler">
-            <button className="project-button">Next: Daimler</button>
-          </Link>
+        <div className="bottom-buttons-container">
+          <div className="project-button-container mt-64">
+            <Link to="/goodreads">
+              <button className="project-button">Prev: Goodreads</button>
+            </Link>
+          </div>
+          <div className="project-button-container mt-64">
+            <Link to="/daimler">
+              <button className="project-button">Next: Daimler</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

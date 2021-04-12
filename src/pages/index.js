@@ -4,6 +4,7 @@ import "../styles.scss";
 import { withPrefix, Link } from "gatsby";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import avatar from "../../static/avatar.png";
+import grCover from "../../static/grCover.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
@@ -103,11 +104,18 @@ const Home = () => {
           </div>
         </section>
         <div className="col-80">
+          <h2> Featured Project. </h2>
+          <Link to="goodreads">
+            <section id="featured">
+              <img style={{width: "100%"}} src={grCover}></img>
+            </section>
+          </Link>
+
           <section id="section-two">
-            <h2> Professional Experiences. </h2>
+            <h2> Professional Experiences.</h2>
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>UX/UI Designer</b></p>
+                <p className="m-0"><div className="current"></div><b>UX/UI Designer</b></p>
                 <p className="m-0">Carta (Stanford University)</p>
                 <p className="m-0"><i>January 2021 - now</i></p>
                 <p>
@@ -123,7 +131,7 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>Engineering Lead</b></p>
+                <p className="m-0"><div className="current"></div><b>Head of Engineering</b></p>
                 <p className="m-0">Stealth Startup</p>
                 <p className="m-0"><i>September 2020 - now</i></p>
                 <p>
@@ -184,7 +192,7 @@ const Home = () => {
                 <p className="m-0"><i>GPA: 4.0/4.0</i></p>
 
                 <p>
-                  Select Coursework: Product Management, Entrepreneurial Principles, Data Visualization, Social Computing, Web Applications
+                  Select Coursework: Product Management, HCI Research, Entrepreneurial Principles, Data Visualization, Social Computing, Web Applications
                 </p>
               </div>
             </div>
@@ -252,14 +260,14 @@ const Home = () => {
                   </a>
                 </p>
                 <p className="m-0">
-                  <a href="https://www.sophia-nguyen.com/" target="_blank">
-                    Sophia Nguyen
+                  <a href="https://www.liamllorin.com/" target="_blank">
+                    Liam Llorin
                   </a>
                 </p>
                 <p className="m-0">Jordan Llorin</p>
                 <p className="m-0">
-                  <a href="https://www.liamllorin.com/" target="_blank">
-                    Liam Llorin
+                  <a href="https://www.sophia-nguyen.com/" target="_blank">
+                    Sophia Nguyen
                   </a>
                 </p>
                 <p className="m-0">Kaelyn Ong</p>
