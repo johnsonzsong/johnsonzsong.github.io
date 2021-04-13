@@ -106,8 +106,8 @@ const Home = () => {
         <div className="col-80">
           <h2> Featured Project. </h2>
           <Link to="goodreads">
-            <section className="featured">
-              <img style={{width: "100%"}} src={grCover}></img>
+            <section>
+              <img className="featured" src={grCover}></img>
             </section>
           </Link>
 
