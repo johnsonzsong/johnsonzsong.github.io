@@ -83,7 +83,7 @@ const Home = () => {
       {/* CONTENT */}
       <div className="container">
         <p id="ps-container" class="holo-text">
-          *P.S. - this entire website was handmade from scratch by me. Let me know what you think!
+          *P.S. - this entire website was designed (Figma) and developed (React/Javascript) from scratch by me!
         </p>
         <section id="section-one" className="intro">
           <div className="col-80">
