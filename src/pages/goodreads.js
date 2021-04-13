@@ -85,7 +85,7 @@ const Goodreads = () => {
       </a>
 
       <div className="container">
-        <img className="wide" id="featured" src={grCover}></img>
+        <img className="wide featured" src={grCover}></img>
         <div className="col-60">
           <section id="section-one">
             <h1> Goodreads.</h1>
@@ -319,7 +319,7 @@ const Goodreads = () => {
             </section>
 
             <section className="wide stack">
-              <p>You can check out my <a href="https://www.figma.com/proto/eYYsWMfDZFOCbjtn7kTVwP/Goodreads-Case-Study?node-id=219%3A0&viewport=339%2C785%2C0.38783445954322815&scaling=scale-down&page-id=24%3A3" target="_blank">prototype</a> below.</p>
+              <p>You can check out my <a href="https://www.figma.com/proto/eYYsWMfDZFOCbjtn7kTVwP/Goodreads-Case-Study?node-id=219%3A0&viewport=339%2C785%2C0.38783445954322815&scaling=scale-down&page-id=24%3A3" target="_blank">prototype here.</a> </p>
               <iframe width={800} height={450} src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeYYsWMfDZFOCbjtn7kTVwP%2FGoodreads-Case-Study%3Fnode-id%3D219%253A0%26viewport%3D339%252C785%252C0.38783445954322815%26scaling%3Dscale-down%26page-id%3D24%253A3" allowfullscreen></iframe>
             </section>
         </section>
