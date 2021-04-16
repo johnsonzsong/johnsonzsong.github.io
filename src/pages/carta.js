@@ -5,18 +5,18 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 
+import cartaAffinityMap from "../../static/cartaAffinityMap.jpeg";
 import cartaAudit1 from "../../static/cartaAudit1.png";
 import cartaAudit2 from "../../static/cartaAudit2.png";
 import cartaFilterFlare1 from "../../static/cartaFilterFlare1.png";
 import cartaFilterFlare2 from "../../static/cartaFilterFlare2.png";
 import cartaFilterFlare3 from "../../static/cartaFilterFlare3.png";
-import cartaSearchFlare1 from "../../static/cartaSearchFlare1.png";
-import cartaSearchFlare2 from "../../static/cartaSearchFlare2.png";
+import cartaLayout1 from "../../static/cartaLayout1.png";
+import cartaLayout2 from "../../static/cartaLayout2.png";
+import cartaLayout3 from "../../static/cartaLayout3.png";
 import cartaMedFinal1 from "../../static/cartaMedFinal1.png";
 import cartaMedFinal2 from "../../static/cartaMedFinal2.png";
-import cartaHiFi1 from "../../static/cartaHiFi1.png";
-import cartaHiFi2 from "../../static/cartaHiFi2.png";
-import cartaHiFi3 from "../../static/cartaHiFi3.png";
+import cartaHifi from "../../static/cartaHifi.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
 
@@ -106,28 +106,33 @@ const Carta = () => {
           </section>
         </div>
 
-        <section id="section-two" className="wide">
+        <section id="section-two" className="wide stack">
+        <h2>UX Research.</h2>
+          <p className="col-60">
+              In addition to reading through the existing research repository my team had put together, I conducted user interviews through Zoom in order to uncover insights about the search experience on Carta. When and how often did students search? What contexts did they search in? How did they use filters?
+            </p>
+          <div className="image-container mb-32">
+            <img style={{width: "100%"}} src={cartaAffinityMap}></img>
+          </div>
+          <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
           <div className="col-60 multi-image">
             <div className="insight-container">
               <div className="insight-number">1</div>
-              Most of the time, students know exactly what course they'd like to search on Carta, and search it by exact course code or name.
+              <b>Degree comes first.</b> Most of the time, students know exactly what course they need to take in order to stay on track to graduate from their degree program.
             </div>
             <div className="insight-container">
              <div className="insight-number">2</div>
-              Or, they're looking for <b>one last class</b> to fit into their existing schedules (units-wise) or fulfill some elusive graduation requirement.
+              <b>One last class.</b> Other times, students need just one class to round out their quarter based on some requirements, such as WAYS, units, or even time of day.
             </div>
           </div>
-          <div className="col-35">
-            <h2>UX Research.</h2>
+          <div className="col-35" style={{textAlign: "left"}}>
             <p>
-              My primary research focus was uncovering insights about the course filtering process. How did students use filters? What parameters did they filter by and in what order? What filters were desired?
-            </p>
-            <p>
-              Through user interviews, I found that filters on the search results page were used in few limited cases. Students often entered exact-string queries of the course in question, and so didn’t always need to further filter results.
+              I found that students often entered exact-string queries courses because they knew what they were looking for. This was a common case because students just wanted additional information about the courses required by their degree programs.
             </p>
             <p>
               However, a compelling use case for filters among students was in finding <b>one last course</b> - a filler course to complete their quarter schedule. The most frequently-used filters to help with this scenario was narrowing results by quarter, number of units, and fulfillment of graduation requirements (WAYS requirements).
             </p>
+          </div>
           </div>
         </section>
 
@@ -184,19 +189,35 @@ const Carta = () => {
 
         {/* TODO: section about binary filter states or search bar?*/}
 
-        <section id="med-fi-search" className="wide">
-          <div className="col-60 multi-image-vertical">
+        <section id="med-fi-search" className="wide stack">
+          {/* <div className="col-60 multi-image-vertical">
             <div className="image-container">
               <img style={{width: "100%"}} src={cartaSearchFlare1}></img>
             </div>
-            {/* <div className="image-container">
+            <div className="image-container">
               <img style={{width: "100%"}} src={cartaSearchFlare2}></img>
-            </div> */}
-          </div>
-          <div className="col-35">
-            <h2>Navigating Results.</h2>
+            </div>
+          </div> */}
+          <h2>Navigating Results.</h2>
+          <div className="col-60">
             <p>
               One peculiarity of Carta search results is that there are multiple <i>types</i> of results: courses, professors/teaching staff, or even departments. This challenged me to design for smooth, intuitive navigation. My first attempt used a tabbed navigation to switch between all results, courses, people, and departments. Tabs were a natural course since they would be used to <b>logically chunk</b> results that were <b>parallel in nature</b>. Additionally, they were already used throughout numerous other pages on Carta. Shoutout to Liam for sharing a <a href="https://www.nngroup.com/articles/tabs-used-right/" target="_blank">great article from Nielsen Norman Group</a> about using tabs that helped inform this approach.
+            </p>
+          </div>
+          <div className="multi-image">
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaLayout1}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaLayout2}></img>
+            </div>
+            <div className="image-container">
+              <img style={{width: "100%"}} src={cartaLayout3}></img>
+            </div>
+          </div>
+          <div className="col-60">
+            <p>
+              I explored a layout more geared towards exploration and recommendation rather than filtering. This utilized a grid layout to represent search results, so that while each card had less information on it, there were overall more cards on the screen at a time. Inspired by Spotify's analogous search patterns, this was an interesting exploration of discovery vs. focus.
             </p>
             <p>
               I also tried using buttons (inspired by LinkedIn search) to navigate between result types. LinkedIn provided a great comparison, since it has the same pattern - search results include companies, job opportunities, people, posts, and more. Exploring this pattern gave me insights about how filter sets could be dynamic depending on type of result the user is looking at.
@@ -226,30 +247,38 @@ const Carta = () => {
           </p>
           <div className="multi-image col-80">
             <div className="image-container nb">
-              <img style={{width: "100%"}} src={cartaHiFi2}></img>
+              <img style={{width: "100%"}} src={cartaHifi}></img>
             </div>
           </div>
         </section>
 
-        <section id="section-five" className="wide">
-          <div className="col-60 multi-image">
-            <div className="insight-container">
-              <div className="insight-number">1</div>
-              Overcommunicate. It will save you time in the long-run.
-            </div>
-            <div className="insight-container">
-             <div className="insight-number">2</div>
-              Be patient. The design process is not a straight path, and you'll be frustrated, surprised, and overjoyed at what you discover along the way.
-            </div>
-          </div>
-          <div className="col-35">
-            <h2>Takeaways.</h2>
+        <section id="section-five" className="wide stack">
+          <h2>Takeaways.</h2>
+          <div className="col-60">
             <p>
               This was my first time working on a real, structured design team, and I am incredibly grateful for the opportunity. I wouldn't want to have had my first structured design critiques, brainstorming sessions, and design banters with anyone else - so huge huge shoutout to my design team: Kristina, Liam, Jordan, and Kaelyn.
             </p>
             <p>
               I was surprised by both how much I knew, and how little I knew, of the design process. Sure, I'd heard of and practiced needfinding, brainstorming, and prototyping before. However, I didn't realize how many wild and exciting directions design could take me, with a feature as seemingly straightforward as filters, no less! I am excited to continue applying what I've learned to future design - and even engineering - projects.
             </p>
+          </div>
+          <div className="multi-image">
+            <div className="insight-container">
+              <div className="insight-number">1</div>
+              Be unafraid to ask for help.
+            </div>
+            <div className="insight-container">
+             <div className="insight-number">2</div>
+              Stay anchored with the user end goal.
+            </div>
+            <div className="insight-container">
+             <div className="insight-number">3</div>
+              Make data-driven decisions.
+            </div>
+            <div className="insight-container">
+             <div className="insight-number">4</div>
+             A supportive design team is one of your greatest design tools.
+            </div>
           </div>
         </section>
 

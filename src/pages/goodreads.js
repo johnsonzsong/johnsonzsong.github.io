@@ -154,10 +154,10 @@ const Goodreads = () => {
             After my preliminary research, my next step was to conduct comparator audits of similar apps and UX patterns found in Goodreads. I looked at both existing reading app competitors such as Reading List and Libib, as well as apps in different domains but with similar patterns, like Spotify's explore flow and playlist library and Twitter's social feed. Below are some annotated screenshots of my comparative analyses.
           </p>
           <div className="multi-image-vertical">
-            <div className="image-container">
+            <div className="image-container nb">
               <img style={{width: "100%"}} src={grAudit1}></img>
             </div>
-            <div className="image-container">
+            <div className="image-container nb">
               <img style={{width: "100%"}} src={grAudit2}></img>
             </div>
           </div>
