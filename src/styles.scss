@@ -135,11 +135,11 @@ p a {
   flex-direction: column;
 
   a {
+    font-size: 2em;
     text-decoration: none;
     color: $white-30;
     width: fit-content;
     height: fit-content;
-    margin-top: 1em;
   }
 }
 
@@ -154,6 +154,7 @@ p a {
   right: 1em;
   bottom: 0;
   padding: 1em;
+  font-size: 2em;
   color: $white-30;
 
   &:hover {
@@ -193,8 +194,7 @@ h2 {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 2em;
   width: fit-content;
 }
 
@@ -207,8 +207,9 @@ h2 {
 
 // Used for default body text
 p {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 500;
 }
 
 section {
@@ -230,6 +231,12 @@ section {
   align-items: center;
   align-self: center;
   text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 // Utility classes --------------------------------------------------------------------------------
@@ -293,18 +300,17 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12em;
 }
 
 .avatar {
-  width: 6em;
-  height: 6em;
+  width: 12em;
+  height: 12em;
   position: absolute;
 }
 
 .avatar-ring {
-  width: 6.3em;
-  height: 6.3em;
+  width: 13em;
+  height: 13em;
   background: transparent;
   position: absolute;
   border: double 2px transparent;
@@ -317,7 +323,7 @@ section {
 }
 
 .project {
-  margin-bottom: 32px;
+  margin-bottom: 3em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -511,10 +517,10 @@ section {
   }
 
   .container {
-    padding: 6em 4em;
+    padding: 6em 2em;
   }
 
-  .nav-items {
+  #nav-container, #social-container, #backToTop-container {
     display: none;
   }
 
@@ -538,7 +544,12 @@ section {
     justify-content: flex-start;
   }
 
-  .wide {
+  .bottom-buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wide, .row {
     flex-direction: column;
     margin: unset;
   }

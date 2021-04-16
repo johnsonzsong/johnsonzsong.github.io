@@ -65,19 +65,19 @@ const Home = () => {
       {/* SOCIAL */}
       <div id="social-container">
         <a href="http://instagram.com/johnson.song" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+          <FontAwesomeIcon icon={faInstagram} />
         </a>
         <a href="https://www.linkedin.com/in/johnsonsong/" target="_blank">
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a href="mailto:johnsonsong@stanford.edu">
-          <FontAwesomeIcon icon={faEnvelope} size="2x" />
+          <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>
 
       {/* BACK TO TOP */}
       <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
-        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+        <FontAwesomeIcon icon={faAngleDoubleUp} />
       </a>
 
       {/* CONTENT */}
@@ -85,20 +85,17 @@ const Home = () => {
         <p id="ps-container" class="holo-text">
           *P.S. - this entire website was designed (Figma) and developed (React/Javascript) from scratch by me!
         </p>
-        <section id="section-one" className="intro">
-          <div className="col-80">
+        <section id="section-one" className="intro col-80">
+          <div className="col-50">
             <h2 className="holo-text"> Hey! I'm Johnson. </h2>
             <p>
-              I’m a developer and designer, eager to explore the world and ready for my next project. I approach all my work with curiosity, creativity, and a keen eye for detail.
-            </p>
-            <p>
-              I am a master’s student in computer science at Stanford. I am currently doing product design with Carta at Stanford, helping students navigate their academic paths. Previously, I was a software engineering intern at <a href="https://www.facebook.com/gaming/" target="_blank">Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">Messenger</a>, where I developed new features for web and iOS.
+              I’m a developer and product designer, currently studying human-computer interaction <a href="http://stanford.edu/" target="_blank">@Stanford</a> and designing <a href="http://carta-beta.stanford.edu/" target="_blank">@Carta.</a> Previously, I was a software engineer <a href="https://www.facebook.com/gaming/" target="_blank">@Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">@Messenger.</a>
             </p>
             <a href={resume} target="_blank">
               <button className="project-button">Download my Resume</button>
             </a>
           </div>
-          <div className="avatar-container">
+          <div className="avatar-container col-50">
             <img className="avatar" src={avatar} />
             <div className="avatar-ring" />
           </div>
@@ -119,7 +116,7 @@ const Home = () => {
                 <p className="m-0">Carta (Stanford University)</p>
                 <p className="m-0"><i>January 2021 - now</i></p>
                 <p>
-                  I joined the Carta team at Stanford to design a delightful way to search, filter, and sort through the thousands of courses offered at Stanford. I thoroughly enjoyed working with fellow designers in a beautiful design system and relevant application.
+                  I joined the Carta team at Stanford to design a brand new search experience for the academic offerings at Stanford. I collaborated with fellow designers on the design system and other features within Carta.
                 </p>
               </div>
               <div className="col-50 project-button-container">
@@ -132,7 +129,7 @@ const Home = () => {
             <div className="project">
               <div className="col-50">
                 <p className="m-0"><div className="current"></div><b>Head of Engineering</b></p>
-                <p className="m-0">Stealth Startup</p>
+                <p className="m-0">Kangaroo</p>
                 <p className="m-0"><i>September 2020 - now</i></p>
                 <p>
                   I led the engineering team at a stealth startup in the interactive media space. I developed dozens of MVP features for web and mobile, scoped tasks, designed some flows, and helped form the early company product vision.
@@ -146,14 +143,14 @@ const Home = () => {
                 <p className="m-0">Facebook (Seattle)</p>
                 <p className="m-0"><i>June - September 2020</i></p>
                 <p>
-                I developed a brand new MVP experience for Facebook Gaming on web. I worked closely with designers and engineers across teams.
+                I developed an MVP experience for Facebook Gaming on web. I worked closely with designers and engineers across teams.
                 </p>
               </div>
             </div>
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>Product Designer and Developer</b></p>
+                <p className="m-0"><b>UX Researcher and Developer</b></p>
                 <p className="m-0">Daimler (Sunnyvale)</p>
                 <p className="m-0"><i>January - June 2020</i></p>
                 <p>

@@ -73,7 +73,7 @@ const Carta = () => {
       </div>
 
       <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
-        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+        <FontAwesomeIcon icon={faAngleDoubleUp} />
       </a>
 
       <div className="container">
@@ -90,15 +90,15 @@ const Carta = () => {
               </p>
               <div className="background-facts">
                 <div> 
-                  <p>DURATION</p>
+                  <p><b>DURATION</b></p>
                   <p>January 2021 - now</p>
                 </div>
                 <div> 
-                  <p>ROLES</p>
+                  <p><b>ROLES</b></p>
                   <p>UX/UI Designer</p>
                 </div>
                 <div> 
-                  <p>TOOLS</p>
+                  <p><b>TOOLS</b></p>
                   <p>Figma</p>
                 </div>
               </div>
@@ -114,7 +114,7 @@ const Carta = () => {
           <div className="image-container mb-32">
             <img style={{width: "100%"}} src={cartaAffinityMap}></img>
           </div>
-          <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+          <div className="row">
           <div className="col-60 multi-image">
             <div className="insight-container">
               <div className="insight-number">1</div>

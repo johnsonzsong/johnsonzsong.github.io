@@ -81,11 +81,11 @@ const Goodreads = () => {
       </div>
 
       <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
-        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+        <FontAwesomeIcon icon={faAngleDoubleUp} />
       </a>
 
       <div className="container">
-        <img className="wide featured" src={grCover}></img>
+        <img className="featured" src={grCover}></img>
         <div className="col-60">
           <section id="section-one">
             <h1> Goodreads.</h1>
@@ -99,15 +99,15 @@ const Goodreads = () => {
               </p>
               <div className="background-facts">
                 <div> 
-                  <p>DURATION</p>
+                  <p><b>DURATION</b></p>
                   <p>March 2021</p>
                 </div>
                 <div> 
-                  <p>ROLES</p>
+                  <p><b>ROLES</b></p>
                   <p>UX/UI Designer</p>
                 </div>
                 <div> 
-                  <p>TOOLS</p>
+                  <p><b>TOOLS</b></p>
                   <p className="m-0">Figma</p>
                   <p className="m-0">Whimsical</p>
                 </div>
@@ -116,36 +116,36 @@ const Goodreads = () => {
           </section>
         </div>
 
-        <section id="section-two" className="wide">
-          <div className="col-60 multi-image-vertical">
-            <div className="image-container">
-              <img 
-                style={{width: "100%", backgroundColor: "#fff"}}
-                src={grStickies} />
-            </div>
-            <div className="multi-image">
-            <div className="insight-container">
-              <div className="insight-number">1</div>
-              Many users found the social aspect of Goodreads to contribute positively to their reading experiences. However, there was a tension between public and private reading activity.
-            </div>
-            <div className="insight-container">
-             <div className="insight-number">2</div>
-              One of the biggest painpoints of Goodreads was its obscure exploration and recommendation flows. While Goodreads has plenty of these resources in place, they are hard to find and underutilized.
-            </div>
-          </div>
-          </div>
-          <div className="col-35">
-            <h2>User Research & Affinity Mapping.</h2>
+        <section id="section-two" className="wide stack">
+          <h2>User Research & Affinity Mapping.</h2>
+          <div className="col-60">
             <p>
                 My first step towards better understanding the ways in which readers used the Goodreads mobile app was conducting user research. In previous projects, this might have meant conducting user interviews at a coffee shop. However, given the unique context of the situation (COVID-19), I decided to take a more digital approach. I turned to Reddit as a method of crowd-sourced needfinding. I read through a handful of recent threads in which Goodreads users vented about frustrations they found with the platform.
             </p>
             <p>
                 In addition to gathering insights from Reddit forums, I also reached out to friends that I knew were active on Goodreads. This allowed me to have more in-depth conversations about painpoints, joys, and behaviors within the app. I distilled important learnings and quotes from this combination of crowd-sourced and individual interviews, organizing them on sticky notes. I then used affinity mapping to help categorize these findings.
             </p>
-            <p>
+          </div>
+            <div className="image-container mb-32">
+              <img 
+                style={{width: "100%", backgroundColor: "#fff"}}
+                src={grStickies} />
+            </div>
+            <div className="row">
+            <div className="col-60 multi-image">
+              <div className="insight-container">
+                <div className="insight-number">1</div>
+                Many users found the social aspect of Goodreads to contribute positively to their reading experiences. However, there was a <b>tension between public and private</b> reading activity.
+              </div>
+              <div className="insight-container">
+              <div className="insight-number">2</div>
+                One of the biggest painpoints of Goodreads was its <b>obscure exploration and recommendation</b> flows. While Goodreads has plenty of these resources in place, they are hard to find and underutilized.
+              </div>
+            </div>
+          <p className="col-35" style={{textAlign: "left"}}>
                 Beyond qualms with the clunky interface of the current Goodreads mobile app, I identified two themes to the user feedback. The first was a tension between <b>being social</b> on the app and engaging with friends' reading activities, and wanting to purely track <b>personal activity</b>. The other was a frustration at the limited emphasis Goodreads placed on <b>discoverability of books</b>.
             </p>
-          </div>
+            </div>
         </section>
 
         <section id="audits" className="wide stack">
@@ -336,10 +336,12 @@ const Goodreads = () => {
           </div>
         </section>
 
-        <div className="project-button-container mt-64">
-          <Link to="/carta">
-            <button className="project-button">Next: Carta</button>
-          </Link>
+        <div className="bottom-buttons-container">
+          <div className="project-button-container mt-64">
+            <Link to="/carta">
+              <button className="project-button">Next: Carta</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

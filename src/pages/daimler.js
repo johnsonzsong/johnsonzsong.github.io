@@ -70,7 +70,7 @@ const Daimler = () => {
       </div>
 
       <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
-        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+        <FontAwesomeIcon icon={faAngleDoubleUp} />
       </a>
 
       <div className="container">
@@ -87,16 +87,16 @@ const Daimler = () => {
               </p>
               <div className="background-facts">
                 <div> 
-                  <p>DURATION</p>
+                  <p><b>DURATION</b></p>
                   <p>January - June 2020</p>
                 </div>
                 <div> 
-                  <p>ROLES</p>
+                  <p><b>ROLES</b></p>
                   <p className="m-0">Product Designer</p>
                   <p className="m-0">Frontend Developer</p>
                 </div>
                 <div> 
-                  <p>TOOLS</p>
+                  <p><b>TOOLS</b></p>
                   <p className="m-0">Figma</p>
                   <p className="m-0">React</p>
                 </div>
@@ -304,10 +304,12 @@ const Daimler = () => {
           </div>
         </section>
 
-        <div className="project-button-container mt-64">
-          <Link to="/carta">
-            <button className="project-button">Previous: Carta</button>
-          </Link>
+        <div className="bottom-buttons-container">
+          <div className="project-button-container mt-64">
+            <Link to="/carta">
+              <button className="project-button">Previous: Carta</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
