@@ -27,14 +27,14 @@ import grFinal from "../../static/grFinal.png";
 
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
+import SEO from "../components/seo";
 
 const Goodreads = () => {
   return (
     <PageTransition>
+    <SEO title="Goodreads"></SEO>
     <div>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Johnson Song | Goodreads</title>
         <script src={withPrefix('navScript.js')} type="text/javascript"/>
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>

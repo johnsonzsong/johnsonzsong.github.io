@@ -16,14 +16,14 @@ import cabanaMedFi3 from "../../static/cabanaMedFi3.png";
 import cabanaFeature from "../../static/cabanaFeature.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
+import SEO from "../components/seo";
 
 const Daimler = () => {
   return (
     <PageTransition>
+    <SEO title="Daimler"></SEO>
     <div>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Johnson Song | Daimler</title>
         <script src={withPrefix('navScript.js')} type="text/javascript"/>
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>

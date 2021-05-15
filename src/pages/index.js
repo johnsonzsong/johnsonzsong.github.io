@@ -9,14 +9,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import resume from "../../static/Johnson_Song_Resume.pdf";
+import SEO from "../components/seo"
 
 const Home = () => {
   return (
     <PageTransition>
+    <SEO title="Home"></SEO>
     <div>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Johnson Song | Home</title>
         <script src={withPrefix('navScript.js')} type="text/javascript"/>
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
@@ -87,7 +87,7 @@ const Home = () => {
         </p>
         <section id="section-one" className="intro col-80">
           <div className="col-50">
-            <h2 className="holo-text"> Hey! I'm Johnson. </h2>
+            <h1 className="holo-text"> Hey! I'm Johnson. </h1>
             <p>
               I’m a developer and product designer, currently studying human-computer interaction <a href="http://stanford.edu/" target="_blank">@Stanford</a> and designing <a href="http://carta-beta.stanford.edu/" target="_blank">@Carta.</a> Previously, I was a software engineer <a href="https://www.facebook.com/gaming/" target="_blank">@Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">@Messenger.</a>
             </p>

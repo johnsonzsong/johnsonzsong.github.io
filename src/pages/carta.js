@@ -19,14 +19,14 @@ import cartaMedFinal2 from "../../static/cartaMedFinal2.png";
 import cartaHifi from "../../static/cartaHifi.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
+import SEO from "../components/seo";
 
 const Carta = () => {
   return (
     <PageTransition>
+      <SEO title="Carta"></SEO>
     <div>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Johnson Song | Carta</title>
         <script src={withPrefix('navScript.js')} type="text/javascript"/>
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>

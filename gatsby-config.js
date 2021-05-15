@@ -5,10 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
-    title: `Johnson Song`,
-    description: `Handmade from scratch`,
+    title: "Johnson Song",
+    titleTemplate: "%s • Johnson Song",
+    description: "Johnson Song, UX/UI designer at Carta (Stanford) and C3.ai, previously software engineer at Facebook, Messenger, and Kangaroo.",
+    url: "http://johnsonsong.me", // No trailing slash allowed!
+    image: "/avatar.png",
     author: `@johnson.song`,
   },
   pathPrefix: "/",
