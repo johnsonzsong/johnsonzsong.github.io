@@ -23,7 +23,7 @@ const Home = () => {
       {/* NAV */}
       <div id="nav-container">
         <Link to="/">
-          <div className="logo holo-text">JS.</div>
+          <div className="logo holo-text">JS</div>
         </Link>
         <div className="nav-items">
           <div className="nav-bar"></div>
@@ -83,13 +83,13 @@ const Home = () => {
       {/* CONTENT */}
       <div className="container">
         <p id="ps-container" class="holo-text">
-          *P.S. - this entire website was designed (Figma) and developed (React/Javascript) from scratch by me!
+          This entire website was designed (Figma) and developed (React/Javascript) from scratch by me.
         </p>
         <section id="section-one" className="intro col-80">
           <div className="col-50">
-            <h1 className="holo-text"> Hey! I'm Johnson. </h1>
+            <h1 className="holo-text"> Johnson Song. </h1>
             <p>
-              I’m a developer and product designer, currently studying human-computer interaction <a href="http://stanford.edu/" target="_blank">@Stanford</a> and designing <a href="http://carta-beta.stanford.edu/" target="_blank">@Carta.</a> Previously, I was a software engineer <a href="https://www.facebook.com/gaming/" target="_blank">@Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">@Messenger.</a>
+              I am a developer and designer, currently studying human-computer interaction <a href="http://stanford.edu/" target="_blank">@Stanford</a> and designing <a href="http://carta-beta.stanford.edu/" target="_blank">@Carta.</a> Previously, I was a software engineer <a href="https://www.facebook.com/gaming/" target="_blank">@Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">@Messenger.</a>
             </p>
             <a href={resume} target="_blank">
               <button className="project-button">Download my Resume</button>
@@ -112,9 +112,10 @@ const Home = () => {
             <h2> Professional Experiences.</h2>
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><div className="current"></div><b>UX/UI Designer</b></p>
-                <p className="m-0">Carta (Stanford University)</p>
-                <p className="m-0"><i>January 2021 - now</i></p>
+                <p className="m-0 fs-med">
+                  <b>Carta</b>
+                </p>
+                <p className="m-0 a-60">UX/UI Designer • Jan '21 - Jun '21</p>
                 <p>
                   I joined the Carta team at Stanford to design a brand new search experience for the academic offerings at Stanford. I collaborated with fellow designers on the design system and other features within Carta.
                 </p>
@@ -128,20 +129,24 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><div className="current"></div><b>Head of Engineering</b></p>
-                <p className="m-0">Kangaroo</p>
-                <p className="m-0"><i>September 2020 - now</i></p>
+                <p className="m-0 fs-med">
+                  <b>Kangaroo</b>
+                </p>
+                <p className="m-0 a-60">Head of Engineering • Sep '20 - May '21</p>
                 <p>
-                  I led the engineering team at a stealth startup in the interactive media space. I developed dozens of MVP features for web and mobile, scoped tasks, designed some flows, and helped form the early company product vision.
+                  I led the engineering team at a startup in the interactive media space. I developed dozens of MVP features for web and mobile, scoped tasks, designed screens, and helped form early product vision.
                 </p>
               </div>
             </div>
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>Software Engineering Intern</b></p>
-                <p className="m-0">Facebook (Seattle)</p>
-                <p className="m-0"><i>June - September 2020</i></p>
+                <p className="m-0 fs-med">
+                  <b>Facebook</b>
+                </p>
+                <p className="m-0 a-60">
+                  Software Engineering Intern • Jun '20 - Sep '20
+                </p>
                 <p>
                 I developed an MVP experience for Facebook Gaming on web. I worked closely with designers and engineers across teams.
                 </p>
@@ -150,9 +155,12 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>UX Researcher and Developer</b></p>
-                <p className="m-0">Daimler (Sunnyvale)</p>
-                <p className="m-0"><i>January - June 2020</i></p>
+              <p className="m-0 fs-med">
+                  <b>Daimler</b>
+                </p>
+                <p className="m-0 a-60">
+                  Partner Designer and Developer • Jan '20 - Jun '20
+                </p>
                 <p>
                   I led research, prototyping, and user testing for an in-vehicle gaming experience for the autonomous driving era. I also helped develop the MVP.
                 </p>
@@ -166,22 +174,24 @@ const Home = () => {
 
             <div className="project">
               <div className="col-50">
-                <p className="m-0"><b>Software Engineering Intern</b></p>
-                <p className="m-0">Facebook (Menlo Park)</p>
-                <p className="m-0"><i>June - September 2019</i></p>
+              <p className="m-0 fs-med">
+                  <b>Facebook</b>
+                </p>
+                <p className="m-0 a-60">
+                  Software Engineering Intern • Jun '19 - Sep '19
+                </p>
                 <p>
                   I developed new iOS features and ran user tests on Messenger, collaborating closely with designers, engineers, and data scientists. I also sought mentorship from incredible designers on the team.
                 </p>
               </div>
             </div>
-            
           </section>
 
           <section id="section-three">
             <h2> Education. </h2>
             <div className="project">
               <div className="col-70">
-                <p className="m-0"><b>Stanford University</b></p>
+                <p className="m-0 fs-med"><b>Stanford University</b></p>
                 <p className="m-0">M.S. Computer Science</p>
                 <p className="m-0">
                   Human Computer Interaction Concentration
@@ -196,7 +206,7 @@ const Home = () => {
 
             <div className="project">
               <div className="col-70">
-                <p className="m-0"><b>Stanford University</b></p>
+                <p className="m-0 fs-med"><b>Stanford University</b></p>
                 <p className="m-0">B.S. Computer Science</p>
                 <p className="m-0">Minor in Economics</p>
                 <p className="m-0"><i>GPA: 3.9/4.0</i></p>
@@ -242,7 +252,7 @@ const Home = () => {
             <div className="project">
               <div className="col-70">
                 <p>
-                  I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on my experiences and happiness.
+                  I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on me.
                 </p>
                 <p className="m-0">
                   <a href="https://www.linkedin.com/in/jennifersongcmu" target="_blank">
