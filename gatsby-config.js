@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Johnson Song",
     titleTemplate: "%s • Johnson Song",
-    description: "Johnson Song, UX/UI designer at Carta (Stanford) and C3.ai, previously software engineer at Facebook, Messenger, and Kangaroo.",
+    description: "Johnson Song, UX/UI designer at C3.ai, previously software engineer at Facebook and Messenger.",
     url: "http://johnsonsong.me", // No trailing slash allowed!
     image: "/avatar.png",
     author: `@johnson.song`,
@@ -29,18 +29,16 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: `Poppins`,
-              variants: [`400`, `500`, `700`]
-            },
-            {
-              family: `Proxima Nova`,
-            },
-            {
-              family: `Montserrat`,
+              family: `Oswald`,
               variants: [`400`, `500`, `600`, `700`]
             },
             {
-              family: `PT Serif`,
+              family: `Open Sans`,
+              variants: [`400`, `500`, `600`, `700`]
+            },
+            {
+              family: `Roboto Mono`,
+              variants: [`400`, `500`, `600`, `700`]
             }
           ],
         },

@@ -14,57 +14,54 @@
 // @media only screen and (min-width: 1200px) {...}
 
 // COLORS --------------------------------------------------------------------------------
-$holo: linear-gradient(336deg, rgba(242,97,255,1) 0%, rgba(86,245,255,1) 100%);
-$bg: #313639;
-$white-100: #ffffff;
-$white-30: #ffffff30;
-$accent: #ffe066;
+// $holo: linear-gradient(336deg, rgba(242,97,255,1) 0%, rgba(86,245,255,1) 100%);
+$bg: #fff;
+$primaryFont: #333;
+$blue: #00A3FF;
+$yellow: #FED385;
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Montserrat', 'Proxima Nova', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: auto;
   width: 100%;
   background-color: $bg;
-  color: $white-100;
+  color: $primaryFont;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 body::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
-  background: $white-30;        /* color of the tracking area */
-}
+// body::-webkit-scrollbar-track {
+//   background: $blue;        /* color of the tracking area */
+// }
 
-body::-webkit-scrollbar-thumb {
-  background-color: $accent;    /* color of the scroll thumb */
-  border-radius: 3em;       /* roundness of the scroll thumb */
-  border: 2px solid $white-30;  /* creates padding around scroll thumb */
-}
+// body::-webkit-scrollbar-thumb {
+//   background-color: $blue;    /* color of the scroll thumb */
+//   border-radius: 3em;       /* roundness of the scroll thumb */
+//   border: 2px solid $blue;  /* creates padding around scroll thumb */
+// }
 
 a {
-  color: $white-100;
-}
-
-p a {
-  &:hover {
-    @extend .holo-text;
-  }
+  color: $blue;
+  text-decoration: none;
 }
 
 ::selection {
   color: $bg;
-  background: $accent;
+  background: $blue;
 }
 
 ::-moz-selection {
   color: $bg;
-  background: $white-100;
+  background: $primaryFont;
 }
 
 #customCursor {
@@ -77,26 +74,23 @@ p a {
   pointer-events: none;
 }
 
-.logo {
-  font-family: 'PT Serif';
-  font-weight: bold;
-  font-style: italic;
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
 #nav-container {
-  z-index: 1;
-  position: fixed;
   padding: 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  color: $primaryFont;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
 
   a {
     text-decoration: none;
-    color: $white-100;
+    color: $primaryFont;
     width: fit-content;
     height: fit-content;
+    margin-left: 64px;
   }
 }
 
@@ -104,27 +98,27 @@ p a {
   display: flex;
 }
 
-.nav-bar {
-  width: 2px;
-  border-radius: 100px;
-  background-color: $white-30;
-  height: 200px;
-  margin-right: 0.5em;
-}
+// .nav-bar {
+//   width: 2px;
+//   border-radius: 100px;
+//   background-color: $blue;
+//   height: 200px;
+//   margin-right: 0.5em;
+// }
 
-.nav-list {
-  font-family: 'PT Serif';
-  font-style: italic;
-  color: $white-30;
-}
+// .nav-list {
+//   font-family: 'PT Serif';
+//   font-style: italic;
+//   color: $blue;
+// }
 
-.nav-active {
-  background: $holo;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold !important;
-  user-select: none;
-}
+// .nav-active {
+//   background: $holo;
+//   background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   font-weight: bold !important;
+//   user-select: none;
+// }
 
 #social-container {
   z-index: 1;
@@ -137,7 +131,7 @@ p a {
   a {
     font-size: 2em;
     text-decoration: none;
-    color: $white-30;
+    color: $blue;
     width: fit-content;
     height: fit-content;
   }
@@ -155,7 +149,7 @@ p a {
   bottom: 0;
   padding: 1em;
   font-size: 2em;
-  color: $white-30;
+  color: $blue;
 
   &:hover {
     cursor: pointer;
@@ -174,35 +168,23 @@ p a {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 192px 229px;
+  padding: 256px 256px;
   position: relative;
 }
 
 // Used for project page titles
 h1 {
-  font-family: 'PT Serif';
-  font-style: italic;
+  font-family: 'Oswald';
   font-weight: bold;
-  font-size: 3em;
-  width: fit-content;
-
-  @extend .holo-text;
+  font-size: 1.6em;
+  margin-top: 0;
 }
 
 // Used for section headings
 h2 {
-  font-family: 'PT Serif';
-  font-style: italic;
+  font-family: 'Oswald';
   font-weight: bold;
-  font-size: 2em;
-  width: fit-content;
-}
-
-.holo-text {
-  background: $holo;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  user-select: none;
+  font-size: 1.4em;
 }
 
 // Used for default body text
@@ -210,10 +192,11 @@ p {
   font-size: 1em;
   line-height: 1.5em;
   font-weight: 500;
+  margin: 0;
 }
 
 .fs-med { // font-size medium
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .a-60 { // alpha 60
@@ -276,6 +259,10 @@ section {
   margin: 0px;
 }
 
+.mr-32 {
+  margin-right: 32px;
+}
+
 .mt-64 {
   margin-top: 4em;
 }
@@ -300,7 +287,7 @@ section {
 
 .intro {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .avatar-container {
@@ -308,26 +295,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 16px;
 }
 
 .avatar {
-  width: 12em;
-  height: 12em;
-  position: absolute;
-}
-
-.avatar-ring {
-  width: 13em;
-  height: 13em;
-  background: transparent;
-  position: absolute;
-  border: double 2px transparent;
-  border-radius: 50%;
-  background-image: linear-gradient($bg, $bg), radial-gradient(circle at top left, rgba(242,97,255,1), rgba(86,245,255,1));
-  // background-color: $accent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  z-index: -1;
+  width: 6em;
+  height: 6em;
 }
 
 .project {
@@ -337,11 +310,16 @@ section {
   align-items: center;
 }
 
+.project-link {
+  margin-top: 32px;
+  font-family: 'Roboto Mono';
+}
+
 .current {
   width: .8em;
   height: .8em;
   border-radius: 1em;
-  background-color: $accent;
+  background-color: $blue;
   display: inline-block;
   margin-right: .5em;
 }
@@ -352,23 +330,23 @@ section {
   display: flex;
 }
 
-.project-button {
-  font-family: 'Montserrat', 'Proxima Nova', sans-serif;
-  font-weight: bold;
-  background: $bg;
-  padding: 16px 32px;
-  text-transform: uppercase;
-  color: $white-100;
+// .project-button {
+//   font-family: 'Montserrat', 'Proxima Nova', sans-serif;
+//   font-weight: bold;
+//   background: $bg;
+//   padding: 16px 32px;
+//   text-transform: uppercase;
+//   color: $primaryFont;
 
-  // Holograph border
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: $holo;
+//   // Holograph border
+//   border: 2px solid;
+//   border-image-slice: 1;
+//   border-image-source: $holo;
 
-  &:hover {
-    background: $holo;
-  }
-}
+//   &:hover {
+//     background: $holo;
+//   }
+// }
 
 .background-facts {
   display: flex;
@@ -419,7 +397,7 @@ section {
 }
 
 .persona-container {
-  background: $white-30;
+  background: $blue;
   border: 1px solid #000000;
   border-radius: 1em;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);
@@ -462,7 +440,7 @@ section {
 
 .persona-line {
   width: 1px;
-  background: $white-100;
+  background: $primaryFont;
   position: absolute;
   height: calc(100% - 3em);
   margin-top: 3em;
@@ -471,7 +449,7 @@ section {
 .persona-dot {
   width: 0.8em;
   height: 0.8em;
-  background: $white-100;
+  background: $primaryFont;
   border-radius: 50%;
   margin-top: 3em;
 }
@@ -488,7 +466,7 @@ section {
 }
 
 .insight-container {
-  background: $white-30;
+  background: $blue;
   border: 1px solid #000000;
   border-radius: 1em;
   box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.25);

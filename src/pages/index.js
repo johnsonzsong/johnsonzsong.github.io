@@ -10,6 +10,7 @@ import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import resume from "../../static/Johnson_Song_Resume.pdf";
 import SEO from "../components/seo"
+import cartaHifi from "../../static/cartaHifi.png";
 
 const Home = () => {
   return (
@@ -22,44 +23,9 @@ const Home = () => {
       </Helmet>
       {/* NAV */}
       <div id="nav-container">
-        <Link to="/">
-          <div className="logo holo-text">JS</div>
-        </Link>
-        <div className="nav-items">
-          <div className="nav-bar"></div>
-          <div className="nav-list">
-            <p id="nav-one" className="nav-active" onClick={() => {
-              var elmnt = document.getElementById("section-one");
-              elmnt.scrollIntoView();
-            }}>
-              About.
-            </p>
-            <p id="nav-two" onClick={() => {
-              var elmnt = document.getElementById("section-two");
-              elmnt.scrollIntoView();
-            }}>
-              Professional Experience.
-            </p>
-            <p id="nav-three" onClick={() => {
-              var elmnt = document.getElementById("section-three");
-              elmnt.scrollIntoView();
-            }}>
-              Education.
-            </p>
-            <p id="nav-four" onClick={() => {
-              var elmnt = document.getElementById("section-four");
-              elmnt.scrollIntoView();
-            }}>
-              Favorites.
-            </p>
-            <p id="nav-five" onClick={() => {
-              var elmnt = document.getElementById("section-five");
-              elmnt.scrollIntoView();
-            }}>
-              Shoutouts.
-            </p>
-          </div>
-        </div>
+        <Link to="/"><div>WORK</div></Link>
+        <Link to="/"><div>ABOUT</div></Link>
+        <Link to="/"><div>RESUME</div></Link>
       </div>
 
       {/* SOCIAL */}
@@ -82,109 +48,118 @@ const Home = () => {
 
       {/* CONTENT */}
       <div className="container">
-        <p id="ps-container" class="holo-text">
-          This entire website was designed (Figma) and developed (React/Javascript) from scratch by me.
-        </p>
         <section id="section-one" className="intro col-80">
-          <div className="col-50">
-            <h1 className="holo-text"> Johnson Song. </h1>
-            <p>
-              I am a developer and designer, currently studying human-computer interaction <a href="http://stanford.edu/" target="_blank">@Stanford</a> and designing <a href="http://carta-beta.stanford.edu/" target="_blank">@Carta.</a> Previously, I was a software engineer <a href="https://www.facebook.com/gaming/" target="_blank">@Facebook Gaming</a> and <a href="https://m.me/johnson.song.5" target="_blank">@Messenger.</a>
-            </p>
-            <a href={resume} target="_blank">
-              <button className="project-button">Download my Resume</button>
-            </a>
-          </div>
-          <div className="avatar-container col-50">
+          <div className="avatar-container">
             <img className="avatar" src={avatar} />
-            <div className="avatar-ring" />
+          </div>
+          <div>
+            <h1> JOHNSON SONG </h1>
+            <p> product design intern @C3.ai </p>
+            <p> m.s. + b.s. computer science - hci @Stanford </p>
+            <p> previously swe intern @Facebook </p>
+            {/* <a href={resume} target="_blank">
+              <button className="project-button">Download my Resume</button>
+            </a> */}
           </div>
         </section>
         <div className="col-80">
-          <h2> Featured Project. </h2>
-          <Link to="goodreads">
-            <section>
-              <img className="featured" src={grCover}></img>
-            </section>
-          </Link>
-
           <section id="section-two">
-            <h2> Professional Experiences.</h2>
+            <h2> WORK </h2>
             <div className="project">
-              <div className="col-50">
+            <div className="col-35 mr-32">
+                <Link to="carta">
+                  <div className="image-container nb">
+                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                  </div>
+                </Link>
+              </div>
+              <div style={{width: "100%"}}>
+                <p className="m-0 fs-med">
+                  <b>C3.ai</b>
+                </p>
+                <p className="m-0 a-60">Product Design Intern | June - August 2021</p>
+                <p>
+                  Designing enterprise AI products for customer relationship management, reliability, and data.
+                </p>
+                <Link to="carta">
+                  <div className="project-link">
+                    Read more about C3.ai &#10230;
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            <div className="project">
+            <div className="col-35 mr-32">
+                <Link to="carta">
+                  <div className="image-container nb">
+                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                  </div>
+                </Link>
+              </div>
+              <div style={{width: "100%"}}>
+                <p className="m-0 fs-med">
+                  <b>Goodreads</b>
+                </p>
+                <p className="m-0 a-60">Independent Project | March 2021</p>
+                <p>
+                Redesigning the world’s largest site for readers and book recommendations.
+                </p>
+                <Link to="carta">
+                  <div className="project-link">
+                    Read more about Goodreads &#10230;
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            <div className="project">
+            <div className="col-35 mr-32">
+                <Link to="carta">
+                  <div className="image-container nb">
+                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                  </div>
+                </Link>
+              </div>
+              <div style={{width: "100%"}}>
                 <p className="m-0 fs-med">
                   <b>Carta</b>
                 </p>
-                <p className="m-0 a-60">UX/UI Designer • Jan '21 - Jun '21</p>
+                <p className="m-0 a-60">UX/UI Designer | January - June 2021</p>
                 <p>
-                  I joined the Carta team at Stanford to design a brand new search experience for the academic offerings at Stanford. I collaborated with fellow designers on the design system and other features within Carta.
+                Designing the course search experience at Stanford University.
                 </p>
-              </div>
-              <div className="col-50 project-button-container">
                 <Link to="carta">
-                  <button className="project-button">More about Carta</button>
+                  <div className="project-link">
+                    Read more about Carta &#10230;
+                  </div>
                 </Link>
               </div>
             </div>
 
             <div className="project">
-              <div className="col-50">
-                <p className="m-0 fs-med">
-                  <b>Kangaroo</b>
-                </p>
-                <p className="m-0 a-60">Head of Engineering • Sep '20 - May '21</p>
-                <p>
-                  I led the engineering team at a startup in the interactive media space. I developed dozens of MVP features for web and mobile, scoped tasks, designed screens, and helped form early product vision.
-                </p>
+            <div className="col-35 mr-32">
+                <Link to="carta">
+                  <div className="image-container nb">
+                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                  </div>
+                </Link>
               </div>
-            </div>
-
-            <div className="project">
-              <div className="col-50">
+              <div style={{width: "100%"}}>
                 <p className="m-0 fs-med">
-                  <b>Facebook</b>
-                </p>
-                <p className="m-0 a-60">
-                  Software Engineering Intern • Jun '20 - Sep '20
-                </p>
-                <p>
-                I developed an MVP experience for Facebook Gaming on web. I worked closely with designers and engineers across teams.
-                </p>
-              </div>
-            </div>
-
-            <div className="project">
-              <div className="col-50">
-              <p className="m-0 fs-med">
                   <b>Daimler</b>
                 </p>
-                <p className="m-0 a-60">
-                  Partner Designer and Developer • Jan '20 - Jun '20
-                </p>
+                <p className="m-0 a-60">Partner Designer and Developer | January - June 2020</p>
                 <p>
-                  I led research, prototyping, and user testing for an in-vehicle gaming experience for the autonomous driving era. I also helped develop the MVP.
-                </p>
-              </div>
-              <div className="col-50 project-button-container">
-                <Link to="daimler">
-                  <button className="project-button">More about Daimler</button>
+                Designing, and developing an in-vehicle gaming experience for autonomous driving.                </p>
+                <Link to="carta">
+                  <div className="project-link">
+                    Read more about Daimler &#10230;
+                  </div>
                 </Link>
               </div>
             </div>
 
-            <div className="project">
-              <div className="col-50">
-              <p className="m-0 fs-med">
-                  <b>Facebook</b>
-                </p>
-                <p className="m-0 a-60">
-                  Software Engineering Intern • Jun '19 - Sep '19
-                </p>
-                <p>
-                  I developed new iOS features and ran user tests on Messenger, collaborating closely with designers, engineers, and data scientists. I also sought mentorship from incredible designers on the team.
-                </p>
-              </div>
-            </div>
           </section>
 
           <section id="section-three">
