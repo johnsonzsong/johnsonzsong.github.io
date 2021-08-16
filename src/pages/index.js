@@ -4,13 +4,13 @@ import "../styles.scss";
 import { withPrefix, Link } from "gatsby";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import avatar from "../../static/avatar.png";
-import grCover from "../../static/grCover.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import resume from "../../static/Johnson_Song_Resume.pdf";
 import SEO from "../components/seo"
 import cartaHifi from "../../static/cartaHifi.png";
+import SiteNavigation from '../components/nav';
 
 const Home = () => {
   return (
@@ -18,18 +18,13 @@ const Home = () => {
     <SEO title="Home"></SEO>
     <div>
       <Helmet>
-        <script src={withPrefix('navScript.js')} type="text/javascript"/>
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
-      {/* NAV */}
-      <div id="nav-container">
-        <Link to="/"><div>WORK</div></Link>
-        <Link to="/"><div>ABOUT</div></Link>
-        <Link to="/"><div>RESUME</div></Link>
-      </div>
+
+      <SiteNavigation />
 
       {/* SOCIAL */}
-      <div id="social-container">
+      {/* <div id="social-container">
         <a href="http://instagram.com/johnson.song" target="_blank">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
@@ -39,7 +34,7 @@ const Home = () => {
         <a href="mailto:johnsonsong@stanford.edu">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-      </div>
+      </div> */}
 
       {/* BACK TO TOP */}
       <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
@@ -48,15 +43,15 @@ const Home = () => {
 
       {/* CONTENT */}
       <div className="container">
-        <section id="section-one" className="intro col-80">
+        <section id="section-one" className="intro">
           <div className="avatar-container">
             <img className="avatar" src={avatar} />
           </div>
           <div>
             <h1> JOHNSON SONG </h1>
-            <p> product design intern @C3.ai </p>
-            <p> m.s. + b.s. computer science - hci @Stanford </p>
-            <p> previously swe intern @Facebook </p>
+            <p> Product design intern @C3.ai </p>
+            <p> M.S. + B.S. Computer Science - HCI @Stanford </p>
+            <p> Previously SWE intern @Facebook </p>
             {/* <a href={resume} target="_blank">
               <button className="project-button">Download my Resume</button>
             </a> */}
@@ -74,9 +69,12 @@ const Home = () => {
                 </Link>
               </div>
               <div style={{width: "100%"}}>
-                <p className="m-0 fs-med">
-                  <b>C3.ai</b>
-                </p>
+                <div className="row">
+                  <p className="m-0 fs-med">
+                    <b>C3.ai</b>
+                  </p>
+                  <div className="pill-pd">PRODUCT DESIGN</div>
+                </div>
                 <p className="m-0 a-60">Product Design Intern | June - August 2021</p>
                 <p>
                   Designing enterprise AI products for customer relationship management, reliability, and data.
@@ -98,9 +96,12 @@ const Home = () => {
                 </Link>
               </div>
               <div style={{width: "100%"}}>
-                <p className="m-0 fs-med">
-                  <b>Goodreads</b>
-                </p>
+                <div className="row">
+                  <p className="m-0 fs-med">
+                    <b>Goodreads</b>
+                  </p>
+                  <div className="pill-pd">PRODUCT DESIGN</div>
+                </div>
                 <p className="m-0 a-60">Independent Project | March 2021</p>
                 <p>
                 Redesigning the world’s largest site for readers and book recommendations.
@@ -122,9 +123,12 @@ const Home = () => {
                 </Link>
               </div>
               <div style={{width: "100%"}}>
-                <p className="m-0 fs-med">
-                  <b>Carta</b>
-                </p>
+              <div className="row">
+                  <p className="m-0 fs-med">
+                    <b>Carta</b>
+                  </p>
+                  <div className="pill-pd">PRODUCT DESIGN</div>
+                </div>
                 <p className="m-0 a-60">UX/UI Designer | January - June 2021</p>
                 <p>
                 Designing the course search experience at Stanford University.
@@ -146,12 +150,17 @@ const Home = () => {
                 </Link>
               </div>
               <div style={{width: "100%"}}>
-                <p className="m-0 fs-med">
-                  <b>Daimler</b>
-                </p>
+              <div className="row">
+                  <p className="m-0 fs-med">
+                    <b>Daimler</b>
+                  </p>
+                  <div className="pill-pd">PRODUCT DESIGN</div>
+                  <div className="pill-engineering">ENGINEERING</div>
+                </div>
                 <p className="m-0 a-60">Partner Designer and Developer | January - June 2020</p>
                 <p>
-                Designing, and developing an in-vehicle gaming experience for autonomous driving.                </p>
+                Designing, and developing an in-vehicle gaming experience for autonomous driving.               
+                </p>
                 <Link to="carta">
                   <div className="project-link">
                     Read more about Daimler &#10230;
@@ -159,70 +168,72 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-
           </section>
+        </div>
 
-          <section id="section-three">
-            <h2> Education. </h2>
-            <div className="project">
-              <div className="col-70">
-                <p className="m-0 fs-med"><b>Stanford University</b></p>
-                <p className="m-0">M.S. Computer Science</p>
-                <p className="m-0">
-                  Human Computer Interaction Concentration
-                </p>
-                <p className="m-0"><i>GPA: 4.0/4.0</i></p>
-
+        <div style={{display: "flex", justifyContent: "space-between"}}>
+          <section id="section-three" className="col-50 mr-64">
+            <h2> OTHER EXPERIENCE </h2>
+            <div className="row">
+                  <p className="m-0 fs-med">
+                    <b>Kangaroo</b>
+                  </p>
+                  <div className="pill-pd">PRODUCT DESIGN</div>
+                  <div className="pill-engineering">ENGINEERING</div>
+                </div>
+                <p className="m-0 a-60">Head of Engineering | September 2020 - May 2021</p>
                 <p>
-                  Select Coursework: Product Management, HCI Research, Entrepreneurial Principles, Data Visualization, Social Computing, Web Applications
+                Designing and developing MVP features for a stealth startup in the creator-social space.           
                 </p>
-              </div>
-            </div>
 
-            <div className="project">
-              <div className="col-70">
-                <p className="m-0 fs-med"><b>Stanford University</b></p>
-                <p className="m-0">B.S. Computer Science</p>
-                <p className="m-0">Minor in Economics</p>
-                <p className="m-0"><i>GPA: 3.9/4.0</i></p>
+                <div className="row">
+                <p className="fs-med mt-32">
+                    <b>Facebook</b>
+                  </p>
+                  <div className="pill-engineering">ENGINEERING</div>
+                </div>
+                <p className="m-0 a-60">Software Engineering Intern | June - August 2020</p>
                 <p>
-                  Select Coursework: Computer Systems, Artificial Intelligence, Human-Computer Interaction Design Studio, Product Design and Manufacturing, Design Sketching
+                Developing MVP features for Facebook Gaming on web.        
                 </p>
-              </div>
-            </div>
+
+                <div className="row">
+                <p className="fs-med mt-32">
+                    <b>Facebook</b>
+                  </p>
+                  <div className="pill-engineering">ENGINEERING</div>
+                </div>
+                <p className="m-0 a-60">Software Engineering Intern | June - August 2019</p>
+                <p>
+                Developing new iOS features for Messenger.      
+                </p>
           </section>
 
-          <section id="section-four">
-            <h2>Favorites.</h2>
-            <div className="project">
-              <div className="col-70">
-                <p className="m-0"><b>Hikes</b></p>
-                <p className="m-0">
-                  Upper Yosemite Falls - Yosemite National Park
+          <section id="section-three" className="col-50">
+            <h2> EDUCATION </h2>
+                  <p className="m-0 fs-med">
+                    <b>Stanford University</b>
+                  </p>
+                <p className="m-0 a-60">September 2020 - December 2021</p>
+                <p>
+                M.S. Computer Science - HCI Specialization <br/>
+4.0/4.0 GPA       
                 </p>
-                <p className="m-0">Samaria Gorge - Crete</p>
-                <p className="m-0">
-                  Boy Scout Trail - Joshua Tree National Park
-                </p>
-              </div>
-            </div>
-            <div className="project">
-              <div className="col-70">
-                <p className="m-0"><b>Books</b></p>
-                <p className="m-0">
-                  Le Petit Prince - Antoine de Saint-Exupery
-                </p>
-                <p className="m-0">
-                  Circe - Madeline Miller
-                </p>
-                <p className="m-0">
-                  This is Water - David Foster Wallace
-                </p>
-              </div>
-            </div>
-          </section>
 
-          <section id="section-five">
+                <p className="fs-med mt-32">
+                    <b>Stanford University</b>
+                  </p>
+                <p className="m-0 a-60">September 2016 - June 2020</p>
+                <p>
+                B.S. Computer Science - HCI Specialization <br/>
+Minor in Economics <br/>
+3.9/4.0 GPA       
+                </p>
+          </section>
+          </div>
+          
+
+          {/* <section id="section-five">
             <h2>Shoutouts.</h2>
             <div className="project">
               <div className="col-70">
@@ -260,10 +271,9 @@ const Home = () => {
                 <p className="m-0">Seth Kasky</p>        
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
-    </div>
     </PageTransition>
   );
 }

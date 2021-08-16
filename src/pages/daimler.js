@@ -17,6 +17,7 @@ import cabanaFeature from "../../static/cabanaFeature.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
 import SEO from "../components/seo";
+import SiteNavigation from '../components/nav';
 
 const Daimler = () => {
   return (
@@ -28,6 +29,7 @@ const Daimler = () => {
         <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
       </Helmet>
       {/* NAV */}
+      <SiteNavigation/>
       <div id="nav-container">
         <Link to="/">
           <div className="logo holo-text">JS.</div>
