@@ -18,7 +18,7 @@
 $bg: #fff;
 $primaryFont: #333;
 $blue: #00A3FF;
-$yellow: #FED385;
+$yellow: #FFC04F;
 
 html {
   scroll-behavior: smooth;
@@ -159,7 +159,7 @@ a {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 128px 256px;
+  padding: 0% 20%;
   position: relative;
 }
 
@@ -187,7 +187,7 @@ p {
 }
 
 .fs-med { // font-size medium
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .a-60 { // alpha 60
@@ -276,6 +276,14 @@ section {
 
 .mr-64 {
   margin-right: 64px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-16 {
+  margin-top: 16px;
 }
 
 .mt-32 {

@@ -7,9 +7,11 @@ import avatar from "../../static/avatar.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import resume from "../../static/Johnson_Song_Resume.pdf";
 import SEO from "../components/seo"
 import cartaHifi from "../../static/cartaHifi.png";
+import c3Hifi from "../../static/c3Hifi.png";
+import grFinal from "../../static/grFinal.png";
+import cabanaFeature from "../../static/cabanaFeature.png";
 import SiteNavigation from '../components/nav';
 
 const Home = () => {
@@ -43,7 +45,7 @@ const Home = () => {
 
       {/* CONTENT */}
       <div className="container">
-        <section id="section-one" className="intro">
+        <section className="intro">
           <div className="avatar-container">
             <img className="avatar" src={avatar} />
           </div>
@@ -52,9 +54,6 @@ const Home = () => {
             <p> Product design intern @C3.ai </p>
             <p> M.S. + B.S. Computer Science - HCI @Stanford </p>
             <p> Previously SWE intern @Facebook </p>
-            {/* <a href={resume} target="_blank">
-              <button className="project-button">Download my Resume</button>
-            </a> */}
           </div>
         </section>
         <div className="col-80">
@@ -62,9 +61,9 @@ const Home = () => {
             <h2> WORK </h2>
             <div className="project">
             <div className="col-35 mr-32">
-                <Link to="carta">
+                <Link to="c3">
                   <div className="image-container nb">
-                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                    <img style={{width: "100%"}} src={c3Hifi}></img>
                   </div>
                 </Link>
               </div>
@@ -79,7 +78,7 @@ const Home = () => {
                 <p>
                   Designing enterprise AI products for customer relationship management, reliability, and data.
                 </p>
-                <Link to="carta">
+                <Link to="c3">
                   <div className="project-link">
                     Read more about C3.ai &#10230;
                   </div>
@@ -89,9 +88,9 @@ const Home = () => {
 
             <div className="project">
             <div className="col-35 mr-32">
-                <Link to="carta">
+                <Link to="goodreads">
                   <div className="image-container nb">
-                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                    <img style={{width: "100%"}} src={grFinal}></img>
                   </div>
                 </Link>
               </div>
@@ -106,7 +105,7 @@ const Home = () => {
                 <p>
                 Redesigning the world’s largest site for readers and book recommendations.
                 </p>
-                <Link to="carta">
+                <Link to="goodreads">
                   <div className="project-link">
                     Read more about Goodreads &#10230;
                   </div>
@@ -143,9 +142,9 @@ const Home = () => {
 
             <div className="project">
             <div className="col-35 mr-32">
-                <Link to="carta">
+                <Link to="daimler">
                   <div className="image-container nb">
-                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                    <img style={{width: "100%"}} src={cabanaFeature}></img>
                   </div>
                 </Link>
               </div>
@@ -161,7 +160,7 @@ const Home = () => {
                 <p>
                 Designing, and developing an in-vehicle gaming experience for autonomous driving.               
                 </p>
-                <Link to="carta">
+                <Link to="daimler">
                   <div className="project-link">
                     Read more about Daimler &#10230;
                   </div>
@@ -172,7 +171,7 @@ const Home = () => {
         </div>
 
         <div style={{display: "flex", justifyContent: "space-between"}}>
-          <section id="section-three" className="col-50 mr-64">
+          <section className="mr-64">
             <h2> OTHER EXPERIENCE </h2>
             <div className="row">
                   <p className="m-0 fs-med">
@@ -209,14 +208,14 @@ const Home = () => {
                 </p>
           </section>
 
-          <section id="section-three" className="col-50">
+          <section>
             <h2> EDUCATION </h2>
                   <p className="m-0 fs-med">
                     <b>Stanford University</b>
                   </p>
                 <p className="m-0 a-60">September 2020 - December 2021</p>
                 <p>
-                M.S. Computer Science - HCI Specialization <br/>
+                M.S. Computer Science - HCI <br/>
 4.0/4.0 GPA       
                 </p>
 
@@ -225,7 +224,7 @@ const Home = () => {
                   </p>
                 <p className="m-0 a-60">September 2016 - June 2020</p>
                 <p>
-                B.S. Computer Science - HCI Specialization <br/>
+                B.S. Computer Science - HCI <br/>
 Minor in Economics <br/>
 3.9/4.0 GPA       
                 </p>
