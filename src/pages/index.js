@@ -11,7 +11,7 @@ import SEO from "../components/seo"
 import cartaHifi from "../../static/cartaHifi.png";
 import c3Hifi from "../../static/c3Hifi.png";
 import grFinal from "../../static/grFinal.png";
-import cabanaFeature from "../../static/cabanaFeature.png";
+import daimlerLogo from "../../static/daimlerLogo.png";
 import SiteNavigation from '../components/nav';
 
 const Home = () => {
@@ -59,13 +59,13 @@ const Home = () => {
         <div className="col-80">
           <section id="section-two">
             <h2> WORK </h2>
-            <div className="project">
+            <div className="project coming-soon">
             <div className="col-35 mr-32">
-                <Link to="c3">
+                {/* <Link to="c3"> */}
                   <div className="image-container nb">
                     <img style={{width: "100%"}} src={c3Hifi}></img>
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
               <div style={{width: "100%"}}>
                 <div className="row">
@@ -78,21 +78,21 @@ const Home = () => {
                 <p>
                   Designing enterprise AI products for customer relationship management, reliability, and data.
                 </p>
-                <Link to="c3">
-                  <div className="project-link">
-                    Read more about C3.ai &#10230;
-                  </div>
-                </Link>
+                <br/>
+                <br/>
+                <a href="mailto:johnsonsong@stanford.edu" className="project-link">
+                  Contact me directly about this project!
+                </a>
               </div>
             </div>
 
-            <div className="project">
+            <div className="project coming-soon">
             <div className="col-35 mr-32">
-                <Link to="goodreads">
+                {/* <Link to="goodreads"> */}
                   <div className="image-container nb">
                     <img style={{width: "100%"}} src={grFinal}></img>
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
               <div style={{width: "100%"}}>
                 <div className="row">
@@ -105,11 +105,12 @@ const Home = () => {
                 <p>
                 Redesigning the world’s largest site for readers and book recommendations.
                 </p>
-                <Link to="goodreads">
+                {/* <Link to="goodreads"> */}
                   <div className="project-link">
-                    Read more about Goodreads &#10230;
+                  PROJECT PAGE COMING SOON...
+                    {/* Read more about Goodreads &#10230; */}
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
 
@@ -140,13 +141,13 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="project">
+            <div className="project coming-soon">
             <div className="col-35 mr-32">
-                <Link to="daimler">
+                {/* <Link to="daimler"> */}
                   <div className="image-container nb">
-                    <img style={{width: "100%"}} src={cabanaFeature}></img>
+                    <img style={{width: "100%"}} src={daimlerLogo}></img>
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
               <div style={{width: "100%"}}>
               <div className="row">
@@ -160,11 +161,12 @@ const Home = () => {
                 <p>
                 Designing, and developing an in-vehicle gaming experience for autonomous driving.               
                 </p>
-                <Link to="daimler">
+                {/* <Link to="daimler"> */}
                   <div className="project-link">
-                    Read more about Daimler &#10230;
+                    PROJECT PAGE COMING SOON...
+                    {/* Read more about Daimler &#10230; */}
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
           </section>
@@ -185,8 +187,8 @@ const Home = () => {
                 Designing and developing MVP features for a stealth startup in the creator-social space.           
                 </p>
 
-                <div className="row">
-                <p className="fs-med mt-32">
+                <div className="row mt-32">
+                <p className="fs-med">
                     <b>Facebook</b>
                   </p>
                   <div className="pill-engineering">ENGINEERING</div>
@@ -196,8 +198,8 @@ const Home = () => {
                 Developing MVP features for Facebook Gaming on web.        
                 </p>
 
-                <div className="row">
-                <p className="fs-med mt-32">
+                <div className="row mt-32">
+                <p className="fs-med">
                     <b>Facebook</b>
                   </p>
                   <div className="pill-engineering">ENGINEERING</div>

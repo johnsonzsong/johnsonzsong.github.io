@@ -30,46 +30,6 @@ const Daimler = () => {
       </Helmet>
       {/* NAV */}
       <SiteNavigation/>
-      <div id="nav-container">
-        <Link to="/">
-          <div className="logo holo-text">JS.</div>
-        </Link>
-        <div className="nav-items">
-          <div className="nav-bar"></div>
-          <div className="nav-list">
-            <p id="nav-one" className="nav-active" onClick={() => {
-              var elmnt = document.getElementById("section-one");
-              elmnt.scrollIntoView();
-            }}>
-              Background.
-            </p>
-            <p id="nav-two" onClick={() => {
-              var elmnt = document.getElementById("section-two");
-              elmnt.scrollIntoView();
-            }}>
-              User Research.
-            </p>
-            <p id="nav-three" onClick={() => {
-              var elmnt = document.getElementById("section-three");
-              elmnt.scrollIntoView();
-            }}>
-              Rapid Prototypes.
-            </p>
-            <p id="nav-four" onClick={() => {
-              var elmnt = document.getElementById("section-four");
-              elmnt.scrollIntoView();
-            }}>
-              Med-Fi.
-            </p>
-            <p id="nav-five" onClick={() => {
-              var elmnt = document.getElementById("section-five");
-              elmnt.scrollIntoView();
-            }}>
-              Hi-Fi and MVP.
-            </p>
-          </div>
-        </div>
-      </div>
 
       <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
         <FontAwesomeIcon icon={faAngleDoubleUp} />
