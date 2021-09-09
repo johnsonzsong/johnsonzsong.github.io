@@ -17,16 +17,16 @@ import SiteNavigation from '../components/nav';
 const Home = () => {
   return (
     <PageTransition>
-    <SEO title="Home"></SEO>
-    <div>
-      <Helmet>
-        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
-      </Helmet>
+      <SEO title="Home"></SEO>
+      <div>
+        <Helmet>
+          <script src={withPrefix('cursorScript.js')} type="text/javascript" />
+        </Helmet>
 
-      <SiteNavigation />
+        <SiteNavigation />
 
-      {/* SOCIAL */}
-      {/* <div id="social-container">
+        {/* SOCIAL */}
+        {/* <div id="social-container">
         <a href="http://instagram.com/johnson.song" target="_blank">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
@@ -38,201 +38,201 @@ const Home = () => {
         </a>
       </div> */}
 
-      {/* BACK TO TOP */}
-      <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
-        <FontAwesomeIcon icon={faAngleDoubleUp} />
-      </a>
+        {/* BACK TO TOP */}
+        <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
+          <FontAwesomeIcon icon={faAngleDoubleUp} />
+        </a>
 
-      {/* CONTENT */}
-      <div className="container">
-        <section className="intro">
-          <div className="avatar-container">
-            <img className="avatar" src={avatar} />
-          </div>
-          <div>
-            <h1> JOHNSON SONG </h1>
-            <p> Product design intern @C3.ai </p>
-            <p> M.S. + B.S. Computer Science - HCI @Stanford </p>
-            <p> Previously SWE intern @Facebook </p>
-          </div>
-        </section>
-        <div className="col-80">
-          <section id="section-two">
-            <h2> WORK </h2>
-            <div className="project coming-soon">
-            <div className="col-35 mr-32">
-                {/* <Link to="c3"> */}
-                  <div className="image-container nb">
-                    <img style={{width: "100%"}} src={c3Hifi}></img>
-                  </div>
-                {/* </Link> */}
-              </div>
-              <div style={{width: "100%"}}>
-                <div className="row">
-                  <p className="m-0 fs-med">
-                    <b>C3.ai</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                </div>
-                <p className="m-0 a-60">Product Design Intern | June - August 2021</p>
-                <p>
-                  Designing enterprise AI products for customer relationship management, reliability, and data.
-                </p>
-                <br/>
-                <br/>
-                <a href="mailto:johnsonsong@stanford.edu" className="project-link">
-                  Contact me directly about this project!
-                </a>
-              </div>
+        {/* CONTENT */}
+        <div className="container">
+          <section className="intro">
+            <div className="avatar-container">
+              <img className="avatar" src={avatar} />
             </div>
-
-            <div className="project coming-soon">
-            <div className="col-35 mr-32">
-                {/* <Link to="goodreads"> */}
-                  <div className="image-container nb">
-                    <img style={{width: "100%"}} src={grFinal}></img>
-                  </div>
-                {/* </Link> */}
-              </div>
-              <div style={{width: "100%"}}>
-                <div className="row">
-                  <p className="m-0 fs-med">
-                    <b>Goodreads</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                </div>
-                <p className="m-0 a-60">Independent Project | March 2021</p>
-                <p>
-                Redesigning the world’s largest site for readers and book recommendations.
-                </p>
-                {/* <Link to="goodreads"> */}
-                  <div className="project-link">
-                  PROJECT PAGE COMING SOON...
-                    {/* Read more about Goodreads &#10230; */}
-                  </div>
-                {/* </Link> */}
-              </div>
+            <div>
+              <h1> JOHNSON SONG </h1>
+              <p> M.S. Computer Science - HCI @Stanford </p>
+              <p> B.S. Computer Science @Stanford </p>
+              <p> Previously Product Design intern @C3.ai </p>
+              <p> Previously SWE intern @Facebook </p>
             </div>
-
-            <div className="project">
-            <div className="col-35 mr-32">
-                <Link to="carta">
+          </section>
+          <div className="col-80">
+            <section id="section-two">
+              <h2> WORK </h2>
+              <div className="project coming-soon">
+                <div className="col-50 mr-32">
+                  {/* <Link to="c3"> */}
                   <div className="image-container nb">
-                    <img style={{width: "100%"}} src={cartaHifi}></img>
+                    <img style={{ width: "100%" }} src={c3Hifi}></img>
                   </div>
-                </Link>
-              </div>
-              <div style={{width: "100%"}}>
-              <div className="row">
-                  <p className="m-0 fs-med">
-                    <b>Carta</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
+                  {/* </Link> */}
                 </div>
-                <p className="m-0 a-60">UX/UI Designer | January - June 2021</p>
-                <p>
-                Designing the course search experience at Stanford University.
-                </p>
-                <Link to="carta">
-                  <div className="project-link">
-                    Read more about Carta &#10230;
+                <div style={{ width: "100%" }}>
+                  <div className="row">
+                    <p className="m-0 fs-med">
+                      <b>C3.ai</b>
+                    </p>
+                    <div className="pill-pd">PRODUCT DESIGN</div>
                   </div>
-                </Link>
+                  <p className="m-0 a-60">Product Design Intern | June - August 2021</p>
+                  <p>
+                    Designing enterprise AI products for customer relationship management, reliability, and data.
+                  </p>
+                  <br />
+                  <br />
+                  <a href="mailto:johnsonsong@stanford.edu" className="project-link">
+                    Contact me directly about this project!
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className="project coming-soon">
-            <div className="col-35 mr-32">
-                {/* <Link to="daimler"> */}
-                  <div className="image-container nb">
-                    <img style={{width: "100%"}} src={daimlerLogo}></img>
-                  </div>
-                {/* </Link> */}
-              </div>
-              <div style={{width: "100%"}}>
-              <div className="row">
-                  <p className="m-0 fs-med">
-                    <b>Daimler</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                  <div className="pill-engineering">ENGINEERING</div>
+              <div className="project">
+                <div className="col-50 mr-32">
+                  <Link to="goodreads">
+                    <div className="image-container nb">
+                      <img style={{ width: "100%" }} src={grFinal}></img>
+                    </div>
+                  </Link>
                 </div>
-                <p className="m-0 a-60">Partner Designer and Developer | January - June 2020</p>
-                <p>
-                Designing, and developing an in-vehicle gaming experience for autonomous driving.               
-                </p>
-                {/* <Link to="daimler"> */}
+                <div style={{ width: "100%" }}>
+                  <div className="row">
+                    <p className="m-0 fs-med">
+                      <b>Goodreads</b>
+                    </p>
+                    <div className="pill-pd">PRODUCT DESIGN</div>
+                  </div>
+                  <p className="m-0 a-60">Independent Project | March 2021</p>
+                  <p>
+                    Redesigning the world’s largest site for readers and book recommendations.
+                  </p>
+                  <Link to="goodreads">
+                    <div className="project-link">
+                      Read more about Goodreads &#10230;
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="project">
+                <div className="col-50 mr-32">
+                  <Link to="carta">
+                    <div className="image-container nb">
+                      <img style={{ width: "100%" }} src={cartaHifi}></img>
+                    </div>
+                  </Link>
+                </div>
+                <div style={{ width: "100%" }}>
+                  <div className="row">
+                    <p className="m-0 fs-med">
+                      <b>Carta</b>
+                    </p>
+                    <div className="pill-pd">PRODUCT DESIGN</div>
+                  </div>
+                  <p className="m-0 a-60">UX/UI Designer | January - June 2021</p>
+                  <p>
+                    Designing the course search experience at Stanford University.
+                  </p>
+                  <Link to="carta">
+                    <div className="project-link">
+                      Read more about Carta &#10230;
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="project coming-soon">
+                <div className="col-50 mr-32">
+                  {/* <Link to="daimler"> */}
+                  <div className="image-container nb">
+                    <img style={{ width: "100%" }} src={daimlerLogo}></img>
+                  </div>
+                  {/* </Link> */}
+                </div>
+                <div style={{ width: "100%" }}>
+                  <div className="row">
+                    <p className="m-0 fs-med">
+                      <b>Daimler</b>
+                    </p>
+                    <div className="pill-pd">PRODUCT DESIGN</div>
+                    <div className="pill-engineering">ENGINEERING</div>
+                  </div>
+                  <p className="m-0 a-60">Partner Designer and Developer | January - June 2020</p>
+                  <p>
+                    Designing, and developing an in-vehicle gaming experience for autonomous driving.
+                  </p>
+                  {/* <Link to="daimler"> */}
                   <div className="project-link">
                     PROJECT PAGE COMING SOON...
                     {/* Read more about Daimler &#10230; */}
                   </div>
-                {/* </Link> */}
+                  {/* </Link> */}
+                </div>
               </div>
-            </div>
-          </section>
-        </div>
-
-        <div style={{display: "flex", justifyContent: "space-between"}}>
-          <section className="mr-64">
-            <h2> OTHER EXPERIENCE </h2>
-            <div className="row">
-                  <p className="m-0 fs-med">
-                    <b>Kangaroo</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                  <div className="pill-engineering">ENGINEERING</div>
-                </div>
-                <p className="m-0 a-60">Head of Engineering | September 2020 - May 2021</p>
-                <p>
-                Designing and developing MVP features for a stealth startup in the creator-social space.           
-                </p>
-
-                <div className="row mt-32">
-                <p className="fs-med">
-                    <b>Facebook</b>
-                  </p>
-                  <div className="pill-engineering">ENGINEERING</div>
-                </div>
-                <p className="m-0 a-60">Software Engineering Intern | June - August 2020</p>
-                <p>
-                Developing MVP features for Facebook Gaming on web.        
-                </p>
-
-                <div className="row mt-32">
-                <p className="fs-med">
-                    <b>Facebook</b>
-                  </p>
-                  <div className="pill-engineering">ENGINEERING</div>
-                </div>
-                <p className="m-0 a-60">Software Engineering Intern | June - August 2019</p>
-                <p>
-                Developing new iOS features for Messenger.      
-                </p>
-          </section>
-
-          <section>
-            <h2> EDUCATION </h2>
-                  <p className="m-0 fs-med">
-                    <b>Stanford University</b>
-                  </p>
-                <p className="m-0 a-60">September 2020 - December 2021</p>
-                <p>
-                M.S. Computer Science - HCI <br/>
-4.0/4.0 GPA       
-                </p>
-
-                <p className="fs-med mt-32">
-                    <b>Stanford University</b>
-                  </p>
-                <p className="m-0 a-60">September 2016 - June 2020</p>
-                <p>
-                B.S. Computer Science - HCI <br/>
-Minor in Economics <br/>
-3.9/4.0 GPA       
-                </p>
-          </section>
+            </section>
           </div>
-          
+
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <section className="mr-64">
+              <h2> OTHER EXPERIENCE </h2>
+              <div className="row">
+                <p className="m-0 fs-med">
+                  <b>Kangaroo</b>
+                </p>
+                <div className="pill-pd">PRODUCT DESIGN</div>
+                <div className="pill-engineering">ENGINEERING</div>
+              </div>
+              <p className="m-0 a-60">Head of Engineering | September 2020 - May 2021</p>
+              <p>
+                Designing and developing MVP features for a stealth startup in the creator-social space.
+              </p>
+
+              <div className="row mt-32">
+                <p className="fs-med">
+                  <b>Facebook</b>
+                </p>
+                <div className="pill-engineering">ENGINEERING</div>
+              </div>
+              <p className="m-0 a-60">Software Engineering Intern | June - August 2020</p>
+              <p>
+                Developing MVP features for Facebook Gaming on web.
+              </p>
+
+              <div className="row mt-32">
+                <p className="fs-med">
+                  <b>Facebook</b>
+                </p>
+                <div className="pill-engineering">ENGINEERING</div>
+              </div>
+              <p className="m-0 a-60">Software Engineering Intern | June - August 2019</p>
+              <p>
+                Developing new iOS features for Messenger.
+              </p>
+            </section>
+
+            <section>
+              <h2> EDUCATION </h2>
+              <p className="m-0 fs-med">
+                <b>Stanford University</b>
+              </p>
+              <p className="m-0 a-60">September 2020 - December 2021</p>
+              <p>
+                M.S. Computer Science - HCI <br />
+                4.0/4.0 GPA
+              </p>
+
+              <p className="fs-med mt-32">
+                <b>Stanford University</b>
+              </p>
+              <p className="m-0 a-60">September 2016 - June 2020</p>
+              <p>
+                B.S. Computer Science - HCI <br />
+                Minor in Economics <br />
+                3.9/4.0 GPA
+              </p>
+            </section>
+          </div>
+
 
           {/* <section id="section-five">
             <h2>Shoutouts.</h2>
