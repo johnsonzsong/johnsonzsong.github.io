@@ -12,62 +12,62 @@ import SiteNavigation from '../components/nav';
 const About = () => {
   return (
     <PageTransition>
-    <SEO title="About"></SEO>
-    <div>
-      <Helmet>
-        <script src={withPrefix('cursorScript.js')} type="text/javascript"/>
-      </Helmet>
+      <SEO title="About"></SEO>
+      <div>
+        <Helmet>
+          <script src={withPrefix('cursorScript.js')} type="text/javascript" />
+        </Helmet>
 
-      <SiteNavigation />
+        <SiteNavigation />
 
-      {/* BACK TO TOP */}
-      <a id="backToTop-container" onClick={() => {window.scrollTo(0, 0)}}>
-        <FontAwesomeIcon icon={faAngleDoubleUp} />
-      </a>
+        {/* BACK TO TOP */}
+        <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
+          <FontAwesomeIcon icon={faAngleDoubleUp} />
+        </a>
 
-      {/* CONTENT */}
-      <div className="container">
-        <section id="section-one" className="intro">
-          <div className="avatar-container">
-            <img className="avatar" src={avatar} />
-          </div>
-          <div>
-            <h1> HI, I'M JOHNSON </h1>
-            <p> I am a detail-oriented designer and developer. This entire website was designed in Figma and developed in React, from scratch, by me!
-            </p>
-                <p className="mt-16">
-Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. I believe that my background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.
-</p>
-<p className="mt-16">
-My story begins in Normandy, France, where I was born (along with my twin sister). After 5 years, my family moved to McLean, Virginia. After 13 years on the East Coast, I moved to California to attend Stanford University. College was my introduction to computer science, through which I learned about UX/UI design. I was immediately drawn to this intersection of technology, human psychology, storytelling, and art.
-</p>
-<p className="mt-16">
-I see design as a neverending journey to transform things that don’t make sense into things that do. </p>
-          </div>
-        </section>
-
-        <div style={{display: "flex", justifyContent: "space-between"}}>
-        <section className="mr-64">
-        <h2> FAVORITE PLACES </h2>
-        <p>
-        Florence, Italy - where I studied abroad for 3 months.
-        </p>
-        <p>
-Paris, France - an hour from where I was born.
-</p>
-<p>
-Stanford, CA - where I learned cool things and made best friends.
-        </p>
-        </section>
-          <section>
-            <h2> FAVORITE BOOKS </h2>
-            <p>Circe by Madeline Miller</p>
-            <p>Le Petit Prince by Antoine de Saint-Exupery</p>
-<p>This is Water by David Foster Wallace</p>
+        {/* CONTENT */}
+        <div className="container">
+          <section id="section-one" className="intro">
+            <div className="avatar-container">
+              <img className="avatar" src={avatar} />
+            </div>
+            <div>
+              <h1> HI, I'M JOHNSON </h1>
+              <p> I am a detail-oriented designer and developer. This entire website was designed in Figma and developed in React, from scratch, by me!
+              </p>
+              <p className="mt-16">
+                Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. I believe that my background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.
+              </p>
+              <p className="mt-16">
+                My story begins in Normandy, France, where I was born (along with my twin sister). After 5 years, my family moved to McLean, Virginia. After 13 years on the East Coast, I moved to California to attend Stanford University. College was my introduction to computer science, through which I learned about UX/UI design. I was immediately drawn to this intersection of technology, human psychology, storytelling, and art.
+              </p>
+              <p className="mt-16">
+                I see design as a neverending journey to transform things that don’t make sense into things that do. </p>
+            </div>
           </section>
 
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <section className="mr-64">
+              <h2> FAVORITE PLACES </h2>
+              <p>
+                <b> Florence, Italy </b> - where I studied abroad for 3 months.
+              </p>
+              <p>
+                <b> Paris, France </b> - an hour from where I was born.
+              </p>
+              <p>
+                <b> Stanford, CA </b> - where I learned cool things and made best friends.
+              </p>
+            </section>
+            <section>
+              <h2> FAVORITE BOOKS </h2>
+              <p> <b> Circe </b> by Madeline Miller</p>
+              <p> <b> Le Petit Prince </b> by Antoine de Saint-Exupery</p>
+              <p> <b> This is Water </b> by David Foster Wallace</p>
+            </section>
+
           </div>
-          
+
 
           {/* <section id="section-five">
             <h2>Shoutouts.</h2>

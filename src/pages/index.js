@@ -9,8 +9,9 @@ import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import SEO from "../components/seo"
 import cartaHifi from "../../static/cartaHifi.png";
-import c3Hifi from "../../static/c3Hifi.png";
-import grFinal from "../../static/grFinal.png";
+import c3Logo from "../../static/c3Logo.png";
+import grLogo from "../../static/grLogo.png";
+import cartaLogo from "../../static/cartaLogo.svg";
 import daimlerLogo from "../../static/daimlerLogo.png";
 import SiteNavigation from '../components/nav';
 
@@ -51,10 +52,10 @@ const Home = () => {
             </div>
             <div>
               <h1> JOHNSON SONG </h1>
-              <p> M.S. Computer Science - HCI @Stanford </p>
-              <p> B.S. Computer Science @Stanford </p>
-              <p> Previously Product Design intern @C3.ai </p>
-              <p> Previously SWE intern @Facebook </p>
+              <p> M.S. Computer Science - HCI <a href="https://www.stanford.edu/" target="_blank"> @Stanford </a> </p>
+              <p> B.S. Computer Science <a href="https://www.stanford.edu/" target="_blank"> @Stanford </a> </p>
+              <p> Previously Product Design intern <a href="https://c3.ai/" target="_blank"> @C3.ai </a> </p>
+              <p> Previously SWE intern <a href="https://www.facebook.com/" target="_blank"> @Facebook </a> </p>
             </div>
           </section>
           <div className="col-80">
@@ -64,7 +65,7 @@ const Home = () => {
                 <div className="col-50 mr-32">
                   {/* <Link to="c3"> */}
                   <div className="image-container nb">
-                    <img style={{ width: "100%" }} src={c3Hifi}></img>
+                    <img style={{ width: "100%" }} src={c3Logo}></img>
                   </div>
                   {/* </Link> */}
                 </div>
@@ -82,7 +83,7 @@ const Home = () => {
                   <br />
                   <br />
                   <a href="mailto:johnsonsong@stanford.edu" className="project-link">
-                    Contact me directly about this project!
+                    Contact me directly about this project.
                   </a>
                 </div>
               </div>
@@ -91,7 +92,7 @@ const Home = () => {
                 <div className="col-50 mr-32">
                   <Link to="goodreads">
                     <div className="image-container nb">
-                      <img style={{ width: "100%" }} src={grFinal}></img>
+                      <img style={{ width: "100%" }} src={grLogo}></img>
                     </div>
                   </Link>
                 </div>
@@ -118,7 +119,7 @@ const Home = () => {
                 <div className="col-50 mr-32">
                   <Link to="carta">
                     <div className="image-container nb">
-                      <img style={{ width: "100%" }} src={cartaHifi}></img>
+                      <img style={{ width: "100%" }} src={cartaLogo}></img>
                     </div>
                   </Link>
                 </div>
@@ -143,11 +144,11 @@ const Home = () => {
 
               <div className="project coming-soon">
                 <div className="col-50 mr-32">
-                  {/* <Link to="daimler"> */}
-                  <div className="image-container nb">
-                    <img style={{ width: "100%" }} src={daimlerLogo}></img>
-                  </div>
-                  {/* </Link> */}
+                  <Link to="daimler">
+                    <div className="image-container nb">
+                      <img style={{ width: "100%" }} src={daimlerLogo}></img>
+                    </div>
+                  </Link>
                 </div>
                 <div style={{ width: "100%" }}>
                   <div className="row">
@@ -159,14 +160,13 @@ const Home = () => {
                   </div>
                   <p className="m-0 a-60">Partner Designer and Developer | January - June 2020</p>
                   <p>
-                    Designing, and developing an in-vehicle gaming experience for autonomous driving.
+                    Designing and developing an in-vehicle gaming experience for autonomous driving.
                   </p>
-                  {/* <Link to="daimler"> */}
-                  <div className="project-link">
-                    PROJECT PAGE COMING SOON...
-                    {/* Read more about Daimler &#10230; */}
-                  </div>
-                  {/* </Link> */}
+                  <Link to="daimler">
+                    <div className="project-link">
+                      Read more about Daimler &#10230;
+                    </div>
+                  </Link>
                 </div>
               </div>
             </section>
@@ -182,7 +182,7 @@ const Home = () => {
                 <div className="pill-pd">PRODUCT DESIGN</div>
                 <div className="pill-engineering">ENGINEERING</div>
               </div>
-              <p className="m-0 a-60">Head of Engineering | September 2020 - May 2021</p>
+              <p className="m-0 a-60">Founding Head of Engineering | September 2020 - May 2021</p>
               <p>
                 Designing and developing MVP features for a stealth startup in the creator-social space.
               </p>

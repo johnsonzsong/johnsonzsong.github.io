@@ -87,11 +87,11 @@ const Goodreads = () => {
           <section>
             <h2>RESEARCH</h2>
             <p>
-              My first step towards better understanding the ways in which readers used the Goodreads mobile app was conducting user research. In previous projects, this might have meant conducting user interviews at a coffee shop. However, given the unique context of the situation (COVID-19), I decided to take a more digital approach. I turned to Reddit as a method of crowd-sourced needfinding. I read through a handful of recent threads in which Goodreads users vented about frustrations they found with the platform.
+              My first step towards better understanding the ways in which readers currently use the Goodreads mobile app was conducting user research. Due to COVID-19, I decided to take a digital approach, turning to Reddit as a method of crowd-sourced needfinding. I read through a handful of recent threads in which Goodreads users vented about frustrations they found with the platform.
             </p>
             <br />
             <p>
-              In addition to gathering insights from Reddit forums, I also reached out to friends that I knew were active on Goodreads. This allowed me to have more in-depth conversations about painpoints, joys, and behaviors within the app. I distilled important learnings and quotes from this combination of crowd-sourced and individual interviews, organizing them on sticky notes. I then used affinity mapping to help categorize these findings.
+              In addition to gathering insights from Reddit forums, I also reached out to friends that I knew were active on Goodreads. This allowed me to have more in-depth conversations about painpoints, joys, and behaviors within the app. I distilled important learnings and quotes from this combination of crowd-sourced and individual interviews and then categorized them using affinity mapping.
             </p>
             <div className="image-container mt-32">
               <img style={{ width: "100%" }} src={grStickies}></img>
@@ -104,12 +104,12 @@ const Goodreads = () => {
                 <div className="insight-container">
                   <div className="insight-number">1</div>
                   <br />
-                  Many users found the social aspect of Goodreads to contribute positively to their reading experiences. However, there was a <b>tension between public and private</b> reading activity.
+                  Social aspect of Goodreads contribute positively to the reading experience, but there is a <b>tension between public and private</b> reading activity.
                 </div>
                 <div className="insight-container">
                   <div className="insight-number">2</div>
                   <br />
-                  One of the biggest painpoints of Goodreads was its <b>obscure exploration and recommendation</b> flows. While Goodreads has plenty of these resources in place, they are hard to find and underutilized.
+                  While Goodreads has plenty of these resources to support <b> personalized exploration and recommendation</b> they are obscure and underutilized.
                 </div>
               </div>
             </div>
@@ -245,7 +245,7 @@ const Goodreads = () => {
               <img style={{ width: "50%", alignSelf: "center", borderRadius: 32 }} src={grHifi3}></img>
             </div>
 
-            <p>You can check out my <a href="https://www.figma.com/proto/eYYsWMfDZFOCbjtn7kTVwP/Goodreads-Case-Study?node-id=219%3A0&viewport=339%2C785%2C0.38783445954322815&scaling=scale-down&page-id=24%3A3" target="_blank">prototype here.</a> </p>
+            <p className="mb-32">You can check out my prototype <a href="https://www.figma.com/proto/eYYsWMfDZFOCbjtn7kTVwP/Goodreads-Case-Study?node-id=219%3A0&viewport=339%2C785%2C0.38783445954322815&scaling=scale-down&page-id=24%3A3" target="_blank">here</a> and below.</p>
             <iframe width={800} height={450} src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FeYYsWMfDZFOCbjtn7kTVwP%2FGoodreads-Case-Study%3Fnode-id%3D219%253A0%26viewport%3D339%252C785%252C0.38783445954322815%26scaling%3Dscale-down%26page-id%3D24%253A3" allowfullscreen></iframe>
 
           </section>
@@ -255,6 +255,7 @@ const Goodreads = () => {
             <p>
               This was my first independent case study and redesign, which I finally felt comfortable pursuing due to my more recent experiences refining my own design approach. I had a blast embarking on this week-long side project, partly because I am a book/Goodreads fanatic and mostly because the process was so rewarding. I am proud of my growth as a designer but know that there is a lot to learn and improve upon. With more time, I would have liked to conduct more user testing to iterate on the UX, consider the book details pages and interactions within those, and fleshed out the interactions on the screens that I did design.
             </p>
+            <br />
             <p>
               Shoutout to Ben Demonbreun, my friend and fellow Goodreads enthusiast who supported me from start to finish with this project!
             </p>

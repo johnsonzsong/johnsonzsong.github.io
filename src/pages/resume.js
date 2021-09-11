@@ -87,7 +87,7 @@ const Resume = () => {
                   <div className="pill-pd">PRODUCT DESIGN</div>
                   <div className="pill-engineering">ENGINEERING</div>
                 </div>
-                <p className="m-0 a-60">Head of Engineering | September 2020 - May 2021</p>
+                <p className="m-0 a-60">Founding Head of Engineering | September 2020 - May 2021</p>
                 <p>
                   Designing and developing MVP features for a stealth startup in the creator-social space.
                 </p>
