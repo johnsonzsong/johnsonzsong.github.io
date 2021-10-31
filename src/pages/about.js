@@ -33,7 +33,7 @@ const About = () => {
             </div>
             <div>
               <h1> HI, I'M JOHNSON </h1>
-              <p> I am a detail-oriented designer and developer. This entire website was designed in Figma and developed in React, from scratch, by me!
+              <p> I am a detail-oriented designer and developer. This entire website was <span className="blue"> designed in Figma </span> and <span className="yellow"> developed in React </span> from scratch, by me!
               </p>
               <p className="mt-16">
                 Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. I believe that my background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.

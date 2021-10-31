@@ -22,6 +22,8 @@ const Home = () => {
       <div>
         <Helmet>
           <script src={withPrefix('cursorScript.js')} type="text/javascript" />
+          <script src={withPrefix('app.js')} type="text/javascript" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         </Helmet>
 
         <SiteNavigation />
@@ -44,6 +46,20 @@ const Home = () => {
           <FontAwesomeIcon icon={faAngleDoubleUp} />
         </a>
 
+        <section className="testSection">
+          <div className="hero">
+            <img className="mountain" src="mountain.jpeg" alt="mountain" />
+
+            <div className="headline avatar-container">
+              <img className="avatar" src={avatar} />
+            </div>
+
+          </div>
+        </section>
+
+        <div className="slider"></div>
+
+
         {/* CONTENT */}
         <div className="container">
           <section className="intro">
@@ -55,7 +71,7 @@ const Home = () => {
               <p> M.S. Computer Science - HCI <a href="https://www.stanford.edu/" target="_blank"> @Stanford </a> </p>
               <p> B.S. Computer Science <a href="https://www.stanford.edu/" target="_blank"> @Stanford </a> </p>
               <p> Previously Product Design intern <a href="https://c3.ai/" target="_blank"> @C3.ai </a> </p>
-              <p> Previously SWE intern <a href="https://www.facebook.com/" target="_blank"> @Facebook </a> </p>
+              <p> Previously SWE intern <a href="https://www.meta.com/" target="_blank"> @Facebook </a> </p>
             </div>
           </section>
           <div className="col-80">
