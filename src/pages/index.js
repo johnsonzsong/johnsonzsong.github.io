@@ -63,9 +63,6 @@ const Home = () => {
         {/* CONTENT */}
         <div className="container">
           <section className="intro">
-            <div className="avatar-container">
-              <img className="avatar" src={avatar} />
-            </div>
             <div>
               <h1> JOHNSON SONG </h1>
               <p> M.S. Computer Science - HCI <a href="https://www.stanford.edu/" target="_blank"> @Stanford </a> </p>
