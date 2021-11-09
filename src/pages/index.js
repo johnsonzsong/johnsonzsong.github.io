@@ -42,16 +42,25 @@ const Home = () => {
       </div> */}
 
         {/* BACK TO TOP */}
-        <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
+        {/* <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
           <FontAwesomeIcon icon={faAngleDoubleUp} />
-        </a>
+        </a> */}
 
         <section className="testSection">
           <div className="hero">
             <img className="mountain" src="mountain.jpeg" alt="mountain" />
 
-            <div className="headline avatar-container">
-              <img className="avatar" src={avatar} />
+            <div className="headline">
+              This is my <br />
+              <span className="portfolio">
+                PORTFOLIO
+              </span>
+              <span className="portfolio">
+                PLAYGROUND
+              </span>
+              <span className="portfolio">
+                PASSION
+              </span>
             </div>
 
           </div>
@@ -59,9 +68,9 @@ const Home = () => {
 
         <div className="slider"></div>
 
-
         {/* CONTENT */}
         <div className="container">
+          <img src="https://img.icons8.com/ios/24/000000/long-arrow-down.png" />
           <section className="intro">
             <div>
               <h1> JOHNSON SONG </h1>
