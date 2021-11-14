@@ -3,6 +3,7 @@ function onLoad() {
     const hero = document.querySelector('.hero');
     const slider = document.querySelector('.slider');
     const headline = document.querySelector('.headline');
+    const arrow = document.querySelector('.arrow');
 
     const tl = new TimelineMax();
     tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
@@ -41,14 +42,22 @@ function onLoad() {
         }
     })
 
+    TweenMax.to(arrow, 1.5, {
+        y: "+=15px",
+        yoyo: true,
+        ease: Power4.yoyoEase,
+        repeat: -1,
+        delay: 2
+    })
+
 
     // ----------------- NAVIGATION -----------------
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
+    const navLinkContainers = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
+        navLinkContainers.classList.toggle('nav-active');
 
         // Link animations
         navLinks.forEach((link, index) => {

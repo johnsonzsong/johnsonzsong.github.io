@@ -8,12 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import SEO from "../components/seo"
-import cartaHifi from "../../static/cartaHifi.png";
 import c3Logo from "../../static/c3Logo.png";
 import grLogo from "../../static/grLogo.png";
 import cartaLogo from "../../static/cartaLogo.svg";
 import daimlerLogo from "../../static/daimlerLogo.png";
 import SiteNavigation from '../components/nav';
+import { BsArrowDown } from 'react-icons/bs';
 
 const Home = () => {
   return (
@@ -46,32 +46,36 @@ const Home = () => {
           <FontAwesomeIcon icon={faAngleDoubleUp} />
         </a> */}
 
-        <section className="testSection">
+        <div className="testSection">
           <div className="hero">
             <img className="mountain" src="mountain.jpeg" alt="mountain" />
 
             <div className="headline">
               This is my <br />
               <span className="portfolio">
-                PORTFOLIO
+                PORTFOLIO.
               </span>
               <span className="portfolio">
-                PLAYGROUND
+                PLAYGROUND.
               </span>
               <span className="portfolio">
-                PASSION
+                PASSION.
               </span>
             </div>
 
           </div>
-        </section>
 
-        <div className="slider"></div>
+        </div>
 
-        {/* CONTENT */}
-        <div className="container">
-          <img src="https://img.icons8.com/ios/24/000000/long-arrow-down.png" />
-          <section className="intro">
+        <div style={{ height: "15vh", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h3> Everything you see on this website was designed and coded from scratch by me using Figma, React, JavaScript, HTML/CSS, and GSAP. </h3>
+          <BsArrowDown size={32} className="arrow" />
+        </div>
+
+        {/* <div className="slider"></div> */}
+
+        <div className="container col-80">
+          {/* <section className="intro">
             <div>
               <h1> JOHNSON SONG </h1>
               <p> M.S. Computer Science - HCI <a href="https://www.stanford.edu/" target="_blank"> @Stanford </a> </p>
@@ -79,17 +83,15 @@ const Home = () => {
               <p> Previously Product Design intern <a href="https://c3.ai/" target="_blank"> @C3.ai </a> </p>
               <p> Previously SWE intern <a href="https://www.meta.com/" target="_blank"> @Facebook </a> </p>
             </div>
-          </section>
-          <div className="col-80">
-            <section id="section-two">
-              <h2> WORK </h2>
+          </section> */}
+
+          <section id="section-two" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div className="project-row">
               <div className="project coming-soon">
                 <div className="col-50 mr-32">
-                  {/* <Link to="c3"> */}
                   <div className="image-container nb">
                     <img style={{ width: "100%" }} src={c3Logo}></img>
                   </div>
-                  {/* </Link> */}
                 </div>
                 <div style={{ width: "100%" }}>
                   <div className="row">
@@ -136,7 +138,6 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-
               <div className="project">
                 <div className="col-50 mr-32">
                   <Link to="carta">
@@ -191,10 +192,15 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+            <div className="col-25" style={{ display: "flex", justifyContent: "space-around" }}>
+              <img className="avatar" src="messenger.png" />
+              <img className="avatar" src="facebook.png" />
+              <img className="avatar" src="kangaroo.jpeg" />
+            </div>
+          </section>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          {/*  <div className="col-35" style={{ display: "flex", justifyContent: "space-around" }}>
             <section className="mr-64">
               <h2> OTHER EXPERIENCE </h2>
               <div className="row">
@@ -230,9 +236,9 @@ const Home = () => {
               <p>
                 Developing new iOS features for Messenger.
               </p>
-            </section>
+            </section> */}
 
-            <section>
+          {/* <section>
               <h2> EDUCATION </h2>
               <p className="m-0 fs-med">
                 <b>Stanford University</b>
@@ -252,52 +258,10 @@ const Home = () => {
                 Minor in Economics <br />
                 3.9/4.0 GPA
               </p>
-            </section>
-          </div>
-
-
-          {/* <section id="section-five">
-            <h2>Shoutouts.</h2>
-            <div className="project">
-              <div className="col-70">
-                <p>
-                  I would not be where I am today without mentorship and support from so many people. Here are just some of them who’ve had a huge impact on me.
-                </p>
-                <p className="m-0">
-                  <a href="https://www.linkedin.com/in/jennifersongcmu" target="_blank">
-                    Jennifer Song
-                  </a>
-                </p>
-                <p className="m-0">Rıza Selçuk Saydam</p>
-                <p className="m-0">Jordan Dunn</p>
-                <p className="m-0">
-                  <a href="http://www.kristinainouye.com/" target="_blank">
-                    Kristina Inouye
-                  </a>
-                </p>
-                <p className="m-0">
-                  <a href="https://www.liamllorin.com/" target="_blank">
-                    Liam Llorin
-                  </a>
-                </p>
-                <p className="m-0">Jordan Llorin</p>
-                <p className="m-0">
-                  <a href="https://www.sophia-nguyen.com/" target="_blank">
-                    Sophia Nguyen
-                  </a>
-                </p>
-                <p className="m-0">Kaelyn Ong</p>
-                <p className="m-0">Noopur Chhabra</p>   
-                <p className="m-0">Odette Du</p>
-                <p className="m-0">Daiwei Liu</p>
-                <p className="m-0">Roger Li</p>
-                <p className="m-0">Seth Kasky</p>        
-              </div>
-            </div>
-          </section> */}
+            </section> */}
         </div>
       </div>
-    </PageTransition>
+    </PageTransition >
   );
 }
 
