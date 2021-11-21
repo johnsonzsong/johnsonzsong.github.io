@@ -1,15 +1,11 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "gatsby";
 import "../styles.scss";
 import { withPrefix } from "gatsby";
-import PageTransition from 'gatsby-plugin-page-transitions';
-import avatar from "../../static/avatar.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import SEO from "../components/seo"
-import Footer from "../components/footer"
-import SiteNavigation from '../components/nav';
+import PageTransition from "gatsby-plugin-page-transitions";
+import SEO from "../components/seo";
+import Footer from "../components/footer";
+import SiteNavigation from "../components/nav";
 import resume from "../../static/Johnson_Song_Resume.pdf";
 
 import c3Logo2 from "../../static/c3Logo2.png";
@@ -18,7 +14,7 @@ import kangarooLogo from "../../static/kangaroo.jpeg";
 import facebookLogo from "../../static/facebook.png";
 import messengerLogo from "../../static/messenger.png";
 
-import ResumeUnit from '../components/resumeUnit';
+import ResumeUnit from "../components/resumeUnit";
 
 const Resume = () => {
   return (
@@ -26,9 +22,14 @@ const Resume = () => {
       <SEO title="Resume"></SEO>
       <div>
         <Helmet>
-          <script src={withPrefix('cursorScript.js')} type="text/javascript" />
-          <script src={withPrefix('app.js')} type="text/javascript" />
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src={withPrefix("cursorScript.js")} type="text/javascript" />
+          <script src={withPrefix("app.js")} type="text/javascript" />
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+            integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+          ></script>
         </Helmet>
 
         <SiteNavigation />
@@ -39,14 +40,19 @@ const Resume = () => {
             style={{
               display: "flex",
               alignItems: "center",
-              flexDirection: "column"
+              flexDirection: "column",
             }}
           >
             <h2>RESUMÉ</h2>
-            <a href={resume} target="_blank">Download </a>
+            <a href={resume} target="_blank">
+              Download{" "}
+            </a>
           </div>
 
-          <div className="col-80" style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            className="col-80"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
             <div style={{ flex: 2, marginRight: "8em" }}>
               <section>
                 <h2 className="mb-16"> WORK EXPERIENCE </h2>
@@ -88,8 +94,6 @@ const Resume = () => {
               </section>
             </div>
 
-
-
             <div style={{ flex: 1 }}>
               <section>
                 <h2 className="mb-16"> EDUCATION </h2>
@@ -119,14 +123,14 @@ const Resume = () => {
                   <b>Design</b>
                 </p>
                 <p>
-                  Needfinding, design thinking, prototyping, wireframing, design systems, journey mapping, information architecture, data visualization, Figma
+                  Needfinding, design thinking, prototyping, wireframing, design
+                  systems, journey mapping, information architecture, data
+                  visualization, Figma
                 </p>
                 <p className="mt-32 fs-med">
                   <b>Engineering</b>
                 </p>
-                <p>
-                  React, Javascript, Java, HTML, CSS, C++, Objective-C
-                </p>
+                <p>React, Javascript, Java, HTML, CSS, C++, Objective-C</p>
               </section>
 
               <section>
@@ -136,11 +140,10 @@ const Resume = () => {
             </div>
           </div>
         </div>
-
       </div>
       <Footer />
     </PageTransition>
   );
-}
+};
 
 export default Resume;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "../styles.scss";
 import { Link } from "gatsby";
 
@@ -6,9 +6,7 @@ const SiteNavigation = () => {
   return (
     <nav>
       <Link to="/">
-        <div className="logo">
-          JOHNSON SONG
-        </div>
+        <div className="logo">JOHNSON SONG</div>
       </Link>
 
       <ul className="nav-links">
@@ -33,7 +31,8 @@ const SiteNavigation = () => {
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
-    </nav>);
-}
+    </nav>
+  );
+};
 
-export default SiteNavigation
+export default SiteNavigation;

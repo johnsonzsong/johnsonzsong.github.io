@@ -8,7 +8,8 @@ module.exports = {
   siteMetadata: {
     title: "Johnson Song",
     titleTemplate: "%s • Johnson Song",
-    description: "Johnson Song, UX/UI designer at C3.ai, previously software engineer at Facebook and Messenger.",
+    description:
+      "Johnson Song, UX/UI designer at C3.ai, previously software engineer at Facebook and Messenger.",
     url: "http://johnsonsong.me", // No trailing slash allowed!
     image: "/avatar.png",
     author: `@johnson.song`,
@@ -18,10 +19,10 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-page-transitions`,
     {
-      resolve: 'gatsby-plugin-page-transitions',
+      resolve: "gatsby-plugin-page-transitions",
       options: {
-        transitionTime: 1000
-      }
+        transitionTime: 1000,
+      },
     },
     {
       resolve: `gatsby-plugin-webfonts`,
@@ -30,16 +31,16 @@ module.exports = {
           google: [
             {
               family: `Oswald`,
-              variants: [`400`, `500`, `600`, `700`]
+              variants: [`400`, `500`, `600`, `700`],
             },
             {
               family: `Open Sans`,
-              variants: [`400`, `500`, `600`, `700`]
+              variants: [`400`, `500`, `600`, `700`],
             },
             {
               family: `Roboto Mono`,
-              variants: [`400`, `500`, `600`, `700`]
-            }
+              variants: [`400`, `500`, `600`, `700`],
+            },
           ],
         },
       },
@@ -53,4 +54,4 @@ module.exports = {
       },
     },
   ],
-}
+};

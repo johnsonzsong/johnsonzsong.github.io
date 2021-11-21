@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { withPrefix } from "gatsby";
-import PageTransition from 'gatsby-plugin-page-transitions';
+import PageTransition from "gatsby-plugin-page-transitions";
 import SEO from "../components/seo";
 import Footer from "../components/footer";
 import ProjectTile from "../components/projectTile";
-import SiteNavigation from '../components/nav';
+import SiteNavigation from "../components/nav";
 
 import florence from "../../static/florence.jpg";
 import michelangelo from "../../static/michelangelo.jpg";
@@ -23,9 +23,14 @@ const About = () => {
       <SEO title="About"></SEO>
       <div>
         <Helmet>
-          <script src={withPrefix('cursorScript.js')} type="text/javascript" />
-          <script src={withPrefix('app.js')} type="text/javascript" />
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src={withPrefix("cursorScript.js")} type="text/javascript" />
+          <script src={withPrefix("app.js")} type="text/javascript" />
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+            integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+          ></script>
         </Helmet>
         <SiteNavigation />
 
@@ -37,13 +42,24 @@ const About = () => {
               <div style={{ marginRight: "4em", flex: 2 }}>
                 <p> I am a detail-oriented designer and developer.</p>
                 <p className="mt-16">
-                  Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. My background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.
+                  Over the years, I’ve discovered a deep love for the design of
+                  complex and crucial technologies. My background in computer
+                  science and software engineering has given me invaluable
+                  insights about how to be a better designer. My ability to
+                  think creatively and critically, and to communicate
+                  empathetically and technically is what sets me apart.
                 </p>
                 <p className="mt-16">
-                  I was born in France and raised in Virginia. In 2016, I moved to California to attend Stanford University. There, I was introduced to computer science and UX/UI design. I was immediately drawn to the intersection of technology, human psychology, storytelling, and art.
+                  I was born in France and raised in Virginia. In 2016, I moved
+                  to California to attend Stanford University. There, I was
+                  introduced to computer science and UX/UI design. I was
+                  immediately drawn to the intersection of technology, human
+                  psychology, storytelling, and art.
                 </p>
                 <p className="mt-16">
-                  I see design as a neverending journey to transform things that don’t make sense into things that do. </p>
+                  I see design as a neverending journey to transform things that
+                  don’t make sense into things that do.{" "}
+                </p>
               </div>
               <div style={{ flex: 1 }}>
                 <div className="image-container nb">
@@ -51,10 +67,17 @@ const About = () => {
                 </div>
               </div>
             </div>
-
           </section>
 
-          <section id="section-two" className="col-80" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <section
+            id="section-two"
+            className="col-80"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <h2>SOME OF MY FAVORITE PLACES</h2>
             <div className="project-row">
               <ProjectTile
@@ -125,7 +148,6 @@ const About = () => {
             </section>
           </div> */}
 
-
           {/* <section id="section-five">
             <h2>Shoutouts.</h2>
             <div className="project">
@@ -170,6 +192,6 @@ const About = () => {
       <Footer />
     </PageTransition>
   );
-}
+};
 
 export default About;

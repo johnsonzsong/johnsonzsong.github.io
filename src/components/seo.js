@@ -1,12 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useLocation } from "@reach/router";
+import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ title, description, image, article }) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+  const { pathname } = useLocation();
+  const { site } = useStaticQuery(query);
 
   const {
     defaultTitle,
@@ -14,14 +14,14 @@ const SEO = ({ title, description, image, article }) => {
     defaultDescription,
     siteUrl,
     defaultImage,
-  } = site.siteMetadata
+  } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
-  }
+  };
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
@@ -51,24 +51,25 @@ const SEO = ({ title, description, image, article }) => {
 
       {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
 
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
-}
+};
 
 SEO.defaultProps = {
   title: "Johnson Song",
-  description: "Johnson Song, UX/UI designer at Carta (Stanford) and C3.ai, previously software engineer at Facebook, Messenger, and Kangaroo.",
+  description:
+    "Johnson Song, UX/UI designer at Carta (Stanford) and C3.ai, previously software engineer at Facebook, Messenger, and Kangaroo.",
   image: null,
   article: false,
-}
+};
 
 const query = graphql`
   query SEO {
@@ -82,4 +83,4 @@ const query = graphql`
       }
     }
   }
-`
+`;

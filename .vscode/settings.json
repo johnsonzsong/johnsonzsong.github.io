@@ -1,9 +1,7 @@
 {
-    "emmet.preferences": {
-    
-    },
-    "emmet.includeLanguages": { 
-        "javascript": "javascriptreact"
-    },
-    "editor.wordWrap": "wordWrapColumn"
+  "emmet.preferences": {},
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.wordWrap": "wordWrapColumn"
 }
