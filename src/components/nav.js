@@ -24,7 +24,7 @@ const SiteNavigation = () => {
         </li>
         <li>
           <Link to="/resume" activeStyle={{ color: "#00A3FF" }}>
-            <div>RESUME</div>
+            <div>RESUMÉ</div>
           </Link>
         </li>
       </ul>

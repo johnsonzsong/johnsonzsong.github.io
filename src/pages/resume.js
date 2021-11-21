@@ -42,7 +42,7 @@ const Resume = () => {
               flexDirection: "column"
             }}
           >
-            <h2>RESUME</h2>
+            <h2>RESUMÉ</h2>
             <a href={resume} target="_blank">Download </a>
           </div>
 
