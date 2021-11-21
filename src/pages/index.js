@@ -1,13 +1,11 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import "../styles.scss";
-import { withPrefix, Link } from "gatsby";
+import { withPrefix } from "gatsby";
 import PageTransition from 'gatsby-plugin-page-transitions';
-import avatar from "../../static/avatar.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import ProjectTile from '../components/projectTile';
+import Footer from "../components/footer";
 import c3Logo from "../../static/c3Logo.png";
 import grLogo from "../../static/grLogo.png";
 import cartaLogo from "../../static/cartaLogo.svg";
@@ -19,7 +17,7 @@ const Home = () => {
   return (
     <PageTransition>
       <SEO title="Home"></SEO>
-      <div>
+      <div style={{ overflowX: "hidden" }}>
         <Helmet>
           <script src={withPrefix('cursorScript.js')} type="text/javascript" />
           <script src={withPrefix('app.js')} type="text/javascript" />
@@ -27,19 +25,6 @@ const Home = () => {
         </Helmet>
 
         <SiteNavigation />
-
-        {/* SOCIAL */}
-        {/* <div id="social-container">
-        <a href="http://instagram.com/johnson.song" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <a href="https://www.linkedin.com/in/johnsonsong/" target="_blank">
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="mailto:johnsonsong@stanford.edu">
-          <FontAwesomeIcon icon={faEnvelope} />
-        </a>
-      </div> */}
 
         {/* BACK TO TOP */}
         {/* <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
@@ -67,9 +52,11 @@ const Home = () => {
 
         </div>
 
-        <div style={{ height: "15vh", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div className="col-80" style={{ height: "15vh", display: "flex", flexDirection: "column", alignItems: "center", margin: "auto", textAlign: "center" }}>
           <h3> Everything you see on this website was designed and coded from scratch by me using Figma, React, JavaScript, HTML/CSS, and GSAP. </h3>
-          <BsArrowDown size={32} className="arrow" />
+          <div className="arrowContainer">
+            <BsArrowDown size={32} className="arrow" />
+          </div>
         </div>
 
         {/* <div className="slider"></div> */}
@@ -86,157 +73,50 @@ const Home = () => {
           </section> */}
 
           <section id="section-two" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <h2>SOME THINGS I'VE DESIGNED...</h2>
             <div className="project-row">
-              <div className="project coming-soon">
-                <div className="col-50 mr-32">
-                  <div className="image-container nb">
-                    <img style={{ width: "100%" }} src={c3Logo}></img>
-                  </div>
-                </div>
-                <div style={{ width: "100%" }}>
-                  <div className="row">
-                    <p className="m-0 fs-med">
-                      <b>C3.ai</b>
-                    </p>
-                    <div className="pill-pd">PRODUCT DESIGN</div>
-                  </div>
-                  <p className="m-0 a-60">Product Design Intern | June - August 2021</p>
-                  <p>
-                    Designing enterprise AI products for customer relationship management, reliability, and data.
-                  </p>
-                  <br />
-                  <br />
-                  <a href="mailto:johnsonsong@stanford.edu" className="project-link">
-                    Contact me directly about this project.
-                  </a>
-                </div>
-              </div>
-
-              <div className="project">
-                <div className="col-50 mr-32">
-                  <Link to="goodreads">
-                    <div className="image-container nb">
-                      <img style={{ width: "100%" }} src={grLogo}></img>
-                    </div>
-                  </Link>
-                </div>
-                <div style={{ width: "100%" }}>
-                  <div className="row">
-                    <p className="m-0 fs-med">
-                      <b>Goodreads</b>
-                    </p>
-                    <div className="pill-pd">PRODUCT DESIGN</div>
-                  </div>
-                  <p className="m-0 a-60">Independent Project | March 2021</p>
-                  <p>
-                    Redesigning the world’s largest site for readers and book recommendations.
-                  </p>
-                  <Link to="goodreads">
-                    <div className="project-link">
-                      Read more about Goodreads &#10230;
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="project">
-                <div className="col-50 mr-32">
-                  <Link to="carta">
-                    <div className="image-container nb">
-                      <img style={{ width: "100%" }} src={cartaLogo}></img>
-                    </div>
-                  </Link>
-                </div>
-                <div style={{ width: "100%" }}>
-                  <div className="row">
-                    <p className="m-0 fs-med">
-                      <b>Carta</b>
-                    </p>
-                    <div className="pill-pd">PRODUCT DESIGN</div>
-                  </div>
-                  <p className="m-0 a-60">UX/UI Designer | January - June 2021</p>
-                  <p>
-                    Designing the course search experience at Stanford University.
-                  </p>
-                  <Link to="carta">
-                    <div className="project-link">
-                      Read more about Carta &#10230;
-                    </div>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="project coming-soon">
-                <div className="col-50 mr-32">
-                  <Link to="daimler">
-                    <div className="image-container nb">
-                      <img style={{ width: "100%" }} src={daimlerLogo}></img>
-                    </div>
-                  </Link>
-                </div>
-                <div style={{ width: "100%" }}>
-                  <div className="row">
-                    <p className="m-0 fs-med">
-                      <b>Daimler</b>
-                    </p>
-                    <div className="pill-pd">PRODUCT DESIGN</div>
-                    <div className="pill-engineering">ENGINEERING</div>
-                  </div>
-                  <p className="m-0 a-60">Partner Designer and Developer | January - June 2020</p>
-                  <p>
-                    Designing and developing an in-vehicle gaming experience for autonomous driving.
-                  </p>
-                  <Link to="daimler">
-                    <div className="project-link">
-                      Read more about Daimler &#10230;
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <ProjectTile
+                imageSource={c3Logo}
+                disabledLink
+                projectName="C3"
+                description="Designing enterprise AI products for customer relationship management, reliability, and data."
+                role="Product Design Intern"
+                timeFrame="June - August 2021"
+              />
+              <ProjectTile
+                route="/goodreads"
+                imageSource={grLogo}
+                projectName="Goodreads"
+                description="Redesigning the world’s largest site for readers and book recommendations."
+                role="Independent Project"
+                timeFrame="March 2021"
+              />
+              <ProjectTile
+                route="/carta" imageSource={cartaLogo}
+                projectName="Carta"
+                description="Designing the course search experience at Stanford University."
+                role="UX/UI Designer"
+                timeFrame="January - June 2021"
+              />
+              <ProjectTile
+                route="/daimler"
+                imageSource={daimlerLogo}
+                projectName="Daimler"
+                description="Designing and developing an in-vehicle gaming experience for autonomous driving."
+                role="Partner Designer and Developer"
+                timeFrame="January - June 2020"
+              />
             </div>
-            <div className="col-25" style={{ display: "flex", justifyContent: "space-around" }}>
+          </section>
+
+          <section style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "8em" }}>
+            <h2>...AND SOME THINGS I'VE DEVELOPED</h2>
+            <div className="col-50" style={{ display: "flex", justifyContent: "space-around" }}>
               <img className="avatar" src="messenger.png" />
               <img className="avatar" src="facebook.png" />
               <img className="avatar" src="kangaroo.jpeg" />
             </div>
           </section>
-
-          {/*  <div className="col-35" style={{ display: "flex", justifyContent: "space-around" }}>
-            <section className="mr-64">
-              <h2> OTHER EXPERIENCE </h2>
-              <div className="row">
-                <p className="m-0 fs-med">
-                  <b>Kangaroo</b>
-                </p>
-                <div className="pill-pd">PRODUCT DESIGN</div>
-                <div className="pill-engineering">ENGINEERING</div>
-              </div>
-              <p className="m-0 a-60">Founding Head of Engineering | September 2020 - May 2021</p>
-              <p>
-                Designing and developing MVP features for a stealth startup in the creator-social space.
-              </p>
-
-              <div className="row mt-32">
-                <p className="fs-med">
-                  <b>Facebook</b>
-                </p>
-                <div className="pill-engineering">ENGINEERING</div>
-              </div>
-              <p className="m-0 a-60">Software Engineering Intern | June - August 2020</p>
-              <p>
-                Developing MVP features for Facebook Gaming on web.
-              </p>
-
-              <div className="row mt-32">
-                <p className="fs-med">
-                  <b>Facebook</b>
-                </p>
-                <div className="pill-engineering">ENGINEERING</div>
-              </div>
-              <p className="m-0 a-60">Software Engineering Intern | June - August 2019</p>
-              <p>
-                Developing new iOS features for Messenger.
-              </p>
-            </section> */}
 
           {/* <section>
               <h2> EDUCATION </h2>
@@ -261,6 +141,7 @@ const Home = () => {
             </section> */}
         </div>
       </div>
+      <Footer />
     </PageTransition >
   );
 }

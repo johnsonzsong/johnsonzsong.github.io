@@ -3,10 +3,8 @@ import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { withPrefix } from "gatsby";
 import PageTransition from 'gatsby-plugin-page-transitions';
-import avatar from "../../static/avatar.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 import SiteNavigation from '../components/nav';
 
 const About = () => {
@@ -16,25 +14,17 @@ const About = () => {
       <div>
         <Helmet>
           <script src={withPrefix('cursorScript.js')} type="text/javascript" />
+          <script src={withPrefix('app.js')} type="text/javascript" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         </Helmet>
-
         <SiteNavigation />
 
-        {/* BACK TO TOP */}
-        <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
-          <FontAwesomeIcon icon={faAngleDoubleUp} />
-        </a>
-
         {/* CONTENT */}
-        <div className="container">
+        <div className="container col-80">
           <section id="section-one" className="intro">
-            <div className="avatar-container">
-              <img className="avatar" src={avatar} />
-            </div>
             <div>
-              <h1> HI, I'M JOHNSON </h1>
-              <p> I am a detail-oriented designer and developer. This entire website was <span className="blue"> designed in Figma </span> and <span className="yellow"> developed in React </span> from scratch, by me!
-              </p>
+              <h2> HI, I'M JOHNSON </h2>
+              <p> I am a detail-oriented designer and developer.</p>
               <p className="mt-16">
                 Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. I believe that my background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.
               </p>
@@ -110,6 +100,7 @@ const About = () => {
           </section> */}
         </div>
       </div>
+      <Footer />
     </PageTransition>
   );
 }

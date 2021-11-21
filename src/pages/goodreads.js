@@ -28,6 +28,7 @@ import grFinal from "../../static/grFinal.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
 import SEO from "../components/seo";
+import Footer from "../components/footer"
 import SiteNavigation from '../components/nav';
 
 const Goodreads = () => {
@@ -270,6 +271,7 @@ const Goodreads = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </PageTransition>
   );
 }

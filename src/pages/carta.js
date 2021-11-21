@@ -21,6 +21,7 @@ import cartaFeature from "../../static/cartaFeature.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
 import SEO from "../components/seo";
+import Footer from "../components/footer"
 import SiteNavigation from '../components/nav';
 
 const Carta = () => {
@@ -260,6 +261,7 @@ const Carta = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </PageTransition>
   );
 }

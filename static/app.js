@@ -4,6 +4,7 @@ function onLoad() {
     const slider = document.querySelector('.slider');
     const headline = document.querySelector('.headline');
     const arrow = document.querySelector('.arrow');
+    const arrowContainer = document.querySelector('.arrowContainer');
 
     const tl = new TimelineMax();
     tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
@@ -48,6 +49,12 @@ function onLoad() {
         ease: Power4.yoyoEase,
         repeat: -1,
         delay: 2
+    })
+
+    const y = arrowContainer.getBoundingClientRect().bottom;
+    arrowContainer.addEventListener('click', () => {
+        console.log("Y:", y);
+        window.scrollTo({ top: y })
     })
 
 

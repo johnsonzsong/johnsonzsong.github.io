@@ -17,6 +17,7 @@ import cabanaFeature from "../../static/cabanaFeature.png";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { withPrefix } from "gatsby";
 import SEO from "../components/seo";
+import Footer from "../components/footer"
 import SiteNavigation from '../components/nav';
 
 const Daimler = () => {
@@ -273,6 +274,7 @@ const Daimler = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </PageTransition>
   );
 }

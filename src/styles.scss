@@ -202,22 +202,28 @@ nav a {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-// #social-container {
-//   z-index: 1;
-//   position: fixed;
-//   bottom: 0;
-//   padding: 1em;
-//   display: flex;
-//   flex-direction: column;
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10vh;
+  margin:auto;
+  padding: 3em 0;
+}
 
-//   a {
-//     font-size: 2em;
-//     text-decoration: none;
-//     color: $blue;
-//     width: fit-content;
-//     height: fit-content;
-//   }
-// }
+.socials-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  a {
+    font-size: 2em;
+    text-decoration: none;
+    color: $blue;
+    width: fit-content;
+    height: fit-content;
+  }
+}
 
 #backToTop-container {
   z-index: 1;
@@ -270,6 +276,9 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 1.6em;
+  line-height: 1.6em;
+  letter-spacing: 3px;
+  margin: 2em 0;
 }
 
 h3 {
@@ -296,6 +305,7 @@ p {
 
 section {
   margin: 2em 0;
+  width: 100%;
 }
 
 .wide {
@@ -437,25 +447,67 @@ section {
   object-fit: cover;
 }
 
+.arrowContainer {
+  cursor: pointer;
+}
+
 .project-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  > :not(:last-child) {
-    margin-right: 1em;
-  }
+  flex-wrap: wrap;
 }
 
 .project {
-  margin-bottom: 3em;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
   box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.05);
   // border: 1px solid black;
   padding: 16px 32px;
   min-height: 200px;
+  min-width: 200px;
   flex: 1;
+  position: relative;
+  margin: 2em;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: -webkit-fill-available;
+  padding: 1em;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all .8s ease;
+  opacity: 0;
+}
+
+.project:hover .image-container {
+  filter: blur(.5em);
+  opacity: 0.3;
+  transition: all 1s ease;
+}
+
+.project:hover .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: -webkit-fill-available;
+  padding: 1em;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all .8s ease;
+  opacity: 1;
 }
 
 .project-link {
@@ -511,6 +563,7 @@ section {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  transition: all 1s ease;
 
   &.nb {
     border: none;
@@ -628,7 +681,7 @@ section {
     padding: 0em 2em;
   }
 
-  .col-25, .col-35, .col-50, .col-60, .col-70, .col-80 {
+  .col-25, .col-35, .col-50, .col-60, .col-70 {
     width: 100%;
   }
   
@@ -756,5 +809,9 @@ section {
 
   .testSection {
     height: 50vh;
+  }
+
+  .project-container {
+    width: 80%;
   }
 }

@@ -8,6 +8,7 @@ import avatar from "../../static/avatar.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 import SiteNavigation from '../components/nav';
 import resume from "../../static/Johnson_Song_Resume.pdf";
 
@@ -18,6 +19,8 @@ const Resume = () => {
       <div>
         <Helmet>
           <script src={withPrefix('cursorScript.js')} type="text/javascript" />
+          <script src={withPrefix('app.js')} type="text/javascript" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         </Helmet>
 
         <SiteNavigation />
@@ -162,6 +165,7 @@ const Resume = () => {
         </div>
 
       </div>
+      <Footer />
     </PageTransition>
   );
 }
