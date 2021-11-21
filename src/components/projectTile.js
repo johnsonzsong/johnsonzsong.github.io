@@ -15,7 +15,7 @@ const ProjectTile = ({
         <div className="project">
             {!disabledLink &&
                 <Link to={route}>
-                    <div className="image-container nb">
+                    <div className="image-container nb p-32">
                         <img style={{ width: "100%" }} src={imageSource}></img>
                     </div>
                 </Link>
@@ -33,7 +33,6 @@ const ProjectTile = ({
                                 <b>{projectName}</b>
                             </p>
                         </div>
-                        <br />
                         <p className="a-60">{role}</p>
                         <p className="a-60">{timeFrame}</p>
                         <br />
@@ -55,16 +54,17 @@ const ProjectTile = ({
                             <b>{projectName}</b>
                         </p>
                     </div>
-                    <br />
                     <p className="a-60">{role}</p>
                     <p className="a-60">{timeFrame}</p>
                     <br />
                     <p>
                         {description}
                     </p>
-                    <a href="mailto:johnsonsong@stanford.edu" className="project-link">
-                        Contact me directly about this project.
-                    </a>
+                    {role &&
+                        <a href="mailto:johnsonsong@stanford.edu" className="project-link">
+                            Contact me directly about this project.
+                        </a>
+                    }
                 </div>
             }
 

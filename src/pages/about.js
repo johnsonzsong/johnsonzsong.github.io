@@ -3,9 +3,19 @@ import { Helmet } from "react-helmet";
 import "../styles.scss";
 import { withPrefix } from "gatsby";
 import PageTransition from 'gatsby-plugin-page-transitions';
-import SEO from "../components/seo"
-import Footer from "../components/footer"
+import SEO from "../components/seo";
+import Footer from "../components/footer";
+import ProjectTile from "../components/projectTile";
 import SiteNavigation from '../components/nav';
+
+import florence from "../../static/florence.jpg";
+import michelangelo from "../../static/michelangelo.jpg";
+import fiesole from "../../static/fiesole.jpg";
+import vernazza from "../../static/vernazza.jpg";
+import evreux from "../../static/evreux.jpeg";
+import louvre from "../../static/louvre.jpg";
+import gagliani from "../../static/gagliani.jpg";
+import pfp from "../../static/pfp.jpeg";
 
 const About = () => {
   return (
@@ -20,23 +30,81 @@ const About = () => {
         <SiteNavigation />
 
         {/* CONTENT */}
-        <div className="container col-80">
-          <section id="section-one" className="intro">
-            <div>
-              <h2> HI, I'M JOHNSON </h2>
-              <p> I am a detail-oriented designer and developer.</p>
-              <p className="mt-16">
-                Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. I believe that my background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.
-              </p>
-              <p className="mt-16">
-                My story begins in Normandy, France, where I was born (along with my twin sister). After 5 years, my family moved to McLean, Virginia. After 13 years on the East Coast, I moved to California to attend Stanford University. College was my introduction to computer science, through which I learned about UX/UI design. I was immediately drawn to this intersection of technology, human psychology, storytelling, and art.
-              </p>
-              <p className="mt-16">
-                I see design as a neverending journey to transform things that don’t make sense into things that do. </p>
+        <div className="container">
+          <section id="section-one" className="intro col-50">
+            <h2> HI, I'M JOHNSON </h2>
+            <div style={{ display: "flex" }}>
+              <div style={{ marginRight: "4em", flex: 2 }}>
+                <p> I am a detail-oriented designer and developer.</p>
+                <p className="mt-16">
+                  Over the years, I’ve discovered a deep love for the design of complex and crucial technologies. My background in computer science and software engineering has given me invaluable insights about how to be a better designer. My ability to think creatively and critically, and to communicate empathetically and technically is what sets me apart.
+                </p>
+                <p className="mt-16">
+                  I was born in France and raised in Virginia. In 2016, I moved to California to attend Stanford University. There, I was introduced to computer science and UX/UI design. I was immediately drawn to the intersection of technology, human psychology, storytelling, and art.
+                </p>
+                <p className="mt-16">
+                  I see design as a neverending journey to transform things that don’t make sense into things that do. </p>
+              </div>
+              <div style={{ flex: 1 }}>
+                <div className="image-container nb">
+                  <img style={{ width: "100%" }} src={pfp}></img>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <section id="section-two" className="col-80" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <h2>SOME OF MY FAVORITE PLACES</h2>
+            <div className="project-row">
+              <ProjectTile
+                imageSource={florence}
+                disabledLink
+                projectName="Florence"
+                description="Where I studied abroad for 3 months."
+              />
+              <ProjectTile
+                imageSource={michelangelo}
+                disabledLink
+                projectName="Piazzale Michelangelo"
+                description="Part of my daily walk to school in Florence."
+              />
+              <ProjectTile
+                imageSource={vernazza}
+                disabledLink
+                projectName="Vernazza"
+                description="Where I celebrated my 20th birthday with new friends."
+              />
+              <ProjectTile
+                imageSource={fiesole}
+                disabledLink
+                projectName="Fiesole"
+                description="(+ Alcedo for delicious pastries)."
+              />
+            </div>
+            <div className="project-row">
+              <ProjectTile
+                imageSource={evreux}
+                disabledLink
+                projectName="Evreux"
+                description="Where I was born and raised (for 5 years)."
+              />
+              <ProjectTile
+                imageSource={louvre}
+                disabledLink
+                projectName="The Louvre"
+                description="The Winged Victory of Samothrace in the Louvre."
+              />
+              <ProjectTile
+                imageSource={gagliani}
+                disabledLink
+                projectName="Libraire Gagliani"
+                description="A bookstore in Paris."
+              />
             </div>
           </section>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
             <section className="mr-64">
               <h2> FAVORITE PLACES </h2>
               <p>
@@ -55,8 +123,7 @@ const About = () => {
               <p> <b> Le Petit Prince </b> by Antoine de Saint-Exupery</p>
               <p> <b> This is Water </b> by David Foster Wallace</p>
             </section>
-
-          </div>
+          </div> */}
 
 
           {/* <section id="section-five">

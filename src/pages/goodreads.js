@@ -139,8 +139,10 @@ const Goodreads = () => {
             <p>
               The current Goodreads app opens to a home screen that attempts to do it all: there is a search bar to look up books by title, author, or ISBN; there are social updates from friends' reading activity; and there are recommendations from Goodreads based on your reading history. This is confusing to the user because there's <b>no clear primary function</b> of the home page!
             </p>
-            <div className="image-container mt-32 mb-32 nb">
-              <img style={{ width: "30%", alignSelf: "center" }} src={grSocialCurrent}></img>
+            <div style={{ display: "flex" }}>
+              <div className="image-container mt-32 mb-32 nb">
+                <img style={{ width: "30%", alignSelf: "center" }} src={grSocialCurrent}></img>
+              </div>
             </div>
 
             <p>

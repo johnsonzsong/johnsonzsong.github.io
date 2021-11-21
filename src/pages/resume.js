@@ -12,6 +12,14 @@ import Footer from "../components/footer"
 import SiteNavigation from '../components/nav';
 import resume from "../../static/Johnson_Song_Resume.pdf";
 
+import c3Logo2 from "../../static/c3Logo2.png";
+import cartaLogo from "../../static/cartaLogo.svg";
+import kangarooLogo from "../../static/kangaroo.jpeg";
+import facebookLogo from "../../static/facebook.png";
+import messengerLogo from "../../static/messenger.png";
+
+import ResumeUnit from '../components/resumeUnit';
+
 const Resume = () => {
   return (
     <PageTransition>
@@ -25,12 +33,6 @@ const Resume = () => {
 
         <SiteNavigation />
 
-        {/* BACK TO TOP */}
-        <a id="backToTop-container" onClick={() => { window.scrollTo(0, 0) }}>
-          <FontAwesomeIcon icon={faAngleDoubleUp} />
-        </a>
-
-        {/* CONTENT */}
         <div className="container">
           <div
             className="mb-64"
@@ -43,83 +45,54 @@ const Resume = () => {
             <h2>RESUME</h2>
             <a href={resume} target="_blank">Download </a>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <section className="intro mr-64">
-              <div className="avatar-container">
-                <img className="avatar" src={avatar} />
-              </div>
-              <div>
-                <h1> JOHNSON SONG </h1>
-                <p> johnsonsong@stanford.edu</p>
-                <p> (703) 459 - 8226</p>
-                <Link to="https://www.linkedin.com/in/johnsonsong/">linkedin.com/in/johnsonsong</Link>
-                <br />
-                <Link to="https://johnsonsong.me/">johnsonsong.me</Link>
-              </div>
-            </section>
 
-            <section>
+          <div className="col-80" style={{ display: "flex", justifyContent: "space-between" }}>
+            <div style={{ flex: 2, marginRight: "8em" }}>
               <section>
-                <h2 className="mt-0"> WORK EXPERIENCE </h2>
-                <div className="row">
-                  <p className="m-0 fs-med">
-                    <b>C3.ai</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                </div>
-                <p className="m-0 a-60">Product Design Intern | June - August 2021</p>
-                <p>
-                  Designing enterprise AI products for customer relationship management, reliability, and data.
-                </p>
-
-                <div className="row mt-32">
-                  <p className="fs-med">
-                    <b>Carta</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                </div>
-                <p className="m-0 a-60">UX/UI Designer | January - June 2021</p>
-                <p>
-                  Designing the course search experience at Stanford University.
-                </p>
-
-                <div className="row mt-32">
-                  <p className="fs-med">
-                    <b>Kangaroo</b>
-                  </p>
-                  <div className="pill-pd">PRODUCT DESIGN</div>
-                  <div className="pill-engineering">ENGINEERING</div>
-                </div>
-                <p className="m-0 a-60">Founding Head of Engineering | September 2020 - May 2021</p>
-                <p>
-                  Designing and developing MVP features for a stealth startup in the creator-social space.
-                </p>
-
-                <div className="row mt-32">
-                  <p className="fs-med">
-                    <b>Facebook</b>
-                  </p>
-                  <div className="pill-engineering">ENGINEERING</div>
-                </div>
-                <p className="m-0 a-60">Software Engineering Intern | June - August 2020</p>
-                <p>
-                  Developing MVP features for Facebook Gaming on web.
-                </p>
-
-                <div className="row mt-32">
-                  <p className="fs-med">
-                    <b>Facebook</b>
-                  </p>
-                  <div className="pill-engineering">ENGINEERING</div>
-                </div>
-                <p className="m-0 a-60">Software Engineering Intern | June - August 2019</p>
-                <p>
-                  Developing new iOS features for Messenger.
-                </p>
+                <h2 className="mb-16"> WORK EXPERIENCE </h2>
+                <ResumeUnit
+                  logo={c3Logo2}
+                  company="C3.ai"
+                  role="Product Design Intern"
+                  timeFrame="June - August 2021"
+                  description="Designing enterprise AI products for customer relationship management, reliability, and data."
+                />
+                <ResumeUnit
+                  logo={cartaLogo}
+                  company="Carta"
+                  role="UX/UI Designer"
+                  timeFrame="January - June 2021"
+                  description="Designing the course search experience at Stanford University."
+                />
+                <ResumeUnit
+                  logo={kangarooLogo}
+                  company="Kangaroo"
+                  role="Founding Head of Engineering"
+                  timeFrame="September 2020 - May 2021"
+                  description="Designing and developing MVP features for a stealth startup in the creator-social space."
+                />
+                <ResumeUnit
+                  logo={facebookLogo}
+                  company="Facebook (Gaming)"
+                  role="Software Engineering Intern"
+                  timeFrame="June 2020 - August 2020"
+                  description="Developing MVP features for Facebook Gaming on web."
+                />
+                <ResumeUnit
+                  logo={messengerLogo}
+                  company="Facebook (Messenger)"
+                  role="Software Engineering Intern"
+                  timeFrame="June 2019 - August 2019"
+                  description="Developing new iOS features for Messenger."
+                />
               </section>
+            </div>
 
+
+
+            <div style={{ flex: 1 }}>
               <section>
-                <h2 className="mt-0"> EDUCATION </h2>
+                <h2 className="mb-16"> EDUCATION </h2>
                 <p className="m-0 fs-med">
                   <b>Stanford University</b>
                 </p>
@@ -141,7 +114,7 @@ const Resume = () => {
               </section>
 
               <section>
-                <h2 className="mt-0"> SKILLS </h2>
+                <h2 className="mb-16"> SKILLS </h2>
                 <p className="m-0 fs-med">
                   <b>Design</b>
                 </p>
@@ -157,10 +130,10 @@ const Resume = () => {
               </section>
 
               <section>
-                <h2 className="mt-0"> LANGUAGES </h2>
+                <h2 className="mb-16"> LANGUAGES </h2>
                 <p>English, Mandarin, French (intermediate), Italian (basic)</p>
               </section>
-            </section>
+            </div>
           </div>
         </div>
 
