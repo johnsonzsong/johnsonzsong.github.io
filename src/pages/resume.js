@@ -23,7 +23,7 @@ const Resume = () => {
       <div>
         <Helmet>
           <script src={withPrefix("cursorScript.js")} type="text/javascript" />
-          <script src={withPrefix("app.js")} type="text/javascript" />
+          <script src={withPrefix("/app.js")} type="text/javascript" />
           <script
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
             integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
@@ -44,7 +44,7 @@ const Resume = () => {
             }}
           >
             <h2>RESUMÉ</h2>
-            <a href={resume} target="_blank">
+            <a href={resume} target="_blank" rel="noreferrer">
               Download{" "}
             </a>
           </div>

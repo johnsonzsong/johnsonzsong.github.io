@@ -94,14 +94,6 @@ nav a {
   cursor: pointer;
 }
 
-.burger div{
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
 @media screen and (max-width:1024px) {
   .nav-links {
     width: 60%;
@@ -112,11 +104,6 @@ nav a {
 @media screen and (max-width:768px) {
   body {
     overflow-x: hidden;
-  }
-
-  .nav-active {
-    background-color: $bg;
-    z-index: 100;
   }
 
   .nav-links {
@@ -136,18 +123,68 @@ nav a {
     transition: transform 0.5s ease-in;
   }
 
+  .nav-links.open {
+    background-color: $bg;
+    z-index: 100;
+    transform: translateX(0%);
+  }
+
   .nav-links li {
     opacity: 0;
     margin: 1em 0;
   }
 
   .burger {
-    display: block;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    // width: 80%;
+    height: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    // border: 3px solid black;
   }
-}
 
-.nav-active {
-  transform: translateX(0%);
+  .burger-line {
+    width: 30px;
+    height: 4px;
+    background: black;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .burger-line::before, .burger-line::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: black;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .burger-line::before {
+    transform: translateY(-8px);
+  }
+
+  .burger-line::after {
+    transform: translateY(8px);
+  }
+
+  // ANIMATION
+  .burger.open .burger-line {
+    transform: translateX(-50px);
+    background: transparent;
+  }
+
+  .burger.open .burger-line::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  .burger.open .burger-line::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
 }
 
 @keyframes navLinkFade {
@@ -297,28 +334,6 @@ section {
 .row {
   display: flex;
   align-items: center;
-}
-
-.pill-pd {
-  margin: 0px 4px;
-  background-color: $blue;
-  color: $bg;
-  font-family: 'Oswald';
-  font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 32px;
-  font-size: 12px;
-}
-
-.pill-engineering {
-  margin: 0px 4px;
-  background-color: $yellow;
-  color: $bg;
-  font-family: 'Oswald';
-  font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 32px;
-  font-size: 12px;
 }
 
 // Utility classes --------------------------------------------------------------------------------
@@ -494,6 +509,7 @@ section {
 .project-link {
   margin-top: 32px;
   font-family: 'Roboto Mono';
+  color: $blue;
 }
 
 .project-button-container {

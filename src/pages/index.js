@@ -13,21 +13,22 @@ import daimlerLogo from "../../static/daimlerLogo.png";
 import SiteNavigation from "../components/nav";
 import { BsArrowDown } from "react-icons/bs";
 
-const Home = () => {
+export default function Home() {
   return (
+
     <PageTransition>
+      <Helmet>
+        <script src={withPrefix("cursorScript.js")} type="text/javascript" />
+        <script src={withPrefix("app.js")} type="text/javascript" />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+          integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+      </Helmet>
       <SEO title="Home"></SEO>
       <div style={{ overflowX: "hidden" }}>
-        <Helmet>
-          <script src={withPrefix("cursorScript.js")} type="text/javascript" />
-          <script src={withPrefix("app.js")} type="text/javascript" />
-          <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
-            integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-          ></script>
-        </Helmet>
 
         <SiteNavigation />
 
@@ -82,7 +83,7 @@ const Home = () => {
                 projectName="C3.ai"
                 description="Designing enterprise AI."
                 role="Internship | June - August 2021"
-                // timeFrame="June - August 2021"
+              // timeFrame="June - August 2021"
               />
               <ProjectTile
                 route="/goodreads"
@@ -90,7 +91,7 @@ const Home = () => {
                 projectName="Goodreads"
                 description="Redesigning social reading."
                 role="Independent Project | March 2021"
-                // timeFrame="March 2021"
+              // timeFrame="March 2021"
               />
               <ProjectTile
                 route="/carta"
@@ -98,7 +99,7 @@ const Home = () => {
                 projectName="Carta"
                 description="Designing the course search experience at Stanford."
                 role="UX/UI Designer | Jan - June 2021"
-                // timeFrame="January - June 2021"
+              // timeFrame="January - June 2021"
               />
               <ProjectTile
                 route="/daimler"
@@ -106,7 +107,7 @@ const Home = () => {
                 projectName="Daimler"
                 description="Creating a gaming experience for autonomous driving."
                 role="Capstone Project | Jan - June 2020"
-                // timeFrame="January - June 2020"
+              // timeFrame="January - June 2020"
               />
             </div>
           </section>
@@ -139,5 +140,3 @@ const Home = () => {
     </PageTransition>
   );
 };
-
-export default Home;

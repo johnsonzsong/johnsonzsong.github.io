@@ -17,21 +17,22 @@ import louvre from "../../static/louvre.jpg";
 import gagliani from "../../static/gagliani.jpg";
 import pfp from "../../static/pfp.jpeg";
 
-const About = () => {
+export default function About() {
   return (
     <PageTransition>
+      <Helmet>
+        <script src={withPrefix("cursorScript.js")} type="text/javascript" />
+        <script src={withPrefix("/app.js")} type="text/javascript" />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+          integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+      </Helmet>
       <SEO title="About"></SEO>
       <div>
-        <Helmet>
-          <script src={withPrefix("cursorScript.js")} type="text/javascript" />
-          <script src={withPrefix("app.js")} type="text/javascript" />
-          <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
-            integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-          ></script>
-        </Helmet>
+
         <SiteNavigation />
 
         {/* CONTENT */}
@@ -193,5 +194,3 @@ const About = () => {
     </PageTransition>
   );
 };
-
-export default About;

@@ -41,11 +41,9 @@ const ProjectTile = ({
             <p className="a-60">{timeFrame}</p>
             <br />
             <p>{description}</p>
-            <Link to={route}>
-              <div className="project-link">
-                Read more about {projectName} &#10230;
-              </div>
-            </Link>
+            <div className="project-link">
+              Read more about {projectName} &#10230;
+            </div>
           </div>
         </Link>
       )}
