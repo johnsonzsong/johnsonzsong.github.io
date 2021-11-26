@@ -39,7 +39,7 @@ export default function About() {
         <div className="container">
           <section id="section-one" className="intro col-50">
             <h2> HI, I'M JOHNSON </h2>
-            <div style={{ display: "flex" }}>
+            <div className="about-row">
               <div style={{ marginRight: "4em", flex: 2 }}>
                 <p> I am a detail-oriented designer and developer.</p>
                 <p className="mt-16">

@@ -38,9 +38,7 @@ export default function Home() {
 
             <div className="headline">
               This is my <br />
-              <span className="portfolio">PORTFOLIO.</span>
-              <span className="portfolio">PLAYGROUND.</span>
-              <span className="portfolio">PASSION.</span>
+              <span className="subhead-text"></span><div className="subhead-cursor"></div>
             </div>
           </div>
         </div>

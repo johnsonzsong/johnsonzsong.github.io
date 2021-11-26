@@ -50,10 +50,9 @@ const Resume = () => {
           </div>
 
           <div
-            className="col-80"
-            style={{ display: "flex", justifyContent: "space-between" }}
+            className="col-80 resume-container"
           >
-            <div style={{ flex: 2, marginRight: "8em" }}>
+            <div className="mr-8em" style={{ flex: 2 }}>
               <section>
                 <h2 className="mb-16"> WORK EXPERIENCE </h2>
                 <ResumeUnit
