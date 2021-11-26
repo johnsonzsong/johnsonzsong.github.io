@@ -1,89 +1,80 @@
-function onLoad() {
-  // ----------------- HERO -----------------
-  const hero = document.querySelector(".hero");
-  const slider = document.querySelector(".slider");
-  const headline = document.querySelector(".headline");
-  const arrow = document.querySelector(".arrow");
-  const arrowContainer = document.querySelector(".arrowContainer");
+const arrow = document.querySelector(".arrow");
+const arrowContainer = document.querySelector(".arrowContainer");
 
-  const tl = new TimelineMax();
-  tl.fromTo(
-    hero,
-    1,
-    { height: "0%" },
-    { height: "80%", ease: Power2.easeInOut }
-  )
-    .fromTo(
-      hero,
-      1.2,
-      { width: "100%" },
-      { width: "80%", ease: Power2.easeInOut }
-    )
-    .fromTo(
-      slider,
-      1.2,
-      { x: "-100%" },
-      { x: "0%", ease: Power2.easeInOut },
-      "-=1.2"
-    )
-    .fromTo(
-      headline,
-      0.5,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0 },
-      "-=0.5"
-    );
-
-  const tl2 = new TimelineMax({ repeat: -1 });
-  tl2.set(".portfolio", { autoAlpha: 0 });
-  tl2.to(".portfolio", {
-    duration: 2,
-    ease: "Power2.easeInOut",
-    autoAlpha: 1,
-    stagger: {
-      each: 4,
-      repeat: 1,
-      yoyo: true,
-      yoyoEase: false,
-    },
-  });
-
-  TweenMax.to(arrow, 1.5, {
+TweenMax.to(arrow, 1.5, {
     y: "+=15px",
     yoyo: true,
     ease: Power4.yoyoEase,
     repeat: -1,
-    delay: 2,
-  });
+});
 
-  const y = arrowContainer.getBoundingClientRect().bottom;
-  arrowContainer.addEventListener("click", () => {
+const y = arrowContainer.getBoundingClientRect().bottom;
+arrowContainer.addEventListener("click", () => {
     console.log("Y:", y);
     window.scrollTo({ top: y });
-  });
+});
 
-  // ----------------- NAVIGATION -----------------
-  const burger = document.querySelector(".burger");
-  const navLinkContainers = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
 
-  burger.addEventListener("click", () => {
-    navLinkContainers.classList.toggle("nav-active");
+// List of sentences
+var _CONTENT = [
+    "PORTFOLIO.",
+    "PLAYGROUND.",
+    "PASSION.",
+];
 
-    // Link animations
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.5
-        }s`;
-      }
-    });
+// Current sentence being processed
+var _PART = 0;
 
-    // Burger animation
-    burger.classList.toggle("toggle");
-  });
+// Character number of the current sentence being processed 
+var _PART_INDEX = 0;
+
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector(".subhead-text");
+
+// Implements typing effect
+function Type() {
+    // Get substring with 1 characater added
+    var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+    _ELEMENT.innerHTML = text;
+    _PART_INDEX++;
+
+    // If full sentence has been displayed then start to delete the sentence after some time
+    if (text === _CONTENT[_PART]) {
+        clearInterval(_INTERVAL_VAL);
+        setTimeout(function () {
+            _INTERVAL_VAL = setInterval(Delete, 50);
+        }, 2000);
+    }
 }
 
-window.onload = onLoad();
+// Implements deleting effect
+function Delete() {
+    // Get substring with 1 characater deleted
+    var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+    _ELEMENT.innerHTML = text;
+    _PART_INDEX--;
+
+    // If sentence has been deleted then start to display the next sentence
+    if (text === '') {
+        clearInterval(_INTERVAL_VAL);
+
+        // If current sentence was last then display the first one, else move to the next
+        if (_PART == (_CONTENT.length - 1))
+            _PART = 0;
+        else
+            _PART++;
+
+        _PART_INDEX = 0;
+
+        // Start to display the next sentence after some time
+        setTimeout(function () {
+            _INTERVAL_VAL = setInterval(Type, 100);
+        }, 500);
+    }
+}
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 100);
