@@ -4,17 +4,13 @@ import { Link } from "gatsby";
 
 const SiteNavigation = () => {
   return (
-    <nav>
-      <Link to="/">
-        <div className="logo">JOHNSON SONG</div>
-      </Link>
-
-      <ul className="nav-links">
-        <li>
-          <Link to="/" activeStyle={{ color: "#00A3FF" }}>
-            <div>WORK</div>
-          </Link>
-        </li>
+    <div className="nav">
+      <div className="logo">
+        <Link to="/">
+          JOHNSON SONG
+        </Link>
+      </div>
+      <ul className="nav-links" >
         <li>
           <Link to="/about" activeStyle={{ color: "#00A3FF" }}>
             <div>ABOUT</div>
@@ -26,10 +22,7 @@ const SiteNavigation = () => {
           </Link>
         </li>
       </ul>
-      <div className="burger">
-        <div className="burger-line"></div>
-      </div>
-    </nav>
+    </div>
   );
 };
 

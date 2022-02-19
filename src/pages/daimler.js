@@ -24,14 +24,14 @@ const Daimler = () => {
   return (
     <PageTransition>
       <SEO title="Daimler"></SEO>
-      <div>
-        <Helmet>
-          <script src={withPrefix("navScript.js")} type="text/javascript" />
-          <script src={withPrefix("cursorScript.js")} type="text/javascript" />
-        </Helmet>
-        {/* NAV */}
-        <SiteNavigation />
 
+      <Helmet>
+        <script src={withPrefix("navScript.js")} type="text/javascript" />
+        <script src={withPrefix("cursorScript.js")} type="text/javascript" />
+      </Helmet>
+      {/* NAV */}
+      <SiteNavigation />
+      <div className="container">
         <a
           id="backToTop-container"
           onClick={() => {

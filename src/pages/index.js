@@ -15,7 +15,6 @@ import { BsArrowDown } from "react-icons/bs";
 
 export default function Home() {
   return (
-
     <PageTransition>
       <Helmet>
         <script src={withPrefix("cursorScript.js")} type="text/javascript" />
@@ -28,41 +27,26 @@ export default function Home() {
         ></script>
       </Helmet>
       <SEO title="Home"></SEO>
-      <div style={{ overflowX: "hidden" }}>
+      <SiteNavigation />
 
-        <SiteNavigation />
-
-        <div className="testSection">
-          <div className="hero">
-            <img className="mountain" src="mountain.jpeg" alt="mountain" />
-
-            <div className="headline">
-              This is my <br />
-              <span className="subhead-text"></span><div className="subhead-cursor"></div>
-            </div>
-          </div>
+      <div className="container">
+        <div className="col-80" style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}>
+          <h1>Johnson Song</h1>
+          <p>Software engineer <a href="https://about.facebook.com/meta" target="_blank">@Meta</a></p>
+          <p>Alum <a href="https://www.stanford.edu/" target="_blank">@Stanford</a></p>
+          <div style={{ height: "64px" }}></div>
+          <i>
+            <p>Previously - </p>
+          </i>
+          <p>Product design intern <a href="https://c3.ai/" target="_blank">@C3.ai</a></p>
+          <p>Head of Engineering <a href="https://kangaroointeractive.com/" target="_blank">@Kangaroo</a></p>
+          <p>Software engineering intern <a href="https://www.messenger.com/" target="_blank">@Messenger</a></p>
         </div>
 
-        <div
-          className="col-80"
-          style={{
-            height: "15vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            margin: "auto",
-            textAlign: "center",
-          }}
-        >
-          <h3>
-            {" "}
-            Everything you see on this website was designed and coded from
-            scratch by me using Figma, React, JavaScript, HTML/CSS, and GSAP.{" "}
-          </h3>
-          <div className="arrowContainer">
-            <BsArrowDown size={32} className="arrow" />
-          </div>
-        </div>
 
         <div className="container col-80">
           <section
@@ -133,8 +117,8 @@ export default function Home() {
             </div>
           </section>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </PageTransition>
   );
 };

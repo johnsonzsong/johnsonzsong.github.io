@@ -34,14 +34,14 @@ const Goodreads = () => {
   return (
     <PageTransition>
       <SEO title="Goodreads"></SEO>
-      <div>
-        <Helmet>
-          <script src={withPrefix("navScript.js")} type="text/javascript" />
-          <script src={withPrefix("cursorScript.js")} type="text/javascript" />
-        </Helmet>
-        {/* NAV */}
-        <SiteNavigation />
+      <Helmet>
+        <script src={withPrefix("navScript.js")} type="text/javascript" />
+        <script src={withPrefix("cursorScript.js")} type="text/javascript" />
+      </Helmet>
+      {/* NAV */}
+      <SiteNavigation />
 
+      <div className="container">
         <div
           id="backToTop-container"
           onClick={() => {
