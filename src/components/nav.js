@@ -12,23 +12,23 @@ const SiteNavigation = () => {
           </div>
         </Link>
       </h3>
-      <ul className="nav-links" >
-        <li>
-          <Link to="/" activeClassName="active">
-            <div>Work</div>
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" activeClassName="active">
-            <div>About</div>
-          </Link>
-        </li>
-        <li>
-          <Link to="/resume" activeClassName="active">
-            <div>Resumé</div>
-          </Link>
-        </li>
-      </ul>
+      <div className="nav-links" >
+        {/* <li> */}
+        <Link to="/" activeStyle={{ color: "#62AFF6" }}>
+          Work
+        </Link>
+        {/* </li> */}
+        {/* <li> */}
+        <Link to="/about" activeStyle={{ color: "#62AFF6" }}>
+          About
+        </Link>
+        {/* </li> */}
+        {/* <li> */}
+        <Link to="/resume" activeStyle={{ color: "#62AFF6" }}>
+          Resumé
+        </Link>
+        {/* </li> */}
+      </div>
     </div>
   );
 };
