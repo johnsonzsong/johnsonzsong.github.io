@@ -43,7 +43,7 @@ const Daimler = () => {
 
         <div className="project-container">
           <section className="text-center">
-            <h1 className="project-title"> DAIMLER </h1>
+            <h1 className="project-title"> Daimler </h1>
             <p>
               Designing and developing an in-vehicle gaming experience for
               autonomous driving.
@@ -57,16 +57,16 @@ const Daimler = () => {
             <div className="mt-64">
               <div className="background-facts">
                 <div>
-                  <h3>ROLE</h3>
+                  <h3>Role</h3>
                   <p>Product Designer</p>
                   <p>Frontend Developer</p>
                 </div>
                 <div>
-                  <h3>DURATION</h3>
+                  <h3>Duration</h3>
                   <p>January - June 2020</p>
                 </div>
                 <div>
-                  <h3>LOCATION</h3>
+                  <h3>Location</h3>
                   <p>Stanford, CA</p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2>BACKGROUND</h2>
+            <h2>Background</h2>
             <p>
               The Mercedes-Benz Research and Development North America (MBRDNA),
               located in Sunnyvale, CA, is Daimler AG’s hub of cutting-edge
@@ -100,7 +100,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2> RESEARCH </h2>
+            <h2> Research </h2>
             <p>
               As autonomy and electric vehicle charging become more established
               in the automotive industry, drivers will have an increasing
@@ -221,7 +221,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2> BRAINSTORM </h2>
+            <h2> Brainstorm </h2>
             <p>
               My team then went through multiple ideation stages, first coming
               up with as many games as possible. Some of our initial ideas from
@@ -247,7 +247,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2> RAPID PROTOTYPES </h2>
+            <h2> Rapid Prototypes </h2>
             <p>
               We brought our user research, insights, and brainstorms to our
               Daimler liaisons in their Sunnyvale office and received feedback
@@ -309,7 +309,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2>WIREFRAMES</h2>
+            <h2>Wireframes</h2>
             <p>
               Among the games that we rapid-prototyped, we found that trivia
               offered the best mixture of positive feedback from testers and
@@ -334,7 +334,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2>HIGH-FIDELITY PROTOTYPE</h2>
+            <h2>High-fidelity Prototypes</h2>
             <p className="mb-32">
               Before diving into development, I led efforts to create a
               fully-interactive high-fidelity prototype. This included defining
@@ -356,7 +356,7 @@ const Daimler = () => {
           </section>
 
           <section>
-            <h2>MVP (LIVE GAME)</h2>
+            <h2>MVP (Live Game)</h2>
             <p>
               We developed our MVP in React and Firebase. This allowed us to
               extend our original prototypes to include features like player
@@ -390,8 +390,8 @@ const Daimler = () => {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </PageTransition>
   );
 };

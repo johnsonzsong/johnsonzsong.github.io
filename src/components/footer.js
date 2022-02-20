@@ -1,32 +1,12 @@
 import React from "react";
 import "../styles.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 const Footer = () => {
   return (
     <footer className="col-80">
-      <h3>Let's connect!</h3>
-      <div className="socials-container col-25">
-        <a
-          href="http://instagram.com/johnson.song"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/johnsonsong/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="mailto:johnsonsong@stanford.edu">
-          <FontAwesomeIcon icon={faEnvelope} />
-        </a>
-      </div>
+      <p className="deemphasized">This entire website was designed in Figma and developed in React, <span className="active">from scratch</span>, by me ☺️</p>
+      <p className="deemphasized">Last updated: February 2022</p>
     </footer>
   );
 };

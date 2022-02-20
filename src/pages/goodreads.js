@@ -53,7 +53,7 @@ const Goodreads = () => {
 
         <div className="project-container">
           <section className="text-center">
-            <h1 className="project-title"> GOODREADS </h1>
+            <h1 className="project-title"> Goodreads </h1>
             <p>
               Redesigning the world’s largest site for readers and book
               recommendations.
@@ -64,15 +64,15 @@ const Goodreads = () => {
             <div className="mt-64">
               <div className="background-facts">
                 <div>
-                  <h3>ROLE</h3>
+                  <h3>Role</h3>
                   <p>UX/UI Designer</p>
                 </div>
                 <div>
-                  <h3>DURATION</h3>
+                  <h3>Duration</h3>
                   <p>March 2021</p>
                 </div>
                 <div>
-                  <h3>LOCATION</h3>
+                  <h3>Location</h3>
                   <p>Home</p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>BACKGROUND</h2>
+            <h2>Background</h2>
             <p>
               Goodreads is the world’s largest site for readers and book
               recommendations. According to the{" "}
@@ -106,7 +106,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>RESEARCH</h2>
+            <h2>Research</h2>
             <p>
               My first step towards better understanding the ways in which
               readers currently use the Goodreads mobile app was conducting user
@@ -162,7 +162,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>COMPARATOR AUDITS</h2>
+            <h2>Comparator Audits</h2>
             <p>
               After my preliminary research, my next step was to conduct
               comparator audits of similar apps and UX patterns found in
@@ -191,7 +191,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>SOCIAL</h2>
+            <h2>Social</h2>
             <p>
               The current Goodreads app opens to a home screen that attempts to
               do it all: there is a search bar to look up books by title,
@@ -237,7 +237,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>DISCOVERY</h2>
+            <h2>Discovery</h2>
             <p>
               Currently, the Goodreads mobile app has one navigation item called
               "Discover" and one for "Search." Yet the "Discover" has absolutely
@@ -277,7 +277,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>RECORD-KEEPING</h2>
+            <h2>Record-keeping</h2>
             <p>
               One of the most-used features for users of Goodreads is to keep
               track of reading history, including books they're currently
@@ -321,7 +321,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>HIGH-FIDELITY PROTOTYPE</h2>
+            <h2>High-fidelity Prototype</h2>
             <p className="mb-32">
               My main visual goals and principles for this Goodreads redesign
               were: <b>simplicity</b>, <b>discoverability</b>, and{" "}
@@ -420,7 +420,7 @@ const Goodreads = () => {
           </section>
 
           <section>
-            <h2>TAKEAWAYS</h2>
+            <h2>Takeaways</h2>
             <p>
               This was my first independent case study and redesign, which I
               finally felt comfortable pursuing due to my more recent
@@ -447,8 +447,9 @@ const Goodreads = () => {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
+
     </PageTransition>
   );
 };

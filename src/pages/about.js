@@ -22,55 +22,48 @@ export default function About() {
     <PageTransition>
       <Helmet>
         <script src={withPrefix("cursorScript.js")} type="text/javascript" />
-        <script src={withPrefix("/app.js")} type="text/javascript" />
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
-          integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-        ></script>
       </Helmet>
       <SEO title="About"></SEO>
-      <div>
 
-        <SiteNavigation />
+      <SiteNavigation />
 
-        {/* CONTENT */}
-        <div className="container">
-          <section id="section-one" className="intro col-50">
-            <h2> HI, I'M JOHNSON </h2>
-            <div className="about-row">
-              <div style={{ marginRight: "4em", flex: 2 }}>
-                <p> I am a detail-oriented designer and developer.</p>
-                <p className="mt-16">
-                  Over the years, I’ve discovered a deep love for the design of
-                  complex and crucial technologies. My background in computer
-                  science and software engineering has given me invaluable
-                  insights about how to be a better designer. My ability to
-                  think creatively and critically, and to communicate
-                  empathetically and technically is what sets me apart.
-                </p>
-                <p className="mt-16">
-                  I was born in France and raised in Virginia. In 2016, I moved
-                  to California to attend Stanford University. There, I was
-                  introduced to computer science and UX/UI design. I was
-                  immediately drawn to the intersection of technology, human
-                  psychology, storytelling, and art.
-                </p>
-                <p className="mt-16">
-                  I see design as a neverending journey to transform things that
-                  don’t make sense into things that do.{" "}
-                </p>
-              </div>
-              <div style={{ flex: 1 }}>
-                <div className="image-container nb">
-                  <img style={{ width: "100%" }} src={pfp}></img>
-                </div>
-              </div>
-            </div>
-          </section>
+      <div className="container">
+        <section className="col-70 about card">
+          <div className="card-content">
+            <h1> Hi, I'm Johnson</h1>
 
-          <section
+            <h4>The tl;dr</h4>
+            <h3 className="mt-16">NYC-based designer and developer. Stanford grad (x2). Fitness fanatic. Nature lover. Campire guitarist.</h3>
+            <br />
+            <br />
+            <h4>The longer version</h4>
+            <p className="mt-16">
+              I was born in France and raised in Virginia with my twin sister. In 2016, I moved
+              to California to attend Stanford University. There, I was
+              introduced to computer science and UX/UI design. I was
+              instantly drawn to the unique intersection of technology, human
+              psychology, storytelling, and art.
+            </p>
+            <p className="mt-16">
+              Over the years, I’ve discovered a deep love for the design of
+              complex and crucial technologies. My background in computer
+              science and software engineering has given me invaluable
+              insights about how to be a better designer. My ability to
+              think creatively and critically, and to communicate
+              empathetically and technically, are what set me apart.
+            </p>
+
+            <p className="mt-16">
+              I see design as a neverending journey to transform things that
+              don’t make sense into things that do.{" "}
+            </p>
+          </div>
+          {/* <div className="about-image-container">
+            <img style={{ width: "100%" }} src={pfp}></img>
+          </div> */}
+        </section>
+
+        {/* <section
             id="section-two"
             className="col-80"
             style={{
@@ -126,9 +119,9 @@ export default function About() {
                 description="A bookstore in Paris."
               />
             </div>
-          </section>
+          </section> */}
 
-          {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
             <section className="mr-64">
               <h2> FAVORITE PLACES </h2>
               <p>
@@ -149,7 +142,7 @@ export default function About() {
             </section>
           </div> */}
 
-          {/* <section id="section-five">
+        {/* <section id="section-five">
             <h2>Shoutouts.</h2>
             <div className="project">
               <div className="col-70">
@@ -188,9 +181,9 @@ export default function About() {
               </div>
             </div>
           </section> */}
-        </div>
+        <Footer />
       </div>
-      <Footer />
+
     </PageTransition>
   );
 };

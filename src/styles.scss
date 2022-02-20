@@ -1,8 +1,10 @@
 // COLORS --------------------------------------------------------------------------------
 $bg: #fff;
 $primaryFont: #333;
-$blue: #00A3FF;
+$blue: #62AFF6;
 $yellow: #FFC04F;
+$box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.02);
+$gray: #B6B5B5;
 
 html {
   scroll-behavior: smooth;
@@ -12,8 +14,10 @@ html {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $primaryFont;
-  font-size: 14px;
-  line-height: 18px;
+}
+
+body {
+  margin: 0;
 }
 
 body::-webkit-scrollbar {
@@ -27,6 +31,10 @@ a {
 
 .active {
   color: $blue;
+}
+
+.deemphasized {
+  color: $gray;
 }
 
 ::selection {
@@ -50,19 +58,30 @@ a {
   z-index: 100;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(64px + 6%); // 6% = 3% (nav bar margin) * 2
+  position: relative;
+  margin: auto;
+  background: #F9F8F8;
+  min-height: 100vh;
+}
+
 .nav {
   position: fixed;
-  backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
   width: 60%;
-  margin: 2% 20%; // second margin value*2  + width must = 100%
-  height: 80px;
+  margin: 3% 20%; // second margin value*2  + width must = 100%
+  height: 64px;
   border-radius: 16px;
-  z-index: 10;
-  background-color:white;
+  background:#f9f8f8b4;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: $box-shadow;
+  z-index: 99;
 }
 
 .nav a {
@@ -71,18 +90,17 @@ a {
 }
 
 .logo {
-  letter-spacing: 3px;
-  font-size: 2em;
+  font-weight: bold;
   position: absolute;
-  left: 50px;
+  left: 64px;
 }
 
 .nav-links {
   position: absolute;
-  right: 50px;
+  right: 64px;
   display: flex;
   justify-content: space-between;
-  width: 15%;
+  width: 30%;
 }
 
 .nav-links li {
@@ -209,29 +227,24 @@ a {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.resume-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 10vh;
+  height: 48px;
   margin:auto;
-  padding: 3em 0;
+  padding: 2em 0;
 }
 
 .socials-container {
+  margin-top: 16px;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 
   a {
     font-size: 2em;
     text-decoration: none;
-    color: $blue;
     width: fit-content;
     height: fit-content;
   }
@@ -267,41 +280,46 @@ footer {
   font-size: 48px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: calc(80px + 4%);
-  position: relative;
-  margin: auto;
-}
-
 // Used for project page titles
 h1 {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 36px;
+  margin: 24px 0;
 }
 
 // Used for section headings
 h2 {
   font-weight: bold;
-  font-size: 1.6em;
-  line-height: 1.6em;
-  letter-spacing: 3px;
-  margin: 2em 0;
+  font-size: 28px;
+  margin: 32px 0;
 }
 
+// Standard-level headings
 h3 {
-  font-weight: 600;
-  font-size: 1em;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31.25px;
+  margin: 0;
+}
+
+// Gray subtitle text
+h4 {
+  color: $gray;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
 }
 
 // Used for default body text
 p {
-  font-size: 1em;
-  line-height: 1.5em;
-  font-weight: 500;
+  font-size: 18px;
   margin: 0;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 6px 0;
 }
 
 .fs-med { // font-size medium
@@ -313,7 +331,7 @@ p {
 }
 
 section {
-  margin: 2em 0;
+  margin: 3em 0;
   width: 100%;
 }
 
@@ -337,6 +355,28 @@ section {
 .row {
   display: flex;
   align-items: center;
+}
+
+.card {
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: $box-shadow;
+  overflow:hidden;
+}
+
+.card-content {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.other-companies-card-content {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 // Utility classes --------------------------------------------------------------------------------
@@ -446,76 +486,60 @@ section {
   object-fit: cover;
 }
 
-.arrowContainer {
-  cursor: pointer;
+.about {
+  display: flex;
 }
 
-.project-row {
+.about-image-container {
+  flex: 1;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  img {
+    object-fit:cover;
+  }
 }
 
 .project {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.05);
-  // border: 1px solid black;
-  // padding: 16px 32px;
-  min-height: 200px;
-  min-width: 200px;
+  height: 320px;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.project-image-container {
   flex: 1;
-  position: relative;
-  margin: 0.5%;
-}
-
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: -webkit-fill-available;
-  width: -webkit-fill-available;
-  padding: 1em;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: $primaryFont;
   align-items: center;
-  text-align: center;
-  transition: all .8s ease;
-  opacity: 0;
-  padding: 16px 32px;
-}
-
-.project:hover .image-container {
-  filter: blur(.5em);
-  opacity: 0.3;
-  transition: all 1s ease;
-}
-
-.project:hover .project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: -webkit-fill-available;
-  width: -webkit-fill-available;
-  padding: 1em;
-  color: black;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: all .8s ease;
-  opacity: 1;
-  padding: 16px 32px;
+  display: flex;
+}
+
+.project-image {
+  max-width: 60%;
+  max-height: 80%;
+  transition: all 0.5s ease;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+    -webkit-filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+  }
+}
+
+.project-content {
+  flex: 1;
+}
+
+.resume-image {
+  max-width: 50%;
+  background-color: transparent;
+  margin: 64px 0;
 }
 
 .project-link {
   margin-top: 32px;
-  font-family: 'Roboto Mono';
   color: $blue;
 }
 
@@ -564,7 +588,7 @@ section {
   // border: 1px solid #000000;
   // border-radius: 1em;
   overflow: hidden;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: $box-shadow;
   flex: 1;
   display: flex;
   // flex-direction: column;
@@ -588,10 +612,9 @@ section {
 }
 
 .persona-container {
-  // background: $blue;
-  // border: 1px solid #000000;
-  // border-radius: 1em;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: $box-shadow;
   padding: 3em 2em;
   flex: 1;
   display: flex;
@@ -657,12 +680,14 @@ section {
 }
 
 .insight-container {
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: $box-shadow;
   padding: 3em 2em;
   flex: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
 
   &:not(:last-child) {
     margin-right: 1em;
@@ -697,10 +722,6 @@ section {
 
   .col-25, .col-35, .col-50, .col-60, .col-70 {
     width: 100%;
-  }
-  
-  section {
-    margin-bottom: 96px;
   }
 
   .project {
@@ -748,68 +769,7 @@ section {
   }
 }
 
-.testSection {
-  display: flex;
-  height: 75vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero {
-  height: 80%;
-  width: 80%;
-  position: relative;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.mountain {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.headline {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  color: $bg;
-  z-index: 3;
-  line-height: initial;
-  font-size: 2em;
-  letter-spacing: 3px;
-}
-
-.subhead-text {
-  position: absolute;
-  font-size: 3em;
-}
-
-.hero::after {
-  content: "";
-  background: black;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.3;
-}
-
 @media screen and (max-width:768px) {
-  .headline, .subhead-text {
-    font-size: 1.2em;
-  }
-
-  .hero {
-    height: 50%;
-  }
-
-  .testSection {
-    height: 50vh;
-  }
-
   .project {
     margin: 5% 0.5%;
   }
@@ -827,14 +787,6 @@ section {
 
     > div {
       margin-bottom: 2em;
-    }
-  }
-
-  .resume-container {
-    flex-direction: column;
-
-    > div {
-      margin-right: 0;
     }
   }
 }

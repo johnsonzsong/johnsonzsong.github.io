@@ -2,6 +2,12 @@ import React from "react";
 import "../styles.scss";
 import { Link } from "gatsby";
 
+const tagColorMap = {
+  'Mobile': '#E7F6FF',
+  'Desktop': '#FFF1D6',
+  'In-Vehicle System': '#FFD6F3'
+};
+
 const ProjectTile = ({
   route,
   imageSource,
@@ -10,61 +16,30 @@ const ProjectTile = ({
   description,
   role,
   timeFrame,
+  tags
 }) => {
   return (
-    <div className="project">
-      {!disabledLink && (
+    <div className="project card">
+      <Link className="project-image-container" to={route}>
+        <img className="project-image" src={imageSource} alt="image"></img>
+      </Link>
+      <div className="project-content card-content">
         <Link to={route}>
-          <div className="image-container nb p-32">
-            <img style={{ width: "100%" }} src={imageSource} alt="image"></img>
+          <h3>{projectName}</h3>
+        </Link>
+        {tags.map((tag) => {
+          return <div className="tag" style={{
+            backgroundColor: tagColorMap[tag]
+          }}
+          >{tag}</div>
+        })}
+        <h4>{description}</h4>
+        <Link to={route}>
+          <div className="project-link">
+            View project &#10230;
           </div>
         </Link>
-      )}
-      {disabledLink && (
-        <div className="image-container nb">
-          <img
-            style={{ width: "100%" }}
-            src={imageSource}
-            alt="project logo"
-          ></img>
-        </div>
-      )}
-      {!disabledLink && (
-        <Link to={route}>
-          <div className="project-overlay">
-            <div className="row">
-              <p className="fs-med">
-                <b>{projectName}</b>
-              </p>
-            </div>
-            <p className="a-60">{role}</p>
-            <p className="a-60">{timeFrame}</p>
-            <br />
-            <p>{description}</p>
-            <div className="project-link">
-              Read more about {projectName} &#10230;
-            </div>
-          </div>
-        </Link>
-      )}
-      {disabledLink && (
-        <div className="project-overlay">
-          <div className="row">
-            <p className="fs-med">
-              <b>{projectName}</b>
-            </p>
-          </div>
-          <p className="a-60">{role}</p>
-          <p className="a-60">{timeFrame}</p>
-          <br />
-          <p>{description}</p>
-          {role && (
-            <a href="mailto:johnsonsong@stanford.edu" className="project-link">
-              Contact me directly about this project.
-            </a>
-          )}
-        </div>
-      )}
+      </div>
     </div>
   );
 };

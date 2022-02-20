@@ -9,8 +9,8 @@ module.exports = {
     title: "Johnson Song",
     titleTemplate: "%s • Johnson Song",
     description:
-      "Johnson Song, UX/UI designer at C3.ai, previously software engineer at Facebook and Messenger.",
-    url: "http://johnsonsong.me", // No trailing slash allowed!
+      "Johnson Song, software engineer at Meta (Facebook). Previously UX/UI product designer at C3.ai and Stanford University.",
+    url: "http://johnsonzsong.github.io", // No trailing slash allowed!
     image: "/avatar.png",
     author: `@johnson.song`,
   },
@@ -35,6 +35,10 @@ module.exports = {
             },
             {
               family: `Open Sans`,
+              variants: [`400`, `500`, `600`, `700`],
+            },
+            {
+              family: `DM Sans`,
               variants: [`400`, `500`, `600`, `700`],
             },
             {

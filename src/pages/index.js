@@ -6,12 +6,17 @@ import PageTransition from "gatsby-plugin-page-transitions";
 import SEO from "../components/seo";
 import ProjectTile from "../components/projectTile";
 import Footer from "../components/footer";
-import c3Logo from "../../static/c3Logo.png";
-import grLogo from "../../static/grLogo.png";
-import cartaLogo from "../../static/cartaLogo.svg";
-import daimlerLogo from "../../static/daimlerLogo.png";
+import grHifiStatic from "../../static/grHifiStatic.png";
+import cartaFeature from "../../static/cartaFeature.png";
+import cabanaFeature from "../../static/cabanaFeature.png";
+import c3Logo from "../../static/c3Logo2.png";
+import facebookLogo from "../../static/facebook.png";
+import messengerLogo from "../../static/messenger.png";
+import kangarooLogo from "../../static/kangaroo.jpeg";
 import SiteNavigation from "../components/nav";
-import { BsArrowDown } from "react-icons/bs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -26,99 +31,86 @@ export default function Home() {
           referrerpolicy="no-referrer"
         ></script>
       </Helmet>
-      <SEO title="Home"></SEO>
+      <SEO title="Work"></SEO>
       <SiteNavigation />
 
       <div className="container">
-        <div className="col-80" style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-        }}>
-          <h1>Johnson Song</h1>
-          <p>Software engineer <a href="https://about.facebook.com/meta" target="_blank">@Meta</a></p>
-          <p>Alum <a href="https://www.stanford.edu/" target="_blank">@Stanford</a></p>
-          <div style={{ height: "64px" }}></div>
-          <i>
-            <p>Previously - </p>
-          </i>
-          <p>Product design intern <a href="https://c3.ai/" target="_blank">@C3.ai</a></p>
-          <p>Head of Engineering <a href="https://kangaroointeractive.com/" target="_blank">@Kangaroo</a></p>
-          <p>Software engineering intern <a href="https://www.messenger.com/" target="_blank">@Messenger</a></p>
-        </div>
-
-
-        <div className="container col-80">
-          <section
-            id="section-two"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <h2>SOME THINGS I'VE DESIGNED...</h2>
-            <div className="project-row">
-              <ProjectTile
-                imageSource={c3Logo}
-                disabledLink
-                projectName="C3.ai"
-                description="Designing enterprise AI."
-                role="Internship | June - August 2021"
-              // timeFrame="June - August 2021"
-              />
-              <ProjectTile
-                route="/goodreads"
-                imageSource={grLogo}
-                projectName="Goodreads"
-                description="Redesigning social reading."
-                role="Independent Project | March 2021"
-              // timeFrame="March 2021"
-              />
-              <ProjectTile
-                route="/carta"
-                imageSource={cartaLogo}
-                projectName="Carta"
-                description="Designing the course search experience at Stanford."
-                role="UX/UI Designer | Jan - June 2021"
-              // timeFrame="January - June 2021"
-              />
-              <ProjectTile
-                route="/daimler"
-                imageSource={daimlerLogo}
-                projectName="Daimler"
-                description="Creating a gaming experience for autonomous driving."
-                role="Capstone Project | Jan - June 2020"
-              // timeFrame="January - June 2020"
-              />
+        {/* Section 1: Intro */}
+        <section className="col-70 card">
+          <div className="card-content">
+            <h1>Designer and developer</h1>
+            <h3>Currently engineering features to power charitable giving and donations on Facebook.</h3>
+            <br />
+            <div className="socials-container col-25">
+              <a
+                href="http://instagram.com/johnson.song"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/johnsonsong/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a href="mailto:johnsonsong@stanford.edu">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              marginBottom: "8em",
-            }}
-          >
-            <h2>...AND SOME THINGS I'VE DEVELOPED</h2>
-            <div
-              className="col-50"
-              style={{ display: "flex", justifyContent: "space-around" }}
-            >
-              <img
-                className="avatar"
-                src="messenger.png"
-                alt="messenger logo"
-              />
-              <img className="avatar" src="facebook.png" alt="facebook logo" />
-              <img className="avatar" src="kangaroo.jpeg" alt="kangaroo logo" />
+        {/* Section 2: Projects */}
+        <section className="col-60">
+          <h2>Selected Projects</h2>
+          <ProjectTile
+            route="/goodreads"
+            imageSource={grHifiStatic}
+            projectName="Goodreads"
+            description="Redesigning social reading."
+            role="Independent Project | March 2021"
+            // timeFrame="March 2021"
+            tags={['Mobile']}
+          />
+          <ProjectTile
+            route="/carta"
+            imageSource={cartaFeature}
+            projectName="Carta"
+            description="Designing the course search experience at Stanford."
+            role="UX/UI Designer | Jan - June 2021"
+            // timeFrame="January - June 2021"
+            tags={['Desktop']}
+          />
+          <ProjectTile
+            route="/daimler"
+            imageSource={cabanaFeature}
+            projectName="Daimler"
+            description="Creating a gaming experience for autonomous driving."
+            role="Capstone Project | Jan - June 2020"
+            // timeFrame="January - June 2020"
+            tags={['In-Vehicle System']}
+          />
+        </section>
+
+        {/* Section 3: Other Companies */}
+        <section className="col-60">
+          <h2>Other Companies I've Worked With</h2>
+          <div className="card">
+            <div className="other-companies-card-content">
+              <img className="avatar" src={c3Logo} alt="c3 logo" />
+              <img className="avatar" src={messengerLogo} alt="messenger logo" />
+              <img className="avatar" src={facebookLogo} alt="facebook logo" />
+              <img className="avatar" src={kangarooLogo} alt="kangaroo logo" />
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
         <Footer />
       </div>
+
     </PageTransition>
   );
 };

@@ -5,20 +5,27 @@ import { Link } from "gatsby";
 const SiteNavigation = () => {
   return (
     <div className="nav">
-      <div className="logo">
+      <h3 className="logo">
         <Link to="/">
-          JOHNSON SONG
+          <div className="active">
+            Johnson Song
+          </div>
         </Link>
-      </div>
+      </h3>
       <ul className="nav-links" >
         <li>
-          <Link to="/about" activeStyle={{ color: "#00A3FF" }}>
-            <div>ABOUT</div>
+          <Link to="/" activeClassName="active">
+            <div>Work</div>
           </Link>
         </li>
         <li>
-          <Link to="/resume" activeStyle={{ color: "#00A3FF" }}>
-            <div>RESUMÉ</div>
+          <Link to="/about" activeClassName="active">
+            <div>About</div>
+          </Link>
+        </li>
+        <li>
+          <Link to="/resume" activeClassName="active">
+            <div>Resumé</div>
           </Link>
         </li>
       </ul>
