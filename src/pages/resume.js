@@ -20,10 +20,12 @@ const Resume = () => {
       <SiteNavigation />
 
       <div className="container">
-        <a href={resumePDF} target="_blank" rel="noreferrer">
-          Download{" "}
-        </a>
-        <img className="resume-image" src={resumeJPG} alt="resume" />
+        <section style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <div style={{ textAlign: "center" }}>
+            <a href={resumePDF} target="_blank" rel="noreferrer">Download</a>
+          </div>
+          <img className="resume-image" src={resumeJPG} alt="resume"></img>
+        </section>
         <Footer />
       </div>
     </PageTransition>

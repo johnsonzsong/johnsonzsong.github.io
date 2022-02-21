@@ -5,17 +5,15 @@ import { withPrefix } from "gatsby";
 import PageTransition from "gatsby-plugin-page-transitions";
 import SEO from "../components/seo";
 import Footer from "../components/footer";
-import ProjectTile from "../components/projectTile";
 import SiteNavigation from "../components/nav";
+import PlaceTile from "../components/placeTile";
 
 import florence from "../../static/florence.jpg";
 import michelangelo from "../../static/michelangelo.jpg";
-import fiesole from "../../static/fiesole.jpg";
 import vernazza from "../../static/vernazza.jpg";
 import evreux from "../../static/evreux.jpeg";
 import louvre from "../../static/louvre.jpg";
 import gagliani from "../../static/gagliani.jpg";
-import pfp from "../../static/pfp.jpeg";
 
 export default function About() {
   return (
@@ -33,7 +31,7 @@ export default function About() {
             <h1> Hi, I'm Johnson</h1>
 
             <h4>The tl;dr</h4>
-            <h3 className="mt-16">NYC-based designer and developer. Stanford grad (x2). Fitness fanatic. Nature lover. Campire guitarist.</h3>
+            <h3 className="mt-16">NYC-based designer and developer. Stanford grad (x2). Fitness fanatic. Nature lover. Campfire guitarist. Traveler. </h3>
             <br />
             <br />
             <h4>The longer version</h4>
@@ -54,7 +52,7 @@ export default function About() {
             </p>
 
             <p className="mt-16">
-              I see design as a neverending journey to transform things that
+              I see design as a never-ending journey to transform things that
               don’t make sense into things that do.{" "}
             </p>
           </div>
@@ -63,63 +61,41 @@ export default function About() {
           </div> */}
         </section>
 
-        {/* <section
-            id="section-two"
-            className="col-80"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <h2>SOME OF MY FAVORITE PLACES</h2>
-            <div className="project-row">
-              <ProjectTile
-                imageSource={florence}
-                disabledLink
-                projectName="Florence"
-                description="Where I studied abroad for 3 months."
-              />
-              <ProjectTile
-                imageSource={michelangelo}
-                disabledLink
-                projectName="Piazzale Michelangelo"
-                description="Part of my daily walk to school in Florence."
-              />
-              <ProjectTile
-                imageSource={vernazza}
-                disabledLink
-                projectName="Vernazza"
-                description="Where I celebrated my 20th birthday with new friends."
-              />
-              <ProjectTile
-                imageSource={fiesole}
-                disabledLink
-                projectName="Fiesole"
-                description="(+ Alcedo for delicious pastries)."
-              />
-            </div>
-            <div className="project-row">
-              <ProjectTile
-                imageSource={evreux}
-                disabledLink
-                projectName="Evreux"
-                description="Where I was born and raised (for 5 years)."
-              />
-              <ProjectTile
-                imageSource={louvre}
-                disabledLink
-                projectName="The Louvre"
-                description="The Winged Victory of Samothrace in the Louvre."
-              />
-              <ProjectTile
-                imageSource={gagliani}
-                disabledLink
-                projectName="Libraire Gagliani"
-                description="A bookstore in Paris."
-              />
-            </div>
-          </section> */}
+        <section className="col-60">
+          <h2>Some of my favorite places</h2>
+          <div className="places-row">
+            <PlaceTile
+              imageSource={florence}
+              place="Florence, Italy"
+              description="I studied abroad in Florence for 3 months as part of the Stanford Bing Overseas Studies Program."
+            />
+            <PlaceTile
+              imageSource={michelangelo}
+              place="Piazzale Michelangelo"
+              description="I stopped by this hill almost every evening on my walk back from class, catching a panoramic view of the sunset over Florence."
+            />
+            <PlaceTile
+              imageSource={vernazza}
+              place="Cinque Terre"
+              description="I spent a weekend in Cinque Terre towards the end of my quarter abroad, celebrating my 20th birthday with life-long friends."
+            />
+            <PlaceTile
+              imageSource={evreux}
+              place="Evreux, France"
+              description="I was born and raised here, about an hour away from Paris."
+            />
+            <PlaceTile
+              imageSource={louvre}
+              place="Le Louvre, Paris"
+              description="I spent a good half-day in the Louvre, particularly drawn to the Greek and Roman sculpture."
+            />
+            <PlaceTile
+              imageSource={gagliani}
+              place="Libraire Gagliani"
+              description="A bookstore that I stumbled upon while exploring Paris on a wet spring day."
+            />
+          </div>
+        </section>
 
         {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
             <section className="mr-64">

@@ -35,14 +35,14 @@ const Carta = () => {
       {/* NAV */}
       <SiteNavigation />
       <div className="container">
-        <a
+        <button
           id="backToTop-container"
           onClick={() => {
             window.scrollTo(0, 0);
           }}
         >
           <FontAwesomeIcon icon={faAngleDoubleUp} />
-        </a>
+        </button>
 
         <div className="project-container">
           <section className="text-center">
@@ -51,7 +51,7 @@ const Carta = () => {
               Designing the course search experience at Stanford University.
             </p>
             <div className="image-container mt-32 nb">
-              <img style={{ width: "100%" }} src={cartaFeature}></img>
+              <img style={{ width: "100%" }} src={cartaFeature} alt="carta feature"></img>
             </div>
             <div className="mt-64">
               <div className="background-facts">
@@ -276,7 +276,7 @@ const Carta = () => {
             <p>
               I made sure that I was using all patterns, components, and colors
               consistently within our design system. Then, I linked up the
-              interactions into a fully-funtional, usable prototype that would
+              interactions into a fully-functional, usable prototype that would
               help the hand-off process to the development team. I also included
               commentary on expected behaviors for the flows, including cases
               for null results, different search queries, and peculiarities in

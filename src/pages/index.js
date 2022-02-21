@@ -41,7 +41,7 @@ export default function Home() {
             <h1>Designer and developer</h1>
             <h3>Currently engineering features to power charitable giving and donations on Facebook.</h3>
             <br />
-            <div className="socials-container col-25">
+            <div className="socials-container">
               <a
                 href="http://instagram.com/johnson.song"
                 target="_blank"
@@ -65,7 +65,7 @@ export default function Home() {
 
         {/* Section 2: Projects */}
         <section className="col-60">
-          <h2>Selected Projects</h2>
+          <h2>Selected projects</h2>
           <ProjectTile
             route="/goodreads"
             imageSource={grHifiStatic}
@@ -97,7 +97,7 @@ export default function Home() {
 
         {/* Section 3: Other Companies */}
         <section className="col-60">
-          <h2>Other Companies I've Worked With</h2>
+          <h2>Some other companies I've worked with</h2>
           <div className="card">
             <div className="other-companies-card-content">
               <img className="avatar" src={c3Logo} alt="c3 logo" />

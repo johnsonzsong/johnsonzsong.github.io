@@ -29,6 +29,22 @@ a {
   text-decoration: none;
 }
 
+.overlay {
+  display: none;
+  width: 0;
+  height: 0;
+  z-index: 2;
+}
+
+.overlay.open {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 1s ease-in;
+}
+
 .active {
   color: $blue;
 }
@@ -109,15 +125,7 @@ a {
 
 .burger {
   display: none;
-  cursor: pointer;
 }
-
-// @media screen and (max-width:1024px) {
-//   .nav-links {
-//     width: 60%;
-//   }
-// }
-
 
 @media screen and (max-width:768px) {
   body {
@@ -128,9 +136,8 @@ a {
     position: absolute;
     right: 0px;
     top: 10vh;
-    height: 90vh;
     margin-top: 0;
-    padding-top: 4vh;
+    padding: 4vh 0;
 
     justify-content: start;
     display: none;
@@ -146,16 +153,17 @@ a {
     z-index: 100;
     transform: translateX(0%);
     display: flex;
+    border-radius: 16px;
   }
 
-  .nav-links li {
-    opacity: 0;
-    margin: 1em 0;
+  .nav-links a {
+    margin: 8px 0;
   }
 
   .burger {
     display: flex;
-    position: relative;
+    position: absolute;
+    right: 32px;
     justify-content: center;
     align-items: center;
     // width: 80%;
@@ -168,9 +176,15 @@ a {
   .burger-line {
     width: 30px;
     height: 4px;
-    background: black;
+    background: $primaryFont;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+  }
+
+  .burger.open {
+    .burger-line, .burger-line::before, .burger-line::after {
+      background: $blue;
+    }
   }
 
   .burger-line::before, .burger-line::after {
@@ -178,7 +192,7 @@ a {
     position: absolute;
     width: 30px;
     height: 4px;
-    background: black;
+    background: $primaryFont;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
   }
@@ -234,12 +248,13 @@ footer {
   height: 48px;
   margin:auto;
   padding: 2em 0;
+  text-align: center;
 }
 
 .socials-container {
   margin-top: 16px;
   display: flex;
-  width: 100%;
+  width: 25%;
   justify-content: space-between;
 
   a {
@@ -276,10 +291,6 @@ footer {
   text-align: center;
 }
 
-.project-title {
-  font-size: 48px;
-}
-
 // Used for project page titles
 h1 {
   font-weight: bold;
@@ -298,7 +309,6 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: 500;
-  line-height: 31.25px;
   margin: 0;
 }
 
@@ -344,14 +354,6 @@ section {
   align-items: center;
 }
 
-.stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  text-align: center;
-}
-
 .row {
   display: flex;
   align-items: center;
@@ -377,6 +379,28 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.places-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.place-tile {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  margin-bottom: 32px;
+}
+
+.place-image {
+  object-fit: cover;
+  height: 40%;
+}
+
+.place-content {
+  padding: 32px;
 }
 
 // Utility classes --------------------------------------------------------------------------------
@@ -466,19 +490,6 @@ section {
 
 // ----------------------------
 
-.intro {
-  display: flex;
-  flex-direction: column;
-}
-
-.avatar-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 16px;
-}
-
 .avatar {
   width: 6em;
   height: 6em;
@@ -551,7 +562,6 @@ section {
 
 .background-facts {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -712,24 +722,63 @@ section {
     display: none;
   }
 
+  section {
+    margin: 2em 0;
+    width: 100%;
+  }
+
+  .nav {
+    width: calc(100% - 4em);
+    margin:2em;
+
+    .logo {
+      left: 32px;
+    }
+  }
+
+  .card-content {
+    padding: 32px;
+    width: 80%;
+  }
+
+  .socials-container {
+    width: 50%;
+  }
+
   #customCursor {
     display: none;
   }
 
   .container {
-    padding: 0em 2em;
+    padding: 6em 2em;
   }
 
-  .col-25, .col-35, .col-50, .col-60, .col-70 {
+  .col-35, .col-50, .col-60, .col-70 {
+    width: 100%;
+  }
+
+  .project-container {
     width: 100%;
   }
 
   .project {
+    height: unset;
     flex-direction: column;
+    margin: 32px 0;
+
+    .project-image-container {
+      padding: 2em 0;
+    }
+
+    img {
+      max-height: 50%;
+      max-width: 50%;
+    }
   }
 
-  .project-button-container {
-    justify-content: flex-start;
+  .avatar {
+    height: 3em;
+    width: 3em;
   }
 
   .bottom-buttons-container {
@@ -739,13 +788,7 @@ section {
 
   .wide, .row {
     flex-direction: column;
-    margin: unset;
-  }
-
-  .stack {
-    text-align: unset;
-    align-items: unset;
-    align-self: unset;
+    // margin: unset;
   }
 
   .multi-image {
@@ -767,26 +810,60 @@ section {
       margin-bottom: 1em;
     }
   }
-}
 
-@media screen and (max-width:768px) {
-  .project {
-    margin: 5% 0.5%;
+  .mt-64 {
+    margin-top: 16px;
   }
 
-  .project-container {
-    width: 80%;
-  }
-
-  .image-container > img {
-    object-fit: contain;
-  }
-
-  .about-row {
+  .background-facts {
     flex-direction: column;
+    justify-content: flex-start;
 
     > div {
-      margin-bottom: 2em;
+      margin-top: 32px;
     }
   }
+
+  .resume-image {
+    max-width:unset;
+    width: 100%;
+    margin: 32px 0;
+  }
+
+  .place-tile {
+    width: 100%;
+
+    .place-image {
+      height: 80%;
+    }
+
+    .place-content {
+      padding: 24px;
+    }
+  }
+
+  #backToTop-container {
+    display: none;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
 }

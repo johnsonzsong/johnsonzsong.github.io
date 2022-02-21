@@ -203,7 +203,7 @@ const Goodreads = () => {
             <div style={{ display: "flex" }}>
               <div className="image-container mt-32 mb-32 nb">
                 <img
-                  style={{ width: "30%", alignSelf: "center" }}
+                  style={{ width: "100%", alignSelf: "center" }}
                   src={grSocialCurrent}
                 ></img>
               </div>
