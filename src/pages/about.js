@@ -13,7 +13,7 @@ import michelangelo from "../../static/michelangelo.jpg";
 import vernazza from "../../static/vernazza.jpg";
 import evreux from "../../static/evreux.jpeg";
 import louvre from "../../static/louvre.jpg";
-import gagliani from "../../static/gagliani.jpg";
+import galignani from "../../static/gagliani.jpg";
 
 export default function About() {
   return (
@@ -90,8 +90,8 @@ export default function About() {
               description="I spent a good half-day in the Louvre, particularly drawn to the Greek and Roman sculpture."
             />
             <PlaceTile
-              imageSource={gagliani}
-              place="Libraire Gagliani"
+              imageSource={galignani}
+              place="Librairie Galignani"
               description="A bookstore that I stumbled upon while exploring Paris on a wet spring day."
             />
           </div>

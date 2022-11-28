@@ -117,10 +117,19 @@ a {
   display: flex;
   justify-content: space-between;
   width: 30%;
+  font-weight: bold;
+  align-items: center;
 }
 
-.nav-links li {
-  list-style: none;
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $blue;
+    color: white;
+    transition: all 0.25s ease;
+  }
 }
 
 .burger {
@@ -247,6 +256,7 @@ footer {
   align-items: center;
   height: 48px;
   margin:auto;
+  margin-bottom: 2em;
   padding: 2em 0;
   text-align: center;
 }

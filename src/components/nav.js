@@ -15,13 +15,28 @@ const SiteNavigation = () => {
           </Link>
         </h3>
         <div className="nav-links" >
-          <Link to="/" activeStyle={{ color: "#62AFF6" }}>
+          <Link to="/"
+            activeStyle={{
+              border: "2px solid #62AFF6",
+              borderRadius: 8
+            }}
+          >
             Work
           </Link>
-          <Link to="/about" activeStyle={{ color: "#62AFF6" }}>
+          <Link to="/about"
+            activeStyle={{
+              border: "2px solid #62AFF6",
+              borderRadius: 8
+            }}
+          >
             About
           </Link>
-          <Link to="/resume" activeStyle={{ color: "#62AFF6" }}>
+          <Link to="/resume"
+            activeStyle={{
+              border: "2px solid #62AFF6",
+              borderRadius: 8
+            }}
+          >
             Resumé
           </Link>
         </div>
