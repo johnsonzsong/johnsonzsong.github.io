@@ -1,49 +1,35 @@
 import React from "react";
 import "../styles.scss";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFile } from "@fortawesome/free-regular-svg-icons";
+import resumePDF from "../../static/Johnson_Song_Resume.pdf";
 
 const SiteNavigation = () => {
   return (
-    <div>
-      <div className="overlay"></div>
-      <div className="nav">
-        <h3 className="logo">
-          <Link to="/">
-            <div className="active">
-              Johnson Song
-            </div>
-          </Link>
-        </h3>
-        <div className="nav-links" >
-          <Link to="/"
-            activeStyle={{
-              border: "2px solid #62AFF6",
-              borderRadius: 8
-            }}
-          >
-            Work
-          </Link>
-          <Link to="/about"
-            activeStyle={{
-              border: "2px solid #62AFF6",
-              borderRadius: 8
-            }}
-          >
-            About
-          </Link>
-          <Link to="/resume"
-            activeStyle={{
-              border: "2px solid #62AFF6",
-              borderRadius: 8
-            }}
-          >
-            Resumé
-          </Link>
-        </div>
-        <div className="burger">
-          <div className="burger-line"></div>
-        </div>
-      </div>
+    <div className="nav">
+      <a href="/">
+        J
+      </a>
+      <a href={resumePDF} target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faFile} />
+      </a>
+      <a href="mailto:johnsonsong@stanford.edu">
+        <FontAwesomeIcon icon={faEnvelope} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/johnsonsong/"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={faLinkedin} />
+      </a>
+      <a
+        href="http://instagram.com/johnson.song"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={faInstagram} />
+      </a>
     </div>
   );
 };

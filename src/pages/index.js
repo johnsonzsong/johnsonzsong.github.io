@@ -6,17 +6,14 @@ import PageTransition from "gatsby-plugin-page-transitions";
 import SEO from "../components/seo";
 import ProjectTile from "../components/projectTile";
 import Footer from "../components/footer";
-import grHifiStatic from "../../static/grHifiStatic.png";
-import cartaFeature from "../../static/cartaFeature.png";
-import cabanaFeature from "../../static/cabanaFeature.png";
+import grHifiStatic from "../../static/placeholder.png";
+import cartaProjectCover from "../../static/cartaProjectCover.png";
+import cabanaProjectCover from "../../static/cabanaProjectCover.png";
 import c3Logo from "../../static/c3Logo2.png";
 import facebookLogo from "../../static/facebook.png";
 import messengerLogo from "../../static/messenger.png";
 import kangarooLogo from "../../static/kangaroo.jpeg";
 import SiteNavigation from "../components/nav";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -36,78 +33,50 @@ export default function Home() {
 
       <div className="container">
         {/* Section 1: Intro */}
-        <section className="col-70 card">
-          <div className="card-content">
-            <h1>Designer and developer</h1>
-            <h3>Currently engineering features to power charitable giving and donations on Facebook.</h3>
+        <section className="col-70">
+          <div className="col-60">
+            <h2>Hi, I'm Johnson.</h2>
+            <p>I'm a developer and designer of products with a meticulous attention to detail and penchant for delightful experiences. </p>
             <br />
-            <div className="socials-container">
-              <a
-                href="http://instagram.com/johnson.song"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/johnsonsong/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-              <a href="mailto:johnsonsong@stanford.edu">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </div>
+            <p>I'm currently on the Fundraising team at Meta, engineering features to power charitable donations and <a href="https://socialimpact.facebook.com/" target="_blank">social impact on Facebook.</a></p>
+            <br />
+            <p>Before that, I was a product design intern at <a href="https://c3.ai/" target="_blank">C3.ai</a>, designing enterprise and federal AI products for CRM, reliability, and data. Before that, I was the founding head of engineering at Kangaroo, a social storytelling app.</p>
           </div>
         </section>
 
         {/* Section 2: Projects */}
-        <section className="col-60">
-          <h2>Selected projects</h2>
-          <ProjectTile
-            route="/goodreads"
-            imageSource={grHifiStatic}
-            projectName="Goodreads"
-            description="Redesigning social reading."
-            role="Independent Project | March 2021"
-            // timeFrame="March 2021"
-            tags={['Mobile']}
-          />
-          <ProjectTile
-            route="/carta"
-            imageSource={cartaFeature}
-            projectName="Carta"
-            description="Designing the course search experience at Stanford."
-            role="UX/UI Designer | Jan - June 2021"
-            // timeFrame="January - June 2021"
-            tags={['Desktop']}
-          />
-          <ProjectTile
-            route="/daimler"
-            imageSource={cabanaFeature}
-            projectName="Daimler"
-            description="Creating a gaming experience for autonomous driving."
-            role="Capstone Project | Jan - June 2020"
-            // timeFrame="January - June 2020"
-            tags={['In-Vehicle System']}
-          />
-        </section>
-
-        {/* Section 3: Other Companies */}
-        <section className="col-60">
-          <h2>Some other companies I've worked with</h2>
-          <div className="card">
-            <div className="other-companies-card-content">
-              <img className="avatar" src={c3Logo} alt="c3 logo" />
-              <img className="avatar" src={messengerLogo} alt="messenger logo" />
-              <img className="avatar" src={facebookLogo} alt="facebook logo" />
-              <img className="avatar" src={kangarooLogo} alt="kangaroo logo" />
-            </div>
+        <section className="col-70">
+          <div className="col-70">
+            <h2>Selected projects</h2>
+            <ProjectTile
+              route="/goodreads"
+              imageSource={grHifiStatic}
+              projectName="Goodreads"
+              description="As an independent design study, I researched, tested, and prototyped a reimagined mobile experience for Goodreads."
+              role="Independent Project | March 2021"
+              // timeFrame="March 2021"
+              tags={['UX Research', 'UX/UI Design']}
+            />
+            <ProjectTile
+              route="/carta"
+              imageSource={cartaProjectCover}
+              projectName="Carta"
+              description="I researched, designed, and tested the course search experience at Stanford. This was a case study on search/filter design patterns in the context of a complex information architecture."
+              role="UX/UI Designer | Jan - June 2021"
+              // timeFrame="January - June 2021"
+              tags={['UX Research', 'UX/UI Design']}
+            />
+            <ProjectTile
+              route="/daimler"
+              imageSource={cabanaProjectCover}
+              projectName="Daimler"
+              description="As part of my senior capstone project in HCI, I helped research, design, and develop an in-vehicle gaming experience for the autonomous driving era, in partnership with Daimler (Mercedes-Benz Group AG)."
+              role="Capstone Project | Jan - June 2020"
+              // timeFrame="January - June 2020"
+              tags={['UX Research', 'UX/UI Design', 'Coding']}
+            />
           </div>
         </section>
-
         <Footer />
       </div>
 
