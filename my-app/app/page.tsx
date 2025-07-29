@@ -6,7 +6,7 @@ export default function Home() {
       <div className="sm:my-16 grid grid-cols-5 gap-16">
         <div className="col-span-3 ...">
           <p className="mb-6">
-            Hi 👋 I'm Johnson.
+            Hi 👋 I&apos;m Johnson.
           </p>
           <Image alt="headshot photo" src={'/bio-pic.jpeg'} width={200} height={200} style={{ borderRadius: 16 }} />
           <p className="mt-6 mb-6 text-2xl">
